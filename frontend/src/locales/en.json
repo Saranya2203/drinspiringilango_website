@@ -83,6 +83,11 @@
     "heading": "Connect with Dr. Ilango"
   },
 
+  "contact": {
+    "heading": "Get in Touch",
+    "description": "We’d love to hear from you. Reach out with any questions or feedback.",
+    "cta": "Contact Us"
+  },
   "contact_us": "Contact Us",
   "first_name": "First Name",
   "last_name": "Last Name",
