@@ -1,0 +1,323 @@
+{
+  "header": {
+    "navHome": "Home",
+    "navAbout": "About",
+    "navServices": "Services",
+    "navBlogs": "Blogs",
+    "navEvents": "Events",
+    "navContact": "Contact",
+    "navMembership": "Membership",
+    "navAdmin": "Admin"
+  },
+  "hero": {
+    "title": "Dr. Inspiring Ilango",
+    "description": "Motivational programmes are most impactful when they are not treated as one-time events but as part of a consistent growth strategy. Just as machines require regular maintenance, individuals too benefit from periodic inspiration to stay focused, energized, and productive.\n\nHaving been deeply moved by the transformative sessions of Mr. Inspiring Ilango, many corporate organizations and educational institutions have already begun scheduling monthly or bi-monthly programmes with him. These ongoing engagements have proven to significantly elevate individual morale, team synergy, and organizational output.\n\nWe invite you to consider adopting a similar proactive approach through regularly scheduled sessions that aim to review, revive, and revamp both mindset and performance. These high-impact modules—delivered in English or Tamil—are meticulously designed to unlock potential, sustain momentum, and drive measurable results.\n\nLet’s collaborate to foster a culture of continuous motivation and excellence in your organization or institution.",
+    "cta": "Invite to Speak"
+  },
+  "videoIntro": {
+    "heading": "Meet Dr. Ilango",
+    "description": "Watch the inspiring story of the world’s only visually challenged emotional intelligence consultant.",
+    "aria": "Introductory video section about Dr. Ilango",
+    "videoLabel": "Intro video of Dr. Ilango",
+    "captionLabel": "English",
+    "noSupport": "Your browser does not support the video tag."
+  },
+  "endorsements": {
+    "heading": "Global Endorsements",
+    "description": "Endorsed by leaders in academia, corporate innovation, and global well-being."
+  },
+  "roles": {
+    "heading": "Who Is Dr. Ilango?",
+    "motivationalSpeaker": {
+      "title": "Motivational Speaker",
+      "description": "Captivates global audiences with transformative stories, emotional intelligence, and powerful motivational insights that ignite change."
+    },
+    "voiceoverArtist": {
+      "title": "World Record Voiceover Artist",
+      "description": "Renowned for bilingual excellence, lending his unique voice in English and Tamil for ads, documentaries, and corporate films, setting global benchmarks."
+    },
+    "entrepreneur": {
+      "title": "Enterprising Entrepreneur",
+      "description": "Founder of <a href=\"https://acea2z.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Ace Panacea Life Skills Pvt Ltd</a>, dedicated to advancing human excellence through life-transforming learning programs."
+    },
+    "lifeCoach": {
+      "title": "Life Coach",
+      "description": "Empowers individuals to unlock potential, overcome barriers, and achieve personal and professional breakthroughs through guided mentorship."
+    }
+  },
+  "gallery": {
+    "heading": "Moments Captured",
+    "images": [
+      "Inspiring Ilango with police officer",
+      "On stage, Inspiring Ilango lighting lamp",
+      "Receiving award from CM Stalin",
+      "Inspiring Ilango with Suriya and Sivakumar",
+      "Club meeting on stage",
+      "Inspiring Ilango with students"
+    ]
+  },
+  "viif": {
+    "heading": "Support the Mission",
+    "description": "The Vision Inspiring Ilango Foundation (VIIF) is launching the Hope-Giving Cylinder Technician project to prevent suicides across India.",
+    "donate": {
+      "stripe": "Donate with Stripe",
+      "paypal": "Donate with PayPal",
+      "razorpay": "Donate with Razorpay",
+      "patronCta": "Become a Patron – Empower Change"
+    }
+  },
+  "patron": {
+    "heading": "Become a Patron",
+    "description": "Join our global family of supporters and empower lives through education, empathy, and emotional intelligence.",
+    "mediaKit": "📥 Download Media Kit",
+    "benefits": "🎁 View Patron Benefits",
+    "partner": "Partner with Us"
+  },
+  "newsletter": {
+    "heading": "Subscribe to Our Newsletter",
+    "description": "Stay updated with events, courses, and global missions from Dr. Inspiring Ilango.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe"
+  },
+  "social": {
+    "heading": "Connect with Dr. Ilango"
+  },
+
+  "contact_us": "Contact Us",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "email": "Email ID",
+  "contact_number": "Contact Number",
+  "your_message": "Your Message",
+  "send": "Send",
+  "message_sent": "Message sent successfully!",
+  "get_in_touch": "Get in Touch",
+  "address": "Address",
+  "mobile": "Mobile",
+  "email_label": "Email",
+
+  "footer": {
+    "copyright": "© {{year}} Inspiring Ilango. All rights reserved.",
+    "links": {
+      "heading": "Quick Links",
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "events": "Events",
+      "blogs": "Blogs",
+      "contact": "Contact",
+      "membership": "Membership",
+      "admin": "Admin"
+    },
+    "contact": {
+      "heading": "Contact",
+      "email": "Email: inspiringilango@gmail.com",
+      "phone": "Phone: +91 9551065656",
+      "location": "Location: No: 16 600042, 12, Srinivasa Nagar 2nd St, Ram Nagar, Devi Karumariamman Nagar, Mohanpuri, Velachery, Chennai, Tamil Nadu 600042"
+    }
+  },
+  "about": {
+    "title": "About Dr. Inspiring Ilango",
+    "meta": {
+      "title": "About Dr. Inspiring Ilango | Emotional Intelligence Leader",
+      "description": "Learn about Dr. Inspiring Ilango, a visually challenged global thought leader in emotional intelligence, inspiring people around the world.",
+      "keywords": "Dr. Inspiring Ilango, emotional intelligence, global speaker, leadership coach, visually challenged leader, motivational speaker"
+    },
+    "biography": {
+      "heading": "Biography",
+      "paragraph1": "Inspiring Ilango was born totally blind on 06/04/1972 at Andhra Hospital, Adyar in Chennai, Tamil Nadu, India. His blindness is due to the consanguineous marriage between his parents, Mrs. N. Amsam and Mr. K. Natarajan. He studied at Little Flower Convent for the Blind, St. Louis Institute for the Deaf and Blind, and Sri Venkateswara Matriculation School.",
+      "paragraph2": "He holds bachelor's and master's degrees in English with distinction from Loyola College, Chennai, and an M.Phil in English Language Teaching from the University of Madras. He began his career teaching at various institutions and became an Assistant Professor of English at the University of Madras (2002–2006). Later, he became a popular motivational speaker, voice-over artist, and singer."
+    },
+    "mission": {
+      "heading": "Mission",
+      "text": "To inspire people globally by demonstrating that disability is not a limitation, but a unique strength. Through transformative programs, accessible communication, and emotional intelligence mastery, Dr. Ilango seeks to empower the world to lead with empathy, vision, and resilience."
+    },
+    "vision": {
+      "heading": "Vision",
+      "text": "To build a world where inclusive leadership and emotional intelligence are foundational to success. Dr. Ilango envisions a global movement that redefines possibilities, celebrates differences, and inspires excellence in every walk of life."
+    },
+    "awards": {
+      "heading": "Awards & Achievements",
+      "list": [
+        "Siva Foundation Award for Best Contribution to Music with playback singer S.P. Balasubrahmanyam (2011)",
+        "Tamil Nadu State Government Award from Mr. M.K. Stalin for being a successful visually challenged voice-over artist (2010)",
+        "Rose of Ridvan Award from Baha'i Assembly of Chennai (2010)",
+        "Outstanding Young Indian (OYI) Award by JCI (National Level, 2009)",
+        "Outstanding Young Person (OYP) Award by JCI (Regional Zone, 2009)",
+        "OYP Award by JCI Chennai (2009)",
+        "Selected as Youth Icon by India Today (2009)",
+        "Best Achiever Award from Loyola College (1994)",
+        "Outstanding Youth Award by Rajiv Gandhi Foundation (2000)"
+      ]
+    },
+    "facts": {
+      "heading": "9 Inspiring Facts About Dr. Ilango",
+      "items": [
+        "🌍 Has inspired over 500,000+ students worldwide.",
+        "🎤 Self-trained motivational speaker and singer.",
+        "📺 Featured in several TV interviews & public forums.",
+        "🧠 Expert in emotional intelligence and life coaching.",
+        "🏆 Brand ambassador of NTC Logistics since 2014.",
+        "🦯 Born totally blind and redefined his destiny.",
+        "📚 Holds an M.Phil in English Language Teaching.",
+        "🎶 Performed over 300+ live concerts as a singer.",
+        "👨‍🏫 Former Assistant Professor at University of Madras."
+      ]
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "intro": "Explore services by Dr. Inspiring Ilango, designed to empower individuals and organizations.",
+    "items": [
+      {
+        "title": "Motivational Talks",
+        "description": "Inspire your team with powerful keynote sessions."
+      },
+      {
+        "title": "Corporate Training",
+        "description": "Boost productivity with results-driven training."
+      },
+      {
+        "title": "Voice Coaching",
+        "description": "Master clarity and tone with personalized coaching."
+      },
+      {
+        "title": "Inspitainment Programs",
+        "description": "Interactive motivational events with entertainment."
+      },
+      {
+        "title": "Online Courses",
+        "description": "Learn anytime with self-paced certified programs."
+      },
+      {
+        "title": "1-on-1 Consultations",
+        "description": "Personalized mentoring for growth and goals."
+      }
+    ],
+    "book": {
+      "title": "Book: Inspire the World",
+      "alt": "Cover of Inspire the World book",
+      "price": "₹130",
+      "description": "Grab your copy of Dr. Ilango's inspiring new book packed with life-changing insights.",
+      "buyButton": "Buy Now"
+    },
+    "buttons": {
+      "bookNow": "Book Now",
+      "pay": "Pay"
+    }
+  },
+  
+  "events": {
+    "header": {
+      "title": "Join Our Events",
+      "tagline": "Empowering lives through inspiration and learning"
+    },
+    "form": {
+      "ariaLabel": "Event Registration Form",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "selectEvent": "Select an Event",
+      "choose": "-- Please choose an event --",
+      "events": {
+        "masterclass": "Inspiration Masterclass",
+        "oneToOne": "One-to-One with Ilango"
+      },
+      "required": "required"
+    },
+    "buttons": {
+      "stripe": "Pay with Stripe",
+      "calendar": "Add to Google Calendar",
+      "book": "Book Now"
+    },
+    "confirmation": {
+      "thankYou": "Thank you for registering!",
+      "details": "We’ll contact you with more information soon."
+    },
+    "upcoming": {
+      "title": "Upcoming Events",
+      "none": "No upcoming events found."
+    }
+  },
+"membership": {
+    "title": "Join Our Membership Program",
+    "subtitle": "Choose the right plan and unlock exclusive benefits",
+    "plans": {
+      "basic": {
+        "title": "Basic",
+        "price": "₹499 / month",
+        "features": [
+          "Access to weekly webinars",
+          "Monthly motivation sessions",
+          "Email newsletter"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "₹999 / month",
+        "features": [
+          "All Basic features",
+          "1-on-1 Coaching (Monthly)",
+          "Exclusive eBooks & Resources"
+        ]
+      },
+      "elite": {
+        "title": "Elite",
+        "price": "₹1999 / month",
+        "features": [
+          "All Premium features",
+          "Weekly Personal Coaching",
+          "Priority Email Support",
+          "Custom Goal Roadmaps"
+        ]
+      },
+      "button": "Join via Calendly"
+    },
+    "benefitsTitle": "Why Join Our Membership?",
+    "benefits": [
+      "Boost your emotional intelligence",
+      "Connect with a global like-minded community",
+      "Personal and professional growth tools"
+    ],
+    "comparisonTitle": "Compare Plans",
+    "comparison": {
+      "features": "Features",
+      "weeklyWebinars": "Weekly Webinars",
+      "coaching": "1-on-1 Coaching",
+      "ebooks": "Exclusive eBooks",
+      "support": "Priority Support",
+      "yes": "✔",
+      "no": "✖",
+      "monthly": "Monthly",
+      "weekly": "Weekly"
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "faq": [
+      {
+        "question": "Can I cancel anytime?",
+        "answer": "Yes, you can cancel your membership anytime from your Calendly dashboard or by contacting us."
+      },
+      {
+        "question": "Do you offer a trial period?",
+        "answer": "Currently, we do not offer free trials, but you can explore our free content to get started."
+      }
+    ],
+    "testimonialsTitle": "What Members Say",
+    "testimonials": [
+      {
+        "quote": "This program changed my mindset and career path. Dr. Ilango is incredibly motivating!",
+        "author": "- Priya R., Chennai"
+      },
+      {
+        "quote": "Elite coaching is truly transformative. It feels tailored just for me.",
+        "author": "- Rahul S., Bangalore"
+      }
+    ],
+    "cta": {
+      "title": "Ready to Transform Your Life?",
+      "text": "Pick your plan and begin your journey with Inspiring Ilango today!",
+      "button": "Choose Your Plan"
+    }
+  }
+  }
+  

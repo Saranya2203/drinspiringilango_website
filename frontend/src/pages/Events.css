@@ -1,0 +1,209 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Wrapper */
+.event-page {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f7f9fc, #e2e8f0);
+  color: #1a202c;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Branding */
+.branding {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.brand-logo {
+  width: 100px;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.branding h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+/* Form Section */
+.event-registration {
+  width: 100%;
+  max-width: 500px;
+}
+
+.event-form {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Input Fields */
+.event-form label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+  color: #2d3748;
+}
+
+.event-form input,
+.event-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #fdfdfd;
+  transition: border-color 0.2s ease;
+}
+
+.event-form input:focus,
+.event-form select:focus {
+  border-color: #3182ce;
+  outline: none;
+}
+
+/* Buttons */
+.stripe-btn,
+.google-btn {
+  background-color: #002244;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.stripe-btn:hover,
+.google-btn:hover {
+  background-color: #0084ff;
+}
+
+.payment-options,
+.google-meet-link {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.confirmation-message {
+  text-align: center;
+  background: #e6fffa;
+  border: 1px solid #b2f5ea;
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #234e52;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.upcoming-events h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-item {
+  background: #ffffff;
+  margin: 1rem 0;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.event-item strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-item a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.event-item a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Layout */
+@media (min-width: 640px) {
+  .event-form {
+    padding: 2rem 2.5rem;
+  }
+
+  .branding h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  .payment-options {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .google-meet-link {
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .event-page {
+    padding: 3rem 2rem;
+  }
+
+  .brand-logo {
+    width: 140px;
+  }
+
+  .branding h1 {
+    font-size: 2.5rem;
+  }
+
+  .event-form {
+    max-width: 600px;
+  }
+
+  .upcoming-events h2 {
+    font-size: 2rem;
+  }
+}
+

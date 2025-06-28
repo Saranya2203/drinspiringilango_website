@@ -1,0 +1,232 @@
+.membership-container {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f4f6f8;
+}
+
+.membership-title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.membership-subtitle {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.membership-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.membership-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-5px);
+}
+
+.membership-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.price {
+  font-size: 20px;
+  color: #002244;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.membership-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.membership-card ul li {
+  padding: 8px 0;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #002244;;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.popular {
+  border: 2px solid #002244;
+}
+
+@media (max-width: 900px) {
+  .membership-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membership-card {
+    width: 90%;
+  }
+}
+
+.membership-benefits {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.membership-benefits ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.comparison-table {
+  margin: 60px auto; /* center align */
+  padding: 0 20px;   /* add horizontal padding on small screens */
+  overflow-x: auto;
+  max-width: 100%;
+  text-align: left;
+}
+
+.comparison-table table {
+  margin: 0 auto; /* center table horizontally */
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px; /* ensures table doesn't break on mobile */
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.comparison-table th {
+  background-color: #002244;
+  color: #fff;
+  text-align: center;
+}
+
+
+.membership-faq {
+  margin: 60px 0;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h4 {
+  margin-bottom: 5px;
+  color: #002244;
+}
+
+.membership-testimonials {
+  margin: 60px 0;
+  background: #e9f0f7;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.membership-testimonials blockquote {
+  font-style: italic;
+  margin: 20px auto;
+  max-width: 600px;
+  color: #333;
+}
+
+.membership-testimonials footer {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #002244;
+}
+
+.membership-cta-banner {
+  background-color: #002244;
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.membership-cta-banner h2{
+  color: #fff;
+
+}
+
+/* Add visually hidden class */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Responsive Table */
+.comparison-table table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Improve focus visibility */
+a:focus, .btn:focus {
+  outline: 3px solid #0056b3;
+  outline-offset: 3px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .membership-title {
+    font-size: 28px;
+  }
+
+  .membership-card {
+    width: 100%;
+  }
+
+  .membership-cards {
+    flex-direction: column;
+  }
+
+  .comparison-table table th,
+  .comparison-table table td {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    color:#fff;
+  }
+}

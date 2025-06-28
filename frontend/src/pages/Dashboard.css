@@ -1,0 +1,138 @@
+.dashboard-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-container h2,
+.dashboard-container h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #002244;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #007bff;
+}
+
+.status-message {
+  margin-top: 1rem;
+  color: #006400;
+  font-weight: 500;
+  text-align: center;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.blog-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-body h4 {
+  font-size: 1.2rem;
+  margin: 0.3rem 0 0.5rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.blog-body p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.blog-body small {
+  color: #888;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.blog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.blog-actions button,
+.blog-actions a {
+  padding: 6px 12px;
+  background-color: #002244;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.2s ease-in-out;
+}
+
+.blog-actions button:hover,
+.blog-actions a:hover {
+  background-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+  }
+
+  .blog-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
