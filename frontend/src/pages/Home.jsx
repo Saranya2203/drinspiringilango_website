@@ -179,10 +179,10 @@ const Home = () => {
         <h2>{t('patron.heading')}</h2>
         <p>{t('patron.description')}</p>
         <div className="patron-downloads">
-          <a href="/assets/VIIF_MediaKit_and_PatronBenefits.pdf" className="patron-btn" download>
+          <a href="/assets/VIIF_Media_Kit_and_Patron_Benefits.pdf" className="patron-btn" download>
             {t('patron.mediaKit')}
           </a>
-          <a href="/assets/VIIF_MediaKit_and_PatronBenefits.pdf" className="patron-btn" download>
+          <a href="/assets/VIIF_Complete_Patron_Benefits_Kit.pdf" className="patron-btn" download>
             {t('patron.benefits')}
           </a>
         </div>
@@ -191,14 +191,30 @@ const Home = () => {
 
 
       <section className="newsletter-section">
-        <h2>{t('newsletter.heading')}</h2>
-        <p>{t('newsletter.description')}</p>
-        <form className="newsletter-form" aria-label="Subscribe to newsletter">
-          <label htmlFor="newsletter-email">Email</label>
-          <input id="newsletter-email" name="EMAIL" type="email" placeholder={t('newsletter.emailPlaceholder')} required />
-          <button type="submit">{t('newsletter.subscribe')}</button>
-        </form>
-      </section>
+  <h2>{t('newsletter.heading')}</h2>
+  <p>{t('newsletter.description')}</p>
+
+  <form
+    className="newsletter-form"
+    action="https://YOUR_USERNAME.usX.list-manage.com/subscribe/post?u=YOUR_U_ID&amp;id=YOUR_LIST_ID"
+    method="POST"
+    target="_blank"
+    noValidate
+    aria-label="Subscribe to newsletter"
+  >
+    <label htmlFor="newsletter-email">Email</label>
+    <input
+      id="newsletter-email"
+      name="EMAIL"
+      type="email"
+      placeholder={t('newsletter.emailPlaceholder')}
+      required
+    />
+
+    <button type="submit">{t('newsletter.subscribe')}</button>
+  </form>
+</section>
+
 
       <section className="social" aria-label="Follow Dr. Ilango">
         <h2>{t('social.heading')}</h2>
