@@ -110,9 +110,17 @@ const Dashboard = () => {
     setStatus('🗑️ Blog deleted.');
   };
 
+  const handleLogout = () => {
+    localStorage.clear(); // or remove specific auth token
+    window.location.href = '/'; // redirect to login or homepage
+  };
+
   return (
     <div className="dashboard-container">
-      <h2 className="text-center">Admin Dashboard</h2>
+      <div className="dashboard-header">
+        <h2>Admin Dashboard</h2>
+        <button className="logout-btn" onClick={handleLogout}>Logout</button>
+      </div>
 
       <div className="form-group">
         <label>Blog Title</label>
@@ -158,7 +166,7 @@ const Dashboard = () => {
         {blogs.length === 0 && <p>No blogs available.</p>}
         {blogs.map((blog, index) => (
           <div key={index} className="blog-card">
-            <img src={blog.image} alt="Blog" />
+            {blog.image && <img src={blog.image} alt="Blog" />}
             <div className="blog-body">
               <h4>{blog.title}</h4>
               <p>{blog.content}</p>
