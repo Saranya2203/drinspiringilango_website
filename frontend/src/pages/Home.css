@@ -558,3 +558,82 @@ a:focus, button:focus, input:focus {
   white-space: nowrap;
   border: 0;
 }
+
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .gallery-scroll img {
+    width: 250px;
+  }
+
+  .carousel-container {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .gallery-scroll img {
+    width: 220px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body {
+    font-size: 14px; /* சிறிய எழுத்துரு */
+  }
+
+  .hero h1,
+  .video-intro h2,
+  .gallery h2,
+  .viif-section h2,
+  .endorsements h2,
+  .contact-prompt h2,
+  .become-patron h2,
+  .newsletter-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero p,
+  .viif-section p,
+  .endorsements p,
+  .contact-prompt p,
+  .become-patron p,
+  .newsletter-section p {
+    font-size: 1rem;
+  }
+
+  .cta-button,
+  .donate-buttons button,
+  .newsletter-form button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .newsletter-form input {
+    font-size: 1rem;
+  }
+
+  .carousel-card {
+    max-width: 90%;
+  }
+
+  .gallery-scroll img {
+    width: 180px;
+  }
+}
