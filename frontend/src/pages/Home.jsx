@@ -155,25 +155,36 @@ const Home = () => {
         </section>
 
         <section className="viif-section">
-          <h2>{t('viif.heading')}</h2>
-          <p>{t('viif.description')}</p>
-          <video
-            muted
-            autoPlay
-            playsInline
-            loop
-            preload="auto"
-            aria-label="VIIF Fundraising Video"
-            style={{ width: '100%', maxWidth: '640px' }}
-          >
-            <source src="/assets/Be_the_Hope_Save_a_Life.mp4" type="video/mp4" />
-          </video>
-          <div className="donate-buttons">
-            <button onClick={() => window.open('https://buy.stripe.com/test_xxx', '_blank')}>{t('viif.donate.stripe')}</button>
-            <button onClick={() => window.open('https://paypal.me/inspiringilango', '_blank')}>{t('viif.donate.paypal')}</button>
-            <button onClick={() => window.open('https://rzp.io/l/inspiringilango', '_blank')}>{t('viif.donate.razorpay')}</button>
-          </div>
-        </section>
+  <h2>{t('viif.heading')}</h2>
+  <p>{t('viif.description')}</p>
+
+  <video
+    className="viif-video"
+    muted
+    autoPlay
+    playsInline
+    loop
+    preload="auto"
+    controls
+    aria-label="VIIF Fundraising Video"
+  >
+    <source src="/assets/Be_the_Hope_Save_a_Life.mp4" type="video/mp4" />
+    {t('videoIntro.noSupport')}
+  </video>
+
+  <div className="donate-buttons">
+    <button onClick={() => window.open('https://buy.stripe.com/test_xxx', '_blank')}>
+      {t('viif.donate.stripe')}
+    </button>
+    <button onClick={() => window.open('https://paypal.me/inspiringilango', '_blank')}>
+      {t('viif.donate.paypal')}
+    </button>
+    <button onClick={() => window.open('https://rzp.io/l/inspiringilango', '_blank')}>
+      {t('viif.donate.razorpay')}
+    </button>
+  </div>
+</section>
+
 
         <section className="become-patron" aria-label="Support and Downloads">
           <h2>{t('patron.heading')}</h2>
