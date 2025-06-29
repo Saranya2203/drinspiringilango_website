@@ -211,6 +211,30 @@
       "pay": "Pay"
     }
   },
+  "products": {
+  "title": "E-commerce Products",
+  "items": [
+    {
+      "title": "Meditation Audio",
+      "description": "Relax and center yourself with our guided meditation audio.",
+      "price": "$5.00",
+      "url": "https://buy.stripe.com/test_xyzMeditation"
+    },
+    {
+      "title": "Voiceover Sample",
+      "description": "Professional voiceover for your projects.",
+      "price": "$20.00",
+      "url": "https://buy.stripe.com/test_xyzVoiceover"
+    },
+    {
+      "title": "Original Song",
+      "description": "A downloadable original song by Ilango.",
+      "price": "$10.00",
+      "url": "https://buy.stripe.com/test_xyzSong"
+    }
+  ]
+},
+
   
   "events": {
     "header": {

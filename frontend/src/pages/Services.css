@@ -1,4 +1,4 @@
-/* Services.css */
+/* Base container */
 .services-container {
   padding: 60px 20px;
   max-width: 1200px;
@@ -8,7 +8,9 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.services-title {
+/* Section titles and intros */
+.services-title,
+.products-title {
   text-align: center;
   font-size: 2.25rem;
   font-weight: bold;
@@ -25,18 +27,25 @@
   color: #555;
 }
 
+.products-grid {
+  margin-top: 3rem;
+}
+
+/* Grid layout */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
+/* Card design */
 .service-card {
   background: #fff;
   border-radius: 0.75rem;
   padding: 2rem 1.25rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
 }
 
 .service-card:hover,
@@ -45,7 +54,9 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service-card h2 {
+/* Typography in cards */
+.service-card h2,
+.service-card h3 {
   font-size: 1.375rem;
   margin-bottom: 0.75rem;
   color: #002244;
@@ -55,8 +66,10 @@
   font-size: 1rem;
   line-height: 1.5;
   color: #444;
+  margin-bottom: 0.5rem;
 }
 
+/* Buttons section */
 .service-buttons {
   margin-top: 1rem;
   display: flex;
@@ -72,7 +85,7 @@
   cursor: pointer;
   background-color: #002244;
   color: white;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .service-buttons button:hover,
@@ -89,12 +102,58 @@
   background-color: #1e7e34;
 }
 
-@media (max-width: 600px) {
-  .services-title {
+/* Book image and price */
+.book-image {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 160px;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-price,
+.product-price {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #e53935;
+  margin-bottom: 1rem;
+}
+
+/* Responsive media queries */
+@media (max-width: 1024px) {
+  .services-title,
+  .products-title {
+    font-size: 2rem;
+  }
+
+  .services-intro {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-title,
+  .products-title {
     font-size: 1.75rem;
   }
 
   .services-intro {
+    font-size: 1rem;
+  }
+
+  .service-card h2,
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .book-image {
+    max-width: 140px;
+  }
+
+  .book-price,
+  .product-price {
     font-size: 1rem;
   }
 
@@ -108,41 +167,34 @@
   }
 }
 
-/* Existing styles for book image and price */
-.book-image {
-  display: block;
-  margin: 0 auto 1rem;
-  max-width: 160px;
-  height: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.book-price {
-  text-align: center;
-  font-size: 1.125rem;
-  font-weight: bold;
-  color: #e53935;
-  margin-bottom: 1rem;
-}
-
-/* Responsive enhancements */
-@media (max-width: 768px) {
-  .book-image {
-    max-width: 140px;
-  }
-
-  .book-price {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 480px) {
+  .services-container {
+    padding: 40px 15px;
+  }
+
+  .services-title,
+  .products-title {
+    font-size: 1.5rem;
+  }
+
+  .services-intro {
+    font-size: 0.95rem;
+  }
+
+  .service-card {
+    padding: 1.5rem 1rem;
+  }
+
   .book-image {
     max-width: 120px;
   }
 
-  .book-price {
+  .book-price,
+  .product-price {
     font-size: 0.95rem;
+  }
+
+  .service-buttons button {
+    font-size: 0.85rem;
   }
 }

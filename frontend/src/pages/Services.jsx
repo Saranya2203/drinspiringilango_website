@@ -31,6 +31,7 @@ function Services() {
   };
 
   const serviceItems = t('services.items', { returnObjects: true }) || [];
+  const productItems = t('products.items', { returnObjects: true }) || [];
 
   return (
     <main className="services-container" role="main">
@@ -82,6 +83,26 @@ function Services() {
               {t('services.book.buyButton')}
             </button>
           </div>
+        </div>
+      </section>
+
+      <section className="products-grid">
+        <h2 className="products-title">{t('products.title')}</h2>
+        <div className="services-grid">
+          {productItems.map((product, index) => (
+            <div key={index} className="service-card" tabIndex="0" aria-label={product.title}>
+              <h3>{product.title}</h3>
+              <p>{product.description}</p>
+              <p className="product-price">{product.price}</p>
+              <button
+                onClick={() => handlePayment(product.url)}
+                className="pay-btn"
+                aria-label={`Buy ${product.title}`}
+              >
+                {t('services.book.buyButton')}
+              </button>
+            </div>
+          ))}
         </div>
       </section>
     </main>
