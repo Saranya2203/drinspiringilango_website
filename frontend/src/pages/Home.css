@@ -71,7 +71,7 @@
 }
 
 .cta-button:hover {
-  background-color: #e0f0ff;
+  background-color: #0077cc;
   transform: scale(1.05);
 }
 
@@ -460,7 +460,7 @@
   transition: background-color 0.3s, transform 0.3s;
 }
 .patron-btn:hover {
-  background-color: #e0f3ff;
+  background-color: #0077cc;
   transform: scale(1.05);
 }
 
