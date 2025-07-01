@@ -40,7 +40,7 @@ const Home = () => {
   useEffect(() => {
   if (!document.querySelector('script[src*="tawk.to"]')) {
     const s = document.createElement('script');
-    s.src = 'https://embed.tawk.to/683198990ff9cf190abe81e0/1is0ro68f';
+    s.src = 'https://embed.tawk.to/6023c45b918aa261273d8a4b/1eu5re1ng';
     s.async = true;
     s.charset = 'UTF-8';
     s.setAttribute('crossorigin', '*');
