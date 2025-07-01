@@ -228,7 +228,7 @@ const Home = () => {
           <h2>{t('social.heading')}</h2>
           <div className="social-icons">
             <a href="https://www.youtube.com/@InspiringIlango" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/inspiringilango" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/inspiringilango?igsh=YXFzNHpyZmRiZzls" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/InspiringIlango" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
             <a href="https://www.linkedin.com/in/inspiringilango" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
           </div>

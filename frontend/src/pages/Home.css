@@ -124,6 +124,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  margin-top: 1.5rem;
 }
 .carousel-card {
   background: white;
