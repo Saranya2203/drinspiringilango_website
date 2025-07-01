@@ -34,7 +34,7 @@ const Contact = () => {
             name: formElement.name.value,
             email: formElement.email.value,
           },
-          'YOUR_PUBLIC_KEY'
+          'PZXnsQj6OrTUPdnTG'
         ).then(
           (res) => console.log('Auto-reply sent:', res.text),
           (err) => console.error('Auto-reply error:', err.text)
@@ -73,7 +73,7 @@ const Contact = () => {
           <a href="https://facebook.com/ilango" target="_blank" rel="noreferrer"><FaFacebookF /></a>
           <a href="https://twitter.com/ilango" target="_blank" rel="noreferrer"><FaTwitter /></a>
           <a href="https://linkedin.com/in/ilango" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
-          <a href="https://instagram.com/ilango" target="_blank" rel="noreferrer"><FaInstagram /></a>
+          <a href="https://www.instagram.com/inspiringilango?igsh=YXFzNHpyZmRiZzls" target="_blank" rel="noreferrer"><FaInstagram /></a>
         </div>
 
         <div className="map-container">

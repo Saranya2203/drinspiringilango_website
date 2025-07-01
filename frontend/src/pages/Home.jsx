@@ -38,23 +38,15 @@ const Home = () => {
   }, [i18n.language]);
 
   useEffect(() => {
-    const loadDeferredScripts = () => {
-      if (!document.querySelector('script[src*="tawk.to"]')) {
-        const s = document.createElement('script');
-        s.src = 'https://embed.tawk.to/683198990ff9cf190abe81e0/1is0ro68f';
-        s.async = true; s.charset = 'UTF-8';
-        s.setAttribute('crossorigin', '*');
-        document.body.appendChild(s);
-      }
-      if (!document.getElementById('mcjs')) {
-        const s = document.createElement('script');
-        s.id = 'mcjs'; s.async = true;
-        s.src = 'https://chimpstatic.com/mcjs-connected/js/users/…/ec81b55b08d31e60e314d50ce.js';
-        document.body.appendChild(s);
-      }
-    };
-    window.addEventListener('scroll', loadDeferredScripts, { once: true });
-  }, []);
+  if (!document.querySelector('script[src*="tawk.to"]')) {
+    const s = document.createElement('script');
+    s.src = 'https://embed.tawk.to/683198990ff9cf190abe81e0/1is0ro68f';
+    s.async = true;
+    s.charset = 'UTF-8';
+    s.setAttribute('crossorigin', '*');
+    document.body.appendChild(s);
+  }
+}, []);
 
   useEffect(() => {
     const s2 = document.createElement('script');
