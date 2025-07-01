@@ -12,19 +12,36 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const formElement = form.current;
+
+    // Send message to admin
     emailjs.sendForm(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
-      form.current,
-      'YOUR_PUBLIC_KEY'
+      'service_vy7gm98',         // ✅ Your EmailJS service ID
+      'template_ya8vpwf',     // ✅ Replace with your Contact template ID
+      formElement,
+      'PZXnsQj6OrTUPdnTG'          // ✅ Replace with your EmailJS public key
     ).then(
       (result) => {
-        console.log(result.text);
+        console.log('Contact message sent:', result.text);
         setSent(true);
         e.target.reset();
+
+        // Send auto-reply to user
+        emailjs.send(
+          'service_vy7gm98',       // ✅ Same service ID
+          'template_bdudahg',// ✅ Replace with your Auto-Reply template ID
+          {
+            name: formElement.name.value,
+            email: formElement.email.value,
+          },
+          'YOUR_PUBLIC_KEY'
+        ).then(
+          (res) => console.log('Auto-reply sent:', res.text),
+          (err) => console.error('Auto-reply error:', err.text)
+        );
       },
       (error) => {
-        console.error(error.text);
+        console.error('Contact message failed:', error.text);
         setSent(false);
       }
     );
@@ -36,8 +53,7 @@ const Contact = () => {
         <h2>{t('contact_us')}</h2>
         <form ref={form} onSubmit={sendEmail} className="contact-form">
           <div className="input-row">
-            <input type="text" name="first_name" placeholder={t('first_name')} required />
-            <input type="text" name="last_name" placeholder={t('last_name')} required />
+            <input type="text" name="name" placeholder={t('name')} required />
           </div>
           <input type="email" name="email" placeholder={t('email')} required />
           <input type="tel" name="contact_no" placeholder={t('contact_number')} required />
@@ -78,4 +94,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

@@ -89,8 +89,7 @@
     "cta": "Contact Us"
   },
   "contact_us": "Contact Us",
-  "first_name": "First Name",
-  "last_name": "Last Name",
+  "name": "Name",
   "email": "Email ID",
   "contact_number": "Contact Number",
   "your_message": "Your Message",
