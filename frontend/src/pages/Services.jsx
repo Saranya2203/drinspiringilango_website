@@ -86,6 +86,31 @@ function Services() {
         </div>
       </section>
 
+<section className="brochures-section">
+  <h2 className="brochures-title">{t('brochures.title')}</h2>
+  <div className="brochures-grid">
+    {[1, 2, 3].map((num) => (
+      <div key={num} className="brochure-card">
+        <img
+          src={`/assets/brochure${num}.jpg`}
+          alt={t(`brochures.brochure${num}.alt`)}
+          className="brochure-image"
+        />
+        <h3>{t(`brochures.brochure${num}.title`)}</h3>
+        <p>{t(`brochures.brochure${num}.description`)}</p>
+        <a
+          href={`/assets/brochure${num}.pdf`}
+          download
+          className="download-btn"
+          aria-label={t(`brochures.brochure${num}.download`)}
+        >
+          {t(`brochures.brochure${num}.download`)}
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
+
       <section className="products-grid">
         <h2 className="products-title">{t('products.title')}</h2>
         <div className="services-grid">

@@ -210,6 +210,28 @@
       "pay": "Pay"
     }
   },
+  "brochures": {
+  "title": "Download Our Brochures",
+  "brochure1": {
+    "title": "Brochure One",
+    "description": "Discover our primary service offerings.",
+    "download": "Download PDF",
+    "alt": "Cover of Brochure One"
+  },
+  "brochure2": {
+    "title": "Brochure Two",
+    "description": "In-depth guide on consulting packages.",
+    "download": "Download PDF",
+    "alt": "Cover of Brochure Two"
+  },
+  "brochure3": {
+    "title": "Brochure Three",
+    "description": "Pricing and plans explained.",
+    "download": "Download PDF",
+    "alt": "Cover of Brochure Three"
+  }
+},
+
   "products": {
   "title": "E-commerce Products",
   "items": [
