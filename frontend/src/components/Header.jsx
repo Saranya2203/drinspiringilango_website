@@ -8,6 +8,7 @@ import logo from '../Log.png';
 const Header = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isSubMenuOpen, setSubMenuOpen] = useState(false); // 👈 submenu toggle
 
   return (
     <header className="main-header">
@@ -19,22 +20,28 @@ const Header = () => {
         </div>
 
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-  <div className="nav-item">
-    <Link to="/">{t('header.navHome')}</Link>
-    <div className="submenu">
-      <Link to="/viif">VIIF</Link>
-      <Link to="/ace-panacea">Ace Panacea Life Skills Private Limited</Link>
-    </div>
-  </div>
-  <Link to="/about">{t('header.navAbout')}</Link>
-  <Link to="/services">{t('header.navServices')}</Link>
-  <Link to="/blogs">{t('header.navBlogs')}</Link>
-  <Link to="/events">{t('header.navEvents')}</Link>
-  <Link to="/contact">{t('header.navContact')}</Link>
-  <Link to="/membership">{t('header.navMembership')}</Link>
-  <Link to="/admin">{t('header.navAdmin')}</Link>
-  <div className="mobile-language"><LanguageSwitcher /></div>
-</div>
+          {/* Home with submenu */}
+          <div
+            className={`nav-item ${isSubMenuOpen ? 'open' : ''}`}
+            onClick={() => setSubMenuOpen(!isSubMenuOpen)}
+          >
+            <span className="nav-link">{t('header.navHome')} ▼</span>
+            <div className="submenu">
+              <Link to="/viif">{t('header.navVIIF')}</Link>
+              <Link to="/ace-panacea">{t('header.navAcePanacea')}</Link>
+            </div>
+          </div>
+
+          {/* Other links */}
+          <Link to="/about">{t('header.navAbout')}</Link>
+          <Link to="/services">{t('header.navServices')}</Link>
+          <Link to="/blogs">{t('header.navBlogs')}</Link>
+          <Link to="/events">{t('header.navEvents')}</Link>
+          <Link to="/contact">{t('header.navContact')}</Link>
+          <Link to="/membership">{t('header.navMembership')}</Link>
+          <Link to="/admin">{t('header.navAdmin')}</Link>
+          <div className="mobile-language"><LanguageSwitcher /></div>
+        </div>
 
         <div className="right-section">
           <div className="desktop-language"><LanguageSwitcher /></div>
