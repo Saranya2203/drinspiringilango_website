@@ -124,64 +124,94 @@
       "location": "Location: No: 16 600042, 12, Srinivasa Nagar 2nd St, Ram Nagar, Devi Karumariamman Nagar, Mohanpuri, Velachery, Chennai, Tamil Nadu 600042"
     }
   },
-  "VIIF": {
-    "heading1": "INSPIRING ILANGO",
-    "heading2": "TRANSFORMING LIVES",
-    "heading3": "INSPIRING HOPES",
-    "aboutTitle": "ABOUT THE FOUNDATION",
-    "aboutDescription": "Vision Inspiring Ilango Foundation (VIIF) is a registered, non-profit, nongovernmental organisation devoted to emotional empowerment, inclusive development, and life-changing training programmes. Co-founded by Dr Inspiring Ilango and Mrs Srilatha Ilango, VIIF serves as a sanctuary for individuals and communities navigating emotional crises, systemic neglect, or social disadvantage.",
-    "visionTitle": "OUR VISION",
-    "visionDescription": "To radically transform lives affected by emotional trauma, addiction, digital dependency, and internalised oppression. We envision a world grounded in dignity, emotional independence, equality, compassion, and universal human worth.",
-    "missionTitle": "OUR MISSION",
-    "missionDescription": "To champion emotional empowerment through inspiring programmes, accessible training, and compassionate intervention — especially for the visually challenged and emotionally vulnerable. Our mission is to make emotional freedom, mental clarity, and psychological resilience accessible to all.",
-    "whyNowTitle": "WHY THIS CANNOT WAIT",
-    "globalStats": "More than 700,000 people die by suicide every year — one every 40 seconds (WHO). Suicide is the third leading cause of death among people aged 15–29.",
-    "indiaStats": "India accounts for 20% of global suicide deaths. In 2021, 164,033 Indians died by suicide — a 7.2% rise from the previous year. Tamil Nadu alone reported 18,925 cases; Maharashtra led with 22,207.",
-    "economicToll": "Suicide and mental illness significantly reduce productivity and economic output. Tamil Nadu’s GDP is directly affected by mental health-related losses.",
-    "professionalShortage": "India has only 0.75 psychiatrists per 100,000 people — far below the global average of 3–6. Millions suffer without access to trained support.",
-    "initiativesTitle": "OUR FLAGSHIP INITIATIVES",
-    "initiative1.title": "HopeLine – 24/7 Mental Health Centre",
-    "initiative1.description": "Round-the-clock emotional support and crisis intervention by trained mental health professionals.",
-    "initiative2.title": "Inspitainment™ – Where Inspiration Meets Entertainment",
-    "initiative2.description": "Live events combining motivational talks, music, interactive experiences, and mental wellness takeaways.",
-    "initiative3.title": "Empowering Vision – Digital Literacy for the Visually Challenged",
-    "initiative3.description": "Training in assistive technology, communication skills, and digital empowerment for the blind and visually impaired.",
-    "initiative4.title": "Rising Stars – Youth Personality Development",
-    "initiative4.description": "A comprehensive programme nurturing emotional intelligence, English fluency, and leadership in underprivileged students.",
-    "initiative5.title": "Live Life Campaigns – Mental Health Awareness",
-    "initiative5.description": "Outreach initiatives fostering resilience, optimism, and proactive mental wellness.",
-    "initiative6.title": "Speak Up – English for Empowerment",
-    "initiative6.description": "Public speaking and communication programmes for marginalised rural and semiurban communities.",
-    "initiative7.title": "Empower Her – Women’s Well-being and Leadership",
-    "initiative7.description": "Workshops and counselling for entrepreneurial development, assertiveness, and emotional strength in women.",
-    "initiative8.title": "Emotional Wellness Clinics – Counselling & Group Therapy",
-    "initiative8.description": "Professional support for stress, anxiety, trauma, burnout, and emotional instability.",
-    "initiative9.title": "Inspired Living – Talks and Performances",
-    "initiative9.description": "Engaging sessions by Dr Inspiring Ilango and other experts on purpose, emotional mastery, and hope.",
-    "initiative10.title": "Breaking Free – Addiction Awareness and Recovery",
-    "initiative10.description": "Short films, workshops, and sessions addressing substance dependence and emotional healing.",
-    "initiative11.title": "Healthy Choices – Food and Mood Awareness",
-    "initiative11.description": "Campaigns linking nutrition to emotional health and long-term wellness.",
-    "initiative12.title": "Holistic Health – Lifestyle and Mindfulness",
-    "initiative12.description": "Workshops focused on sleep hygiene, fitness, mental clarity, and digital discipline.",
-    "initiative13.title": "Digital Wisdom – Smart Use of Technology",
-    "initiative13.description": "Interactive sessions on healthy digital habits and responsible AI use for students and professionals.",
-    "initiative14.title": "Smart Parenting",
-    "initiative14.description": "Guidance for raising emotionally intelligent, self-aware, and digitally safe children.",
-    "initiative15.title": "Hope Fund – Support for Ailing and Cancer Patients",
-    "initiative15.description": "Financial assistance and emotional support for those battling life-threatening illness.",
-    "foundersTitle": "OUR FOUNDERS AND TRUSTEES",
-    "founder1.name": "DR INSPIRING ILANGO – FOUNDER & MANAGING TRUSTEE",
-    "founder1.bio": "An international speaker, emotional intelligence consultant, bestselling author, and self-trained vocalist, Dr Inspiring Ilango is a visionary who has transformed his visual disability into the cornerstone of his global impact. He holds world records in deep-sea diving and solo paragliding, demonstrating that no obstacle is insurmountable.",
-    "founder2.name": "SRILATHA ILANGO – FOUNDER AND TRUSTEE",
-    "founder2.bio": "An advocate for women’s empowerment and strategic impact, Srilatha Ilango leads with both empathy and precision. She ensures the flawless execution of training and media initiatives across the foundation’s multiple verticals.",
-    "supportTitle": "WHAT WE NEED FROM YOU",
-    "supportDescription": "VIIF is authorised by the Government of India to receive CSR contributions. We are not seeking charity — we are seeking champions. Fund our flagship HopeLine Mental Health Centre, which will save lives daily. Support any of our scalable programmes designed to create long-lasting societal change. Initiate a CSR partnership or join our circle of monthly patrons. Every contribution is a lifeline. Every gift a declaration that emotional well-being matters.",
-    "donationTitle": "DONATION DETAILS (80G EXEMPT)",
-    "donation.icici": "ACCOUNT NAME : Vision Inspiring Ilango Foundation\nACCOUNT NO : 168001000906\nIFSC CODE : ICIC0001680\nBRANCH : Indira Nagar, Chennai\nSWIFT CODE : ICICINBBXXX",
-    "donation.axis": "ACCOUNT NO : 920010066165417\nIFSC CODE : UTIB0003492\nBRANCH : Ambattur Industrial Estate, Chennai\nSWIFT CODE : AXISINBB211",
-    "contactTitle": "REACH US TODAY",
-    "contactInfo": "+91 44 4331 3170\n+91 99419 54545\ninfo@viif.in\nNew No. 16, Old No. 12, 2nd Street, Ram Nagar, Velachery, Chennai – 600042\nLET US NOT WAIT FOR THE NEXT CRISIS. LET US ACT. LET US INSPIRE CHANGE — TODAY."
+  "Viif": {
+    "title": "INSPIRING ILANGO",
+    "subtitle1": "TRANSFORMING LIVES",
+    "subtitle2": "INSPIRING HOPES",
+    "about": {
+      "heading": "ABOUT THE FOUNDATION",
+      "description": "Vision Inspiring Ilango Foundation (VIIF) is a registered, non-profit, non-governmental organisation..."
+    },
+    "vision": {
+      "heading": "OUR VISION",
+      "text": "To radically transform lives affected by emotional trauma..."
+    },
+    "mission": {
+      "heading": "OUR MISSION",
+      "text": "To champion emotional empowerment through inspiring programmes..."
+    },
+    "why_now": {
+      "heading": "WHY THIS CANNOT WAIT",
+      "global": "More than 700,000 people die by suicide every year...",
+      "india": "India accounts for 20% of global suicide deaths...",
+      "economic": "Suicide and mental illness significantly reduce productivity..."
+    },
+    "shortage": {
+      "heading": "A DIRE SHORTAGE OF MENTAL HEALTH PROFESSIONALS",
+      "text": "India has only 0.75 psychiatrists per 100,000 people..."
+    },
+    "initiatives": {
+      "heading": "OUR FLAGSHIP INITIATIVES",
+      "list": [
+        "HopeLine – 24/7 Mental Health Centre",
+        "Inspitainment™ – Where Inspiration Meets Entertainment",
+        "Empowering Vision – Digital Literacy for the Visually Challenged",
+        "Rising Stars – Youth Personality Development",
+        "Live Life Campaigns – Mental Health Awareness",
+        "Speak Up – English for Empowerment",
+        "Empower Her – Women’s Well-being and Leadership",
+        "Emotional Wellness Clinics – Counselling & Group Therapy",
+        "Inspired Living – Talks and Performances",
+        "Breaking Free – Addiction Awareness and Recovery",
+        "Healthy Choices – Food and Mood Awareness",
+        "Holistic Health – Lifestyle and Mindfulness",
+        "Digital Wisdom – Smart Use of Technology",
+        "Smart Parenting",
+        "Hope Fund – Support for Ailing and Cancer Patients"
+      ]
+    },
+    "founders": {
+      "heading": "OUR FOUNDERS AND TRUSTEES",
+      "ilango": {
+        "name": "Dr Inspiring Ilango",
+        "role": "Founder & Managing Trustee",
+        "bio": "An international speaker, emotional intelligence consultant..."
+      },
+      "srilatha": {
+        "name": "Srilatha Ilango",
+        "role": "Founder and Trustee",
+        "bio": "An advocate for women’s empowerment and strategic impact..."
+      }
+    },
+    "donation": {
+      "heading": "WHAT WE NEED FROM YOU",
+      "text": "VIIF is authorised by the Government of India to receive CSR contributions...",
+      "accounts": [
+        {
+          "bank": "ICICI BANK",
+          "account_name": "Vision Inspiring Ilango Foundation",
+          "account_no": "168001000906",
+          "ifsc": "ICIC0001680",
+          "branch": "Indira Nagar, Chennai",
+          "swift": "ICICINBBXXX"
+        },
+        {
+          "bank": "AXIS BANK",
+          "account_no": "920010066165417",
+          "ifsc": "UTIB0003492",
+          "branch": "Ambattur Industrial Estate, Chennai",
+          "swift": "AXISINBB211"
+        }
+      ]
+    },
+    "contacts": {
+      "heading": "REACH US TODAY",
+      "phone1": "+91 44 4331 3170",
+      "phone2": "+91 99419 54545",
+      "email": "info@viif.in",
+      "address": "New No. 16, Old No. 12, 2nd Street, Ram Nagar, Velachery, Chennai – 600042"
+    },
+    "call_to_action": "LET US NOT WAIT FOR THE NEXT CRISIS. LET US ACT. LET US INSPIRE CHANGE — TODAY."
   },
 
   "about": {
