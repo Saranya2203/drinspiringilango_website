@@ -217,14 +217,54 @@ const Home = () => {
         </section>
 
         <section className="social" aria-label="Follow Dr. Ilango">
-          <h2>{t('social.heading')}</h2>
-          <div className="social-icons">
-            <a href="https://www.youtube.com/@InspiringIlango" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/inspiringilango?igsh=YXFzNHpyZmRiZzls" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/InspiringIlango" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-            <a href="https://www.linkedin.com/in/inspiringilango" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
-          </div>
-        </section>
+  <h2>{t('social.heading')}</h2>
+  <div className="social-icons">
+    <a href="https://www.youtube.com/IITVInspiringIlango" aria-label="YouTube">
+      <i className="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://www.instagram.com/inspiringilango/" aria-label="Instagram">
+      <i className="fab fa-instagram"></i>
+    </a>
+
+    <div className="dropdown" tabIndex="0">
+      <button className="dropdown-toggle" aria-label="More Facebook Pages">
+        <i className="fab fa-facebook-f"></i>
+      </button>
+      <div className="dropdown-menu">
+        <a
+          href="https://www.facebook.com/motivationalspeakers.inspiringilango"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook Page 1
+        </a>
+        <a
+          href="https://www.facebook.com/example2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook Page 2
+        </a>
+        <a
+          href="https://www.facebook.com/example3"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook Page 3
+        </a>
+      </div>
+    </div>
+
+    <a
+      href="https://www.linkedin.com/in/inspiring-ilango-40514935/"
+      aria-label="LinkedIn"
+    >
+      <i className="fab fa-linkedin"></i>
+    </a>
+  </div>
+</section>
+
 
         <section className="contact-prompt">
           <h2>{t('contact.heading')}</h2>

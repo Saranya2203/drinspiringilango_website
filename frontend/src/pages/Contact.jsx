@@ -70,10 +70,10 @@ const Contact = () => {
         <p><strong>{t('email_label')}:</strong> inspiringilango@gmail.com</p>
 
         <div className="social-links">
-          <a href="https://facebook.com/ilango" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-          <a href="https://twitter.com/ilango" target="_blank" rel="noreferrer"><FaTwitter /></a>
-          <a href="https://linkedin.com/in/ilango" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
-          <a href="https://www.instagram.com/inspiringilango?igsh=YXFzNHpyZmRiZzls" target="_blank" rel="noreferrer"><FaInstagram /></a>
+          <a href="https://www.facebook.com/motivationalspeakers.inspiringilango" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+          <a href="https://x.com/inspiringilango" target="_blank" rel="noreferrer"><FaTwitter /></a>
+          <a href="https://www.linkedin.com/in/inspiring-ilango-40514935/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+          <a href="https://www.instagram.com/inspiringilango/" target="_blank" rel="noreferrer"><FaInstagram /></a>
         </div>
 
         <div className="map-container">
