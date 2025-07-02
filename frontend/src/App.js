@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import Home from './pages/Home';
-import VIIF from './pages/VIIF';
+import VIIF from './pages/Viif';
 import AcePanacea from './pages/AcePanacea';
 import About from './pages/About';
 import Services from './pages/Services';
