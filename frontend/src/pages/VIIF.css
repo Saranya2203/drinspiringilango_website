@@ -1,0 +1,179 @@
+/* === Base Styles === */
+
+.viif-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Noto Sans', sans-serif;
+  color: #002244;
+  background-color: #f8f9fa;
+}
+
+.viif-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #001a33;
+}
+
+.viif-subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 16px 0;
+  color: #004080;
+}
+
+.viif-paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.viif-section {
+  margin-bottom: 40px;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.viif-highlight {
+  background: #002244;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+.viif-initiative-list {
+  list-style-type: decimal;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.viif-initiative-list li {
+  margin-bottom: 10px;
+}
+
+/* === Founders Section === */
+.viif-founders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.viif-founder-card {
+  flex: 1;
+  min-width: 280px;
+  background-color: #e6f0ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 64, 128, 0.1);
+}
+
+.viif-founder-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #002244;
+  margin-bottom: 8px;
+}
+
+/* === Donation Section === */
+
+.viif-donation-info {
+  background-color: #fff7e6;
+  padding: 20px;
+  border-left: 4px solid #ffa500;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.viif-bank-details {
+  margin-top: 10px;
+  padding-left: 10px;
+  font-family: monospace;
+}
+
+/* === Contact Section === */
+
+.viif-contact {
+  background-color: #eaf4ff;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.viif-contact p {
+  margin: 6px 0;
+}
+
+.viif-contact a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.viif-contact a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive Typography === */
+
+@media (max-width: 1024px) {
+  .viif-heading {
+    font-size: 1.75rem;
+  }
+
+  .viif-subheading {
+    font-size: 1.3rem;
+  }
+
+  .viif-paragraph {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .viif-container {
+    padding: 16px;
+  }
+
+  .viif-heading {
+    font-size: 1.5rem;
+  }
+
+  .viif-subheading {
+    font-size: 1.2rem;
+  }
+
+  .viif-paragraph {
+    font-size: 0.9rem;
+  }
+
+  .viif-founders {
+    flex-direction: column;
+  }
+
+  .viif-donation-info {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .viif-heading {
+    font-size: 1.25rem;
+  }
+
+  .viif-subheading {
+    font-size: 1.1rem;
+  }
+
+  .viif-paragraph {
+    font-size: 0.85rem;
+  }
+
+  .viif-founder-name {
+    font-size: 1rem;
+  }
+}
