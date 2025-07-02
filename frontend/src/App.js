@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import Home from './pages/Home';
+import VIIF from './pages/VIIF';
+import AcePanacea from './pages/AcePanacea';
 import About from './pages/About';
 import Services from './pages/Services';
 import Blogs from './pages/Blogs';
@@ -31,6 +33,8 @@ function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
+          <Route path="/viif" element={<VIIF />} />
+          <Route path="/ace-panacea" element={<AcePanacea />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/blogs" element={<Blogs />} />

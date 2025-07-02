@@ -19,18 +19,20 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="footer-links">
-          <h4>{t('footer.links.heading')}</h4>
-          <ul>
-            <li><Link to="/">{t('footer.links.home')}</Link></li>
-            <li><Link to="/about">{t('footer.links.about')}</Link></li>
-            <li><Link to="/services">{t('footer.links.services')}</Link></li>
-            <li><Link to="/events">{t('footer.links.events')}</Link></li>
-            <li><Link to="/blogs">{t('footer.links.blogs')}</Link></li>
-            <li><Link to="/contact">{t('footer.links.contact')}</Link></li>
-            <li><Link to="/membership">{t('footer.links.membership')}</Link></li>
-            <li><Link to="/Admin">{t('footer.links.admin')}</Link></li>
-          </ul>
-        </div>
+  <h4>{t('footer.links.heading')}</h4>
+  <ul>
+    <li><Link to="/">{t('footer.links.home')}</Link></li>
+    <li><Link to="/viif">VIIF</Link></li>
+    <li><Link to="/ace-panacea">Ace Panacea Life Skills Private Limited</Link></li>
+    <li><Link to="/about">{t('footer.links.about')}</Link></li>
+    <li><Link to="/services">{t('footer.links.services')}</Link></li>
+    <li><Link to="/events">{t('footer.links.events')}</Link></li>
+    <li><Link to="/blogs">{t('footer.links.blogs')}</Link></li>
+    <li><Link to="/contact">{t('footer.links.contact')}</Link></li>
+    <li><Link to="/membership">{t('footer.links.membership')}</Link></li>
+    <li><Link to="/admin">{t('footer.links.admin')}</Link></li>
+  </ul>
+</div>
 
         {/* Contact Information */}
         <div className="footer-contact">

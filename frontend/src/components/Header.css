@@ -113,3 +113,67 @@
     display: flex;
   }
 }
+
+/* ========== SUBMENU STYLES ========== */
+
+.nav-item {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 220px;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 16px;
+  color: #002244;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show submenu on hover (desktop only) */
+@media (min-width: 769px) {
+  .nav-item:hover .submenu {
+    display: block;
+  }
+}
+
+/* Mobile submenu styles (dropdown toggle support) */
+@media (max-width: 768px) {
+  .submenu {
+    position: static;
+    display: none;
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+
+  .nav-item.open .submenu {
+    display: block;
+  }
+
+  .submenu a {
+    color: #ffffff;
+    padding: 8px 12px;
+  }
+
+  .submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

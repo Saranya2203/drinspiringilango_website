@@ -7,7 +7,9 @@
     "navEvents": "Events",
     "navContact": "Contact",
     "navMembership": "Membership",
-    "navAdmin": "Admin"
+    "navAdmin": "Admin",
+    "navVIIF": "VIIF",
+    "navAcePanacea": "ஏஸ் பனாசியா லைஃப் ஸ்கில்ஸ் ப்ரைவேட் லிமிடெட்"
   },
   "hero": {
     "title": "Dr. Inspiring Ilango",
@@ -105,6 +107,8 @@
     "links": {
       "heading": "Quick Links",
       "home": "Home",
+      "viif": "VIIF",
+      "acePanacea": "Ace Panacea Life Skills Pvt. Ltd.",
       "about": "About",
       "services": "Services",
       "events": "Events",

@@ -19,16 +19,22 @@ const Header = () => {
         </div>
 
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <Link to="/">{t('header.navHome')}</Link>
-          <Link to="/about">{t('header.navAbout')}</Link>
-          <Link to="/services">{t('header.navServices')}</Link>
-          <Link to="/blogs">{t('header.navBlogs')}</Link>
-          <Link to="/events">{t('header.navEvents')}</Link>
-          <Link to="/contact">{t('header.navContact')}</Link>
-          <Link to="/membership">{t('header.navMembership')}</Link>
-          <Link to="/admin">{t('header.navAdmin')}</Link>
-          <div className="mobile-language"><LanguageSwitcher /></div>
-        </div>
+  <div className="nav-item">
+    <Link to="/">{t('header.navHome')}</Link>
+    <div className="submenu">
+      <Link to="/viif">VIIF</Link>
+      <Link to="/ace-panacea">Ace Panacea Life Skills Private Limited</Link>
+    </div>
+  </div>
+  <Link to="/about">{t('header.navAbout')}</Link>
+  <Link to="/services">{t('header.navServices')}</Link>
+  <Link to="/blogs">{t('header.navBlogs')}</Link>
+  <Link to="/events">{t('header.navEvents')}</Link>
+  <Link to="/contact">{t('header.navContact')}</Link>
+  <Link to="/membership">{t('header.navMembership')}</Link>
+  <Link to="/admin">{t('header.navAdmin')}</Link>
+  <div className="mobile-language"><LanguageSwitcher /></div>
+</div>
 
         <div className="right-section">
           <div className="desktop-language"><LanguageSwitcher /></div>
