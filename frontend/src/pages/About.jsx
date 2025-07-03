@@ -43,7 +43,7 @@ const About = () => {
             aria-label={t('about.videoLabel', 'Introduction video of Dr. Ilango')}
             className="intro-video"
           >
-            <source src="/assets/Dr_Ilango_Global_Leader.mp4" type="video/mp4" />
+            <source src="/assets/About_InspiringIlango.mp4" type="video/mp4" />
             <track
               src="/videos/intro-captions.vtt"
               kind="captions"

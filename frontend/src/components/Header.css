@@ -1,3 +1,6 @@
+/* ===========================
+   Main Header Styles
+=========================== */
 .main-header {
   font-family: 'Noto Sans', sans-serif;
   background: linear-gradient(90deg, #001a33, #002244);
@@ -19,15 +22,20 @@
   flex-wrap: wrap;
 }
 
+/* ===========================
+   Logo
+=========================== */
 .logo img {
   height: 80px;
   transition: transform 0.3s ease;
 }
-
 .logo img:hover {
   transform: scale(1.1);
 }
 
+/* ===========================
+   Navigation Links
+=========================== */
 .nav-links {
   display: flex;
   flex: 1;
@@ -52,6 +60,9 @@
   box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
 }
 
+/* ===========================
+   Right Section (Language + Hamburger)
+=========================== */
 .right-section {
   display: flex;
   align-items: center;
@@ -66,14 +77,13 @@
   display: none;
 }
 
-/* Hamburger */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
   gap: 4px;
   cursor: pointer;
 }
-
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -81,7 +91,9 @@
   border-radius: 2px;
 }
 
-/* Responsive Styling */
+/* ===========================
+   Responsive Layout
+=========================== */
 @media (max-width: 768px) {
   .logo img {
     height: 60px;
@@ -114,12 +126,14 @@
   }
 }
 
-/* ---------- Updated Submenu Styles (Decorative & Responsive) ---------- */
-
+/* ===========================
+   Submenu Styling
+=========================== */
 .nav-item {
   position: relative;
   cursor: pointer;
 }
+
 .nav-link {
   color: #ffffff;
   font-size: 18px;
@@ -129,8 +143,12 @@
   display: block;
 }
 
+.nav-item .arrow {
+  margin-left: 6px;
+  font-size: 0.7em;
+}
 
-/* Submenu - Default (Hidden) */
+/* Submenu (hidden by default) */
 .submenu {
   display: none;
   position: absolute;
@@ -159,14 +177,15 @@
   transition: background-color 0.3s ease, padding-left 0.3s ease;
   border-left: 4px solid transparent;
 }
-
 .submenu a:hover {
   background-color: #e9f0ff;
   padding-left: 22px;
   border-left: 4px solid #002244;
 }
 
-/* Desktop Hover to Show Submenu */
+/* ===========================
+   Desktop Hover Show Submenu
+=========================== */
 @media (min-width: 769px) {
   .nav-item:hover .submenu {
     display: block;
@@ -176,15 +195,16 @@
   }
 }
 
-/* ---------- Mobile Support for Submenu Dropdown ---------- */
+/* ===========================
+   Mobile Submenu Toggle
+=========================== */
 @media (max-width: 768px) {
   .nav-item {
     width: 100%;
   }
 
-  .submenu {
+  .nav-item .submenu {
     position: static;
-    display: none;
     background: none;
     box-shadow: none;
     border-radius: 0;
@@ -211,10 +231,3 @@
     border-left: 3px solid #ffffff;
   }
 }
-/* For mobile submenu toggle */
-@media (max-width: 768px) {
-  .nav-item.open .submenu {
-    display: block;
-  }
-}
-
