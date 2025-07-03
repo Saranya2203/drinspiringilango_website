@@ -253,22 +253,22 @@
 }
 
 /* --- VIIF Fundraising Section --- */
-.viif-section {
+.Viif-section {
   background-color: #f2fbff;
   padding: 3rem 2rem;
   text-align: center;
 }
-.viif-section h2 {
+.Viif-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-.viif-section p {
+.Viif-section p {
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto 2rem;
   color: #333;
 }
-.viif-section video {
+.Viif-section video {
   width: 100%;
   max-width: 720px;
   border-radius: 12px;
@@ -318,13 +318,13 @@
 
 /* --- Responsive Styles for Small Screens --- */
 @media (max-width: 768px) {
-  .viif-section h2,
+  .Viif-section h2,
   .endorsements h2,
   .gratitude-wall h2 {
     font-size: 1.6rem;
   }
 
-  .viif-section p,
+  .Viif-section p,
   .endorsements p {
     font-size: 1rem;
   }
@@ -339,9 +339,7 @@
     max-width: 300px;
     margin: 0 auto;
   }
-
-  
-  .viif-section video {
+.Viif-section video {
     max-width: 100%;
     height: auto;
   }
@@ -355,7 +353,7 @@
     padding: 0.6rem 1.2rem;
   }
 
-  .viif-section h2,
+  .Viif-section h2,
   .endorsements h2{
     font-size: 1.4rem;
   }

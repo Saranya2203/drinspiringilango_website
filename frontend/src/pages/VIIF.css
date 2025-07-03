@@ -1,5 +1,5 @@
 /* General Container */
-.Viif-container {
+.viif-container {
   font-family: 'Noto Sans', sans-serif;
   padding: 2rem 1rem;
   max-width: 1200px;
@@ -10,7 +10,7 @@
 }
 
 /* Section Styling */
-.Viif-container section {
+.viif-container section {
   margin-bottom: 3rem;
 }
 
@@ -28,7 +28,7 @@
 }
 
 /* Section Headings */
-.Viif-container h2 {
+.viif-container h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #004080;
@@ -36,8 +36,8 @@
   padding-left: 10px;
 }
 
-.Viif-container p,
-.Viif-container li {
+.viif-container p,
+.viif-container li {
   font-size: 1rem;
   color: #333;
 }
@@ -111,11 +111,11 @@
     font-size: 2rem;
   }
 
-  .Viif-container h2 {
+  .viif-container h2 {
     font-size: 1.5rem;
   }
 
-  .Viif-container {
+  .viif-container {
     padding: 1rem;
   }
 
@@ -142,11 +142,11 @@
     font-size: 1rem;
   }
 
-  .Viif-container h2 {
+  .viif-container h2 {
     font-size: 1.3rem;
   }
 
-  .Viif-container p, .Viif-container li {
+  .viif-container p, .viif-container li {
     font-size: 0.95rem;
   }
 

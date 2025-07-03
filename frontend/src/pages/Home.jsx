@@ -146,7 +146,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="viif-section">
+        <section className="Viif-section">
   <h2>{t('viif.heading')}</h2>
   <p>{t('viif.description')}</p>
 

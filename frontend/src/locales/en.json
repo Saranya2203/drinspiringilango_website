@@ -58,7 +58,7 @@
       "Inspiring Ilango with students"
     ]
   },
-  "viif": {
+  "Viif": {
     "heading": "Support the Mission",
     "description": "The Vision Inspiring Ilango Foundation (VIIF) is launching the Hope-Giving Cylinder Technician project to prevent suicides across India.",
     "donate": {
@@ -124,7 +124,7 @@
       "location": "Location: No: 16 600042, 12, Srinivasa Nagar 2nd St, Ram Nagar, Devi Karumariamman Nagar, Mohanpuri, Velachery, Chennai, Tamil Nadu 600042"
     }
   },
-  "Viif": {
+  "viif": {
     "title": "INSPIRING ILANGO",
     "subtitle1": "TRANSFORMING LIVES",
     "subtitle2": "INSPIRING HOPES",
@@ -213,7 +213,6 @@
     },
     "call_to_action": "LET US NOT WAIT FOR THE NEXT CRISIS. LET US ACT. LET US INSPIRE CHANGE — TODAY."
   },
-
   "about": {
     "title": "About Dr. Inspiring Ilango",
     "meta": {

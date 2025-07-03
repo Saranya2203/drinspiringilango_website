@@ -9,7 +9,7 @@ const VIIF = () => {
   const accounts = t("viif.donation.accounts", { returnObjects: true });
 
   return (
-    <div className="Viif-container">
+    <div className="viif-container">
       <section className="viif-header">
         <h1>{t("viif.title")}</h1>
         <h2>{t("viif.subtitle1")}</h2>
