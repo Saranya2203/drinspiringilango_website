@@ -48,6 +48,135 @@
       "description": "Empowers individuals to unlock potential, overcome barriers, and achieve personal and professional breakthroughs through guided mentorship."
     }
   },
+  "ace": {
+    "title": "Ace Panacea Life Skills Private Limited",
+    "tagline": "Strategic Communication | Emotional Intelligence | Transformational Inspiration",
+
+    "intro": {
+      "heading": "Welcome",
+      "description1": "If you are seeking a single, trusted partner to elevate your organisation’s communication proficiency, emotional culture, people development, and brand presence — your search ends here.",
+      "description2": "Ace Panacea Life Skills Private Limited offers measurable, impactful, and sustainable transformation through expert-led training, consultancy, infotainment, and media production services.",
+      "description3": "We empower, we inspire, we connect your message to minds and hearts — online or in person."
+    },
+
+    "vision": {
+      "title": "Our Vision",
+      "text": "A world enriched by heart and idea, uplifted by truth and world media. With wisdom as our constant panacea, we nurture humanity — we are Ace Panacea."
+    },
+
+    "mission": {
+      "title": "Our Mission",
+      "text": "To stir each soul, unlock each mind, through every word, performance, and frame we find. To train, to teach, to touch with grace — and transform the world through Ace Panacea’s embrace."
+    },
+
+    "about": {
+      "title": "About Us",
+      "description1": "Founded in 2009, Ace Panacea Life Skills Private Limited has become a national beacon in human-resource development, emotional intelligence, and transformative communication.",
+      "description2": "We design bespoke modules with cultural sensitivity, emotional resonance, and international relevance.",
+      "description3": "Our certified trainers, creative artistes, and award-winning media professionals serve your institution’s growth with integrity and impact."
+    },
+
+    "leadership": {
+      "title": "Leadership You Can Trust",
+      "founder": {
+        "name": "Dr. Inspiring Ilango - Founder & Managing Director",
+        "bio": "An international speaker, emotional intelligence consultant, bestselling author, and vocalist, Dr. Ilango is a visionary who turned his visual disability into a global mission of empowerment. He holds world records in deep-sea diving and solo paragliding, and inspires through action."
+      },
+      "executive": {
+        "name": "Srilatha Ilango - Executive Director",
+        "bio": "An advocate for women’s empowerment and strategic implementation, she ensures excellence across training and media. She also serves as Trustee of the Vision Inspiring Ilango Foundation, championing mental health awareness and social equity."
+      }
+    },
+
+    "services": {
+      "title": "Our Core Services",
+      "list": {
+        "1": {
+          "title": "1. English Communication Training — ECE with Ace",
+          "description": "A 200-hour, globally benchmarked programme helping learners speak fluently, write professionally, and present persuasively — for professionals, departments, and institutions."
+        },
+        "2": {
+          "title": "2. Personality Development Training",
+          "description": "A practical journey to build confidence, communication finesse, emotional balance, and self-leadership for individuals across ages and roles."
+        },
+        "3": {
+          "title": "3. Inspitainment — A Signature Upliftment Experience",
+          "description": "An immersive 2.5–3-hour live event featuring real-life insights, performances, and magic — crafted to move and motivate audiences in schools, corporations, or retreats."
+        },
+        "4": {
+          "title": "4. Motivational Speaking by Dr. Inspiring Ilango",
+          "description": "Tailored speeches in English or Tamil that spark courage, deepen awareness, and inspire leadership — for students, teams, and changemakers."
+        },
+        "5": {
+          "title": "5. Emotional Intelligence Workshops & Retainership",
+          "description": "One-time workshops and monthly retainerships for lasting emotional literacy and compassionate leadership across institutions."
+        },
+        "6": {
+          "title": "6. Professional Audio-Video Production",
+          "description": "From campaign videos to training films, we produce content that enhances branding, awareness, and education — both online and offline."
+        },
+        "7": {
+          "title": "7. Voice Artistry by Dr. Inspiring Ilango",
+          "description": "A trusted voice for campaigns, audiobooks, documentaries, and public messaging — chosen for authenticity over AI narration."
+        }
+      }
+    },
+
+    "additional": {
+      "title": "Additional Solutions for Holistic Growth",
+      "items": [
+        "Public Speaking and Presentation Coaching",
+        "Leadership Voice and Presence Training",
+        "IELTS, TOEFL, GRE, GMAT Preparation",
+        "Institutional Mentorship Programmes",
+        "Faculty Development for Academic Institutions",
+        "SEL Programmes for Schools",
+        "School-to-College Transition Modules",
+        "Exam Readiness & Stress Management",
+        "Interview and Resume Coaching"
+      ]
+    },
+
+    "custom": {
+      "title": "Our Assurance of Customisation",
+      "description": "We never offer one-size-fits-all training. Every engagement begins with a deep understanding of your people, goals, and context — and results in a tailored transformation."
+    },
+
+    "recommendation": {
+      "title": "What We Recommend for You",
+      "steps": [
+        "Sign an MoU with Ace Panacea Life Skills Private Limited.",
+        "Appoint Dr. Inspiring Ilango as your Emotional Intelligence Consultant on a monthly basis.",
+        "Deploy our English Communication & Personality Development trainings across your teams.",
+        "Host an Inspitainment™ event for your community.",
+        "Commission our media team for your branding and training films.",
+        "Use Inspiring Ilango’s voice for high-impact messaging."
+      ]
+    },
+
+    "invite": {
+      "title": "Let’s Begin the Journey",
+      "items": [
+        "English Communication & Life Skills Training",
+        "Inspitainment™ Events",
+        "Motivational Speaking (English/Tamil)",
+        "Emotional Intelligence Workshops & Retainerships",
+        "Voice Artistry for Campaigns",
+        "Audio-Video Production",
+        "Social Impact & Mental Health Projects"
+      ]
+    },
+
+    "contact": {
+      "title": "Contact Us",
+      "landline": "Landline: +91 44 4331 3170",
+      "mobile": "Mobile: +91 99419 54545",
+      "email1": { "label": "Email: admin09@acea2z.com" },
+      "email2": { "label": "Email: inspiringilango@inspiringilango.com" },
+      "address": "New No. 16, Old No. 12, Second Street, Ram Nagar, Velachery, Chennai - 600042, Tamil Nadu, India"
+    }
+  },
+
   "gallery": {
     "heading": "Moments Captured",
     "images": [
