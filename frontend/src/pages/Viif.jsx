@@ -84,12 +84,12 @@ const VIIF = () => {
         ))}
       </section>
 
-      <section className="viif-contact">
-        <h2>{t("viif.contact.heading")}</h2>
-        <p>📞 {t("viif.contact.phone1")}</p>
-        <p>📞 {t("viif.contact.phone2")}</p>
-        <p>📧 {t("viif.contact.email")}</p>
-        <p>📍 {t("viif.contact.address")}</p>
+      <section className="viif-contacts">
+        <h2>{t("viif.contacts.heading")}</h2>
+        <p>📞 {t("viif.contacts.phone1")}</p>
+        <p>📞 {t("viif.contacts.phone2")}</p>
+        <p>📧 {t("viif.contacts.email")}</p>
+        <p>📍 {t("viif.contacts.address")}</p>
       </section>
 
       <section className="viif-cta">

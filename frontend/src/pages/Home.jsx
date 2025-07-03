@@ -147,8 +147,8 @@ const Home = () => {
         </section>
 
         <section className="Viif-section">
-  <h2>{t('viif.heading')}</h2>
-  <p>{t('viif.description')}</p>
+  <h2>{t('Viif.heading')}</h2>
+  <p>{t('Viif.description')}</p>
 
   <video
     className="viif-video"
@@ -166,13 +166,13 @@ const Home = () => {
 
   <div className="donate-buttons">
     <button onClick={() => window.open('https://buy.stripe.com/test_xxx', '_blank')}>
-      {t('viif.donate.stripe')}
+      {t('Viif.donate.stripe')}
     </button>
     <button onClick={() => window.open('https://paypal.me/inspiringilango', '_blank')}>
-      {t('viif.donate.paypal')}
+      {t('Viif.donate.paypal')}
     </button>
     <button onClick={() => window.open('https://rzp.io/l/inspiringilango', '_blank')}>
-      {t('viif.donate.razorpay')}
+      {t('Viif.donate.razorpay')}
     </button>
   </div>
 </section>
