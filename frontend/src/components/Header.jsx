@@ -31,19 +31,16 @@ const Header = () => {
 
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           {/* HOME with submenu */}
-          <div
-            className={`nav-item home-dropdown ${isSubMenuOpen ? 'open' : ''}`}
-            onClick={() => setSubMenuOpen(!isSubMenuOpen)}
-          >
-            <span className="nav-link home-link" onClick={handleHomeClick}>
-              {t('header.navHome')} <span className="arrow">▼</span>
-            </span>
-
-            <div className="submenu">
-              <Link to="/viif">{t('header.navVIIF')}</Link>
-              <Link to="/ace-panacea">{t('header.navAcePanacea')}</Link>
-            </div>
-          </div>
+          <div className={`nav-item ${isSubMenuOpen ? 'open' : ''}`}>
+  <div className="nav-link-with-toggle">
+    <Link to="/" className="nav-link">{t('header.navHome')}</Link>
+    <span className="submenu-toggle" onClick={() => setSubMenuOpen(!isSubMenuOpen)}>▼</span>
+  </div>
+  <div className="submenu">
+    <Link to="/viif">{t('header.navVIIF')}</Link>
+    <Link to="/ace-panacea">{t('header.navAcePanacea')}</Link>
+  </div>
+</div>
 
           {/* Other links */}
           <Link to="/about" onClick={() => setMenuOpen(false)}>{t('header.navAbout')}</Link>

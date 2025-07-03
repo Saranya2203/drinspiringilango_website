@@ -231,3 +231,17 @@
     border-left: 3px solid #ffffff;
   }
 }
+.nav-link-with-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submenu-toggle {
+  font-size: 0.8rem;
+  padding: 4px;
+  cursor: pointer;
+  user-select: none;
+}
