@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import './Header.css';
@@ -7,25 +7,38 @@ import logo from '../Log.png';
 
 const Header = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isSubMenuOpen, setSubMenuOpen] = useState(false); // 👈 submenu toggle
+  const [isSubMenuOpen, setSubMenuOpen] = useState(false);
+
+  const handleHomeClick = (e) => {
+    e.stopPropagation(); // prevent submenu toggle
+    setMenuOpen(false);  // close mobile menu
+    setSubMenuOpen(false); // close submenu
+    navigate('/');       // go to Home
+  };
 
   return (
     <header className="main-header">
       <div className="container">
         <div className="left-section">
           <div className="logo">
-            <img src={logo} alt="Site Logo" />
+            <Link to="/">
+              <img src={logo} alt="Site Logo" />
+            </Link>
           </div>
         </div>
 
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          {/* Home with submenu */}
+          {/* HOME with submenu */}
           <div
-            className={`nav-item ${isSubMenuOpen ? 'open' : ''}`}
+            className={`nav-item home-dropdown ${isSubMenuOpen ? 'open' : ''}`}
             onClick={() => setSubMenuOpen(!isSubMenuOpen)}
           >
-            <span className="nav-link">{t('header.navHome')} ▼</span>
+            <span className="nav-link home-link" onClick={handleHomeClick}>
+              {t('header.navHome')} <span className="arrow">▼</span>
+            </span>
+
             <div className="submenu">
               <Link to="/viif">{t('header.navVIIF')}</Link>
               <Link to="/ace-panacea">{t('header.navAcePanacea')}</Link>
@@ -33,18 +46,24 @@ const Header = () => {
           </div>
 
           {/* Other links */}
-          <Link to="/about">{t('header.navAbout')}</Link>
-          <Link to="/services">{t('header.navServices')}</Link>
-          <Link to="/blogs">{t('header.navBlogs')}</Link>
-          <Link to="/events">{t('header.navEvents')}</Link>
-          <Link to="/contact">{t('header.navContact')}</Link>
-          <Link to="/membership">{t('header.navMembership')}</Link>
-          <Link to="/admin">{t('header.navAdmin')}</Link>
-          <div className="mobile-language"><LanguageSwitcher /></div>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>{t('header.navAbout')}</Link>
+          <Link to="/services" onClick={() => setMenuOpen(false)}>{t('header.navServices')}</Link>
+          <Link to="/blogs" onClick={() => setMenuOpen(false)}>{t('header.navBlogs')}</Link>
+          <Link to="/events" onClick={() => setMenuOpen(false)}>{t('header.navEvents')}</Link>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>{t('header.navContact')}</Link>
+          <Link to="/membership" onClick={() => setMenuOpen(false)}>{t('header.navMembership')}</Link>
+          <Link to="/admin" onClick={() => setMenuOpen(false)}>{t('header.navAdmin')}</Link>
+
+          {/* Language Switcher for mobile */}
+          <div className="mobile-language">
+            <LanguageSwitcher />
+          </div>
         </div>
 
         <div className="right-section">
-          <div className="desktop-language"><LanguageSwitcher /></div>
+          <div className="desktop-language">
+            <LanguageSwitcher />
+          </div>
           <div className="hamburger" onClick={() => setMenuOpen(!isMenuOpen)}>
             <span></span>
             <span></span>
