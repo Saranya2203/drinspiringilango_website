@@ -11,13 +11,6 @@ const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
 
-  const handleHomeClick = (e) => {
-    e.stopPropagation(); // prevent submenu toggle
-    setMenuOpen(false);  // close mobile menu
-    setSubMenuOpen(false); // close submenu
-    navigate('/');       // go to Home
-  };
-
   return (
     <header className="main-header">
       <div className="container">
