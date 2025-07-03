@@ -7,33 +7,49 @@ import logo from '../Log.png';
 
 const Header = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    // Navigate to homepage and optionally close submenu
+    navigate('/');
+    setSubMenuOpen(false);
+    setMenuOpen(false); // also close main menu on mobile
+  };
 
   return (
     <header className="main-header">
       <div className="container">
+        {/* Logo */}
         <div className="left-section">
-          <div className="logo">
-            <Link to="/">
-              <img src={logo} alt="Site Logo" />
-            </Link>
+          <div className="logo" onClick={handleHomeClick} style={{ cursor: 'pointer' }}>
+            <img src={logo} alt="Site Logo" />
           </div>
         </div>
 
+        {/* Navigation Links */}
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          {/* HOME with submenu */}
-          <div className={`nav-item ${isSubMenuOpen ? 'open' : ''}`}>
-  <div className="nav-link-with-toggle">
-    <Link to="/" className="nav-link">{t('header.navHome')}</Link>
-    <span className="submenu-toggle" onClick={() => setSubMenuOpen(!isSubMenuOpen)}>▼</span>
-  </div>
-  <div className="submenu">
-    <Link to="/viif">{t('header.navVIIF')}</Link>
-    <Link to="/ace-panacea">{t('header.navAcePanacea')}</Link>
-  </div>
-</div>
+          {/* Home with submenu */}
+          <div
+            className={`nav-item ${isSubMenuOpen ? 'open' : ''}`}
+            onClick={() => setSubMenuOpen(!isSubMenuOpen)}
+          >
+            <span className="nav-link">
+              {t('header.navHome')} ▼
+            </span>
+            <div className="submenu">
+              <Link to="/" onClick={handleHomeClick}>
+                {t('header.navHomepage')}
+              </Link>
+              <Link to="/viif" onClick={() => setMenuOpen(false)}>
+                {t('header.navVIIF')}
+              </Link>
+              <Link to="/ace-panacea" onClick={() => setMenuOpen(false)}>
+                {t('header.navAcePanacea')}
+              </Link>
+            </div>
+          </div>
 
           {/* Other links */}
           <Link to="/about" onClick={() => setMenuOpen(false)}>{t('header.navAbout')}</Link>
@@ -44,12 +60,13 @@ const Header = () => {
           <Link to="/membership" onClick={() => setMenuOpen(false)}>{t('header.navMembership')}</Link>
           <Link to="/admin" onClick={() => setMenuOpen(false)}>{t('header.navAdmin')}</Link>
 
-          {/* Language Switcher for mobile */}
+          {/* Mobile Language Switcher */}
           <div className="mobile-language">
             <LanguageSwitcher />
           </div>
         </div>
 
+        {/* Right Section: Language and Hamburger */}
         <div className="right-section">
           <div className="desktop-language">
             <LanguageSwitcher />
