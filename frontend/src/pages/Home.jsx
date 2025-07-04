@@ -158,11 +158,13 @@ const Home = () => {
   loop
   preload="auto"
   controls
+  poster="/assets/video-poster.jpg"
   aria-label={t('home.videoLabel', 'VIIF Fundraising Video')}
 >
   <source src="/assets/Be_the_Hope_Save_a_Life.mp4" type="video/mp4" />
   <p>{t('videoIntro.noSupport', 'Your browser does not support the video tag.')}</p>
 </video>
+
 
   <div className="donate-buttons">
     <button onClick={() => window.open('https://buy.stripe.com/test_xxx', '_blank')}>
