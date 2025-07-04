@@ -548,85 +548,80 @@
       "none": "No upcoming events found."
     }
   },
-"membership": {
-    "title": "Join Our Membership Program",
-    "subtitle": "Choose the right plan and unlock exclusive benefits",
-    "plans": {
-      "basic": {
-        "title": "Basic",
-        "price": "₹499 / month",
-        "features": [
-          "Access to weekly webinars",
-          "Monthly motivation sessions",
-          "Email newsletter"
-        ]
-      },
-      "premium": {
-        "title": "Premium",
-        "price": "₹999 / month",
-        "features": [
-          "All Basic features",
-          "1-on-1 Coaching (Monthly)",
-          "Exclusive eBooks & Resources"
-        ]
-      },
-      "elite": {
-        "title": "Elite",
-        "price": "₹1999 / month",
-        "features": [
-          "All Premium features",
-          "Weekly Personal Coaching",
-          "Priority Email Support",
-          "Custom Goal Roadmaps"
-        ]
-      },
-      "button": "Join via Calendly"
-    },
-    "benefitsTitle": "Why Join Our Membership?",
+
+  "membership": {
+    "title": "Membership Plans",
+    "subtitle": "Choose the right plan that fits your goals.",
+    "benefitsTitle": "Membership Benefits",
     "benefits": [
-      "Boost your emotional intelligence",
-      "Connect with a global like-minded community",
-      "Personal and professional growth tools"
+      "Access to expert-led sessions",
+      "Personalized fitness & diet plans",
+      "24/7 support and guidance",
+      "Progress tracking dashboard",
+      "Exclusive member resources"
     ],
-    "comparisonTitle": "Compare Plans",
-    "comparison": {
-      "features": "Features",
-      "weeklyWebinars": "Weekly Webinars",
-      "coaching": "1-on-1 Coaching",
-      "ebooks": "Exclusive eBooks",
-      "support": "Priority Support",
-      "yes": "✔",
-      "no": "✖",
-      "monthly": "Monthly",
-      "weekly": "Weekly"
+    "cta": {
+      "title": "Ready to Transform Your Life?",
+      "description": "Book a free consultation to find your perfect plan.",
+      "button": "Book Now"
     },
     "faqTitle": "Frequently Asked Questions",
     "faq": [
       {
-        "question": "Can I cancel anytime?",
-        "answer": "Yes, you can cancel your membership anytime from your Calendly dashboard or by contacting us."
+        "question": "What is included in each membership plan?",
+        "answer": "Each plan includes expert coaching, fitness plans, nutrition guidance, and access to our member portal."
       },
       {
-        "question": "Do you offer a trial period?",
-        "answer": "Currently, we do not offer free trials, but you can explore our free content to get started."
+        "question": "Can I upgrade or cancel my plan later?",
+        "answer": "Yes, you can upgrade, downgrade, or cancel anytime with no extra charges."
+      },
+      {
+        "question": "Do I need to be at a certain fitness level?",
+        "answer": "No, our plans are tailored to your individual needs, whether you're a beginner or advanced."
       }
     ],
-    "testimonialsTitle": "What Members Say",
+    "plans": {
+      "basic": {
+        "title": "Basic",
+        "price": "$29/month",
+        "features": [
+          "Weekly check-ins",
+          "Customized workout plans",
+          "Basic diet suggestions"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "$59/month",
+        "features": [
+          "Everything in Basic",
+          "Personal trainer support",
+          "Advanced meal plans",
+          "Goal tracking dashboard"
+        ]
+      },
+      "elite": {
+        "title": "Elite",
+        "price": "$99/month",
+        "features": [
+          "Everything in Premium",
+          "Daily coaching calls",
+          "Exclusive app access",
+          "Priority support"
+        ]
+      }
+    },
     "testimonials": [
       {
-        "quote": "This program changed my mindset and career path. Dr. Ilango is incredibly motivating!",
-        "author": "- Priya R., Chennai"
+        "quote": "This membership changed my life. I’ve never felt more energized and motivated!",
+        "author": "Samantha R."
       },
       {
-        "quote": "Elite coaching is truly transformative. It feels tailored just for me.",
-        "author": "- Rahul S., Bangalore"
+        "quote": "Amazing support and tailored plans. I reached my fitness goals in 3 months.",
+        "author": "Raj K."
       }
-    ],
-    "cta": {
-      "title": "Ready to Transform Your Life?",
-      "text": "Pick your plan and begin your journey with Inspiring Ilango today!",
-      "button": "Choose Your Plan"
-    }
+    ]
   }
+
   }
   
