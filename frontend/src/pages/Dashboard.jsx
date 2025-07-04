@@ -175,33 +175,26 @@ const Dashboard = () => {
                 <button onClick={() => handleEdit(index)}>Edit</button>
                 <button onClick={() => handleDelete(index)}>Delete</button>
                 <a
-                  href={`https://www.facebook.com/motivationalspeakers.inspiringilango${encodeURIComponent(blog.image)}`}
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(blog.image)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Share on Facebook
                 </a>
                 <a
-                  href={`https://www.linkedin.com/in/inspiring-ilango-40514935/${encodeURIComponent(blog.image)}`}
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(blog.image)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Share on LinkedIn
                 </a>
                 <a
-                  href={`https://x.com/inspiringilango${encodeURIComponent(blog.title + ' - ' + blog.content)}&url=${encodeURIComponent(blog.image)}`}
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(blog.title + ' - ' + blog.content)}&url=${encodeURIComponent(blog.image)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Share on X
                 </a>
-                <a
-            href="https://www.instagram.com/inspiringilango/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit Instagram
-          </a>
               </div>
             </div>
           </div>
