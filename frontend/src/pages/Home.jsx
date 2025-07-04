@@ -167,7 +167,7 @@ const Home = () => {
 
 
   <div className="donate-buttons">
-    <button onClick={() => window.open('https://buy.stripe.com/test_xxx', '_blank')}>
+    <button onClick={() => window.open('https://buy.stripe.com/test_aFaaEZc7P3OY25T8SobAs01', '_blank')}>
       {t('Viif.donate.stripe')}
     </button>
     <button onClick={() => window.open('https://paypal.me/inspiringilango', '_blank')}>
