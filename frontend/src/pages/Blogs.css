@@ -66,6 +66,11 @@
   text-align: right;
   margin-top: 0.5rem;
 }
+.blog-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
 
 /* Responsive layout for mobile */
 @media (max-width: 768px) {

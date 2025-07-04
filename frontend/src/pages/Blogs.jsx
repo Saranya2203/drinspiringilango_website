@@ -43,6 +43,7 @@ const Blogs = () => {
             <div className="blog-card" key={index}>
               <img src={blog.image} alt={`Blog ${index}`} />
               <div className="blog-info">
+                <h3 className="blog-title">{blog.title}</h3>
                 <p className="blog-content">
                   {blog.content.length > 250
                     ? blog.content.slice(0, 250) + '...'
