@@ -473,21 +473,21 @@
   "title": "Download Our Brochures",
   "brochure1": {
     "title": "Brochure One",
-    "description": "Discover our primary service offerings.",
+    "description": "Inspiring Ilango Inspitainment",
     "download": "Download PDF",
-    "alt": "Cover of Brochure One"
+    "alt": "Cover of Inspiring Ilango Inspitainment"
   },
   "brochure2": {
     "title": "Brochure Two",
-    "description": "In-depth guide on consulting packages.",
+    "description": "Transforming Lives, Inspiring Hopes.",
     "download": "Download PDF",
-    "alt": "Cover of Brochure Two"
+    "alt": "Cover of transforming lives"
   },
   "brochure3": {
     "title": "Brochure Three",
-    "description": "Pricing and plans explained.",
+    "description": "Ace Panacea Life Skills Private Limited.",
     "download": "Download PDF",
-    "alt": "Cover of Brochure Three"
+    "alt": "Cover of Ace Panacea"
   }
 },
 
