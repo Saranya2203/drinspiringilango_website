@@ -151,18 +151,18 @@ const Home = () => {
   <p>{t('Viif.description')}</p>
 
   <video
-    className="viif-video"
-    muted
-    autoPlay
-    playsInline
-    loop
-    preload="auto"
-    controls
-    aria-label="VIIF Fundraising Video"
-  >
-    <source src="/assets/Be_the_Hope_Save_a_Life.mp4" type="video/mp4" />
-    {t('videoIntro.noSupport')}
-  </video>
+  className="viif-video"
+  muted
+  autoPlay
+  playsInline
+  loop
+  preload="auto"
+  controls
+  aria-label={t('home.videoLabel', 'VIIF Fundraising Video')}
+>
+  <source src="/assets/Be_the_Hope_Save_a_Life.mp4" type="video/mp4" />
+  <p>{t('videoIntro.noSupport', 'Your browser does not support the video tag.')}</p>
+</video>
 
   <div className="donate-buttons">
     <button onClick={() => window.open('https://buy.stripe.com/test_xxx', '_blank')}>
@@ -237,21 +237,21 @@ const Home = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Facebook Page 1
+          Inspiring Ilango
         </a>
         <a
-          href="https://www.facebook.com/example2"
+          href="https://www.facebook.com/inspiringilango"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Facebook Page 2
+          Inspiring Ilango_Visionary
         </a>
         <a
-          href="https://www.facebook.com/example3"
+          href="https://www.facebook.com/viifindia"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Facebook Page 3
+          VIIF
         </a>
       </div>
     </div>
