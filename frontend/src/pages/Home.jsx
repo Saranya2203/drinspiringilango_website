@@ -198,7 +198,7 @@ const Home = () => {
 
           <form
             className="newsletter-form"
-            action="https://YOUR_USERNAME.usX.list-manage.com/subscribe/post?u=YOUR_U_ID&amp;id=YOUR_LIST_ID"
+            action="https://inspiringilango.us6.list-manage.com/subscribe/post?u=8cd8c788be313786951a27cae&id=1389ade986"
             method="POST"
             target="_blank"
             noValidate
