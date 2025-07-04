@@ -258,64 +258,118 @@
     "title": "INSPIRING ILANGO",
     "subtitle1": "TRANSFORMING LIVES",
     "subtitle2": "INSPIRING HOPES",
+
     "about": {
       "heading": "ABOUT THE FOUNDATION",
-      "description": "Vision Inspiring Ilango Foundation (VIIF) is a registered, non-profit, non-governmental organisation..."
+      "description": "Vision Inspiring Ilango Foundation (VIIF) is a registered, non-profit, non-governmental organisation devoted to emotional empowerment, inclusive development, and life-changing training programmes. Co-founded by Dr Inspiring Ilango and Mrs Srilatha Ilango, VIIF serves as a sanctuary for individuals and communities navigating emotional crises, systemic neglect, or social disadvantage."
     },
+
     "vision": {
       "heading": "OUR VISION",
-      "text": "To radically transform lives affected by emotional trauma..."
+      "text": "To radically transform lives affected by emotional trauma, addiction, digital dependency, and internalised oppression. We envision a world grounded in dignity, emotional independence, equality, compassion, and universal human worth."
     },
+
     "mission": {
       "heading": "OUR MISSION",
-      "text": "To champion emotional empowerment through inspiring programmes..."
+      "text": "To champion emotional empowerment through inspiring programmes, accessible training, and compassionate intervention — especially for the visually challenged and emotionally vulnerable. Our mission is to make emotional freedom, mental clarity, and psychological resilience accessible to all."
     },
+
     "why_now": {
       "heading": "WHY THIS CANNOT WAIT",
-      "global": "More than 700,000 people die by suicide every year...",
-      "india": "India accounts for 20% of global suicide deaths...",
-      "economic": "Suicide and mental illness significantly reduce productivity..."
+      "global": "More than 700,000 people die by suicide every year — one every 40 seconds (WHO). Suicide is the third leading cause of death among people aged 15–29.",
+      "india": "India accounts for 20% of global suicide deaths. In 2021, 164,033 Indians died by suicide — a 7.2% rise from the previous year. Tamil Nadu alone reported 18,925 cases; Maharashtra led with 22,207.",
+      "economic": "Suicide and mental illness significantly reduce productivity and economic output. Tamil Nadu’s GDP is directly affected by mental health-related losses."
     },
+
     "shortage": {
       "heading": "A DIRE SHORTAGE OF MENTAL HEALTH PROFESSIONALS",
-      "text": "India has only 0.75 psychiatrists per 100,000 people..."
+      "text": "India has only 0.75 psychiatrists per 100,000 people — far below the global average of 3–6. Millions suffer without access to trained support."
     },
+
     "initiatives": {
       "heading": "OUR FLAGSHIP INITIATIVES",
+      "description": "All initiatives are scalable and ready for implementation with support from international donors, CSR leaders, institutions, and patrons.",
       "list": [
-        "HopeLine – 24/7 Mental Health Centre",
-        "Inspitainment™ – Where Inspiration Meets Entertainment",
-        "Empowering Vision – Digital Literacy for the Visually Challenged",
-        "Rising Stars – Youth Personality Development",
-        "Live Life Campaigns – Mental Health Awareness",
-        "Speak Up – English for Empowerment",
-        "Empower Her – Women’s Well-being and Leadership",
-        "Emotional Wellness Clinics – Counselling & Group Therapy",
-        "Inspired Living – Talks and Performances",
-        "Breaking Free – Addiction Awareness and Recovery",
-        "Healthy Choices – Food and Mood Awareness",
-        "Holistic Health – Lifestyle and Mindfulness",
-        "Digital Wisdom – Smart Use of Technology",
-        "Smart Parenting",
-        "Hope Fund – Support for Ailing and Cancer Patients"
+        {
+          "title": "1. HopeLine – 24/7 Mental Health Centre",
+          "description": "Round-the-clock emotional support and crisis intervention by trained mental health professionals."
+        },
+        {
+          "title": "2. Inspitainment™ – Where Inspiration Meets Entertainment",
+          "description": "Live events combining motivational talks, music, interactive experiences, and mental wellness takeaways."
+        },
+        {
+          "title": "3. Empowering Vision – Digital Literacy for the Visually Challenged",
+          "description": "Training in assistive technology, communication skills, and digital empowerment for the blind and visually impaired."
+        },
+        {
+          "title": "4. Rising Stars – Youth Personality Development",
+          "description": "A comprehensive programme nurturing emotional intelligence, English fluency, and leadership in underprivileged students."
+        },
+        {
+          "title": "5. Live Life Campaigns – Mental Health Awareness",
+          "description": "Outreach initiatives fostering resilience, optimism, and proactive mental wellness. Public speaking and communication programmes for marginalised rural and semi-urban communities."
+        },
+        {
+          "title": "6. Speak Up – English for Empowerment",
+          "description": "Confidence-building programmes to enhance spoken English skills for youth and underserved communities."
+        },
+        {
+          "title": "7. Empower Her – Women’s Well-being and Leadership",
+          "description": "Workshops and counselling for entrepreneurial development, assertiveness, and emotional strength in women."
+        },
+        {
+          "title": "8. Emotional Wellness Clinics – Counselling & Group Therapy",
+          "description": "Professional support for stress, anxiety, trauma, burnout, and emotional instability."
+        },
+        {
+          "title": "9. Inspired Living – Talks and Performances",
+          "description": "Engaging sessions by Dr Inspiring Ilango and other experts on purpose, emotional mastery, and hope."
+        },
+        {
+          "title": "10. Breaking Free – Addiction Awareness and Recovery",
+          "description": "Short films, workshops, and sessions addressing substance dependence and emotional healing."
+        },
+        {
+          "title": "11. Healthy Choices – Food and Mood Awareness",
+          "description": "Campaigns linking nutrition to emotional health and long-term wellness."
+        },
+        {
+          "title": "12. Holistic Health – Lifestyle and Mindfulness",
+          "description": "Workshops focused on sleep hygiene, fitness, mental clarity, and digital discipline."
+        },
+        {
+          "title": "13. Digital Wisdom – Smart Use of Technology",
+          "description": "Interactive sessions on healthy digital habits and responsible AI use for students and professionals."
+        },
+        {
+          "title": "14. Smart Parenting",
+          "description": "Guidance for raising emotionally intelligent, self-aware, and digitally safe children."
+        },
+        {
+          "title": "15. Hope Fund – Support for Ailing and Cancer Patients",
+          "description": "Financial assistance and emotional support for those battling life-threatening illness."
+        }
       ]
     },
+
     "founders": {
       "heading": "OUR FOUNDERS AND TRUSTEES",
       "ilango": {
         "name": "Dr Inspiring Ilango",
         "role": "Founder & Managing Trustee",
-        "bio": "An international speaker, emotional intelligence consultant..."
+        "bio": "An international speaker, emotional intelligence consultant, bestselling author, and self-trained vocalist, Dr Inspiring Ilango is a visionary who has transformed his visual disability into the cornerstone of his global impact. He holds world records in deep-sea diving and solo paragliding, demonstrating that no obstacle is insurmountable. As the living embodiment of resilience, he delivers far more than insight — he delivers inspiration in action. He is also the Founder & Managing Director of Ace Panacea Life Skills Private Limited, offering services in life skills training, purpose-driven entertainment, and meaningful audio and video productions."
       },
       "srilatha": {
         "name": "Srilatha Ilango",
         "role": "Founder and Trustee",
-        "bio": "An advocate for women’s empowerment and strategic impact..."
+        "bio": "An advocate for women’s empowerment and strategic impact, Srilatha Ilango leads with both empathy and precision. She ensures the flawless execution of training and media initiatives across the foundation’s multiple verticals. As Executive Director of Ace Panacea Life Skills Private Limited and Trustee of VIIF, she plays a pivotal role in advancing mental health awareness and social equity across India."
       }
     },
+
     "donation": {
       "heading": "WHAT WE NEED FROM YOU",
-      "text": "VIIF is authorised by the Government of India to receive CSR contributions...",
+      "text": "VIIF is authorised by the Government of India to receive CSR contributions. We are not seeking charity — we are seeking champions. Fund our flagship HopeLine Mental Health Centre, which will save lives daily. Support any of our scalable programmes designed to create long-lasting societal change. Initiate a CSR partnership or join our circle of monthly patrons. Every contribution is a lifeline. Every gift a declaration that emotional well-being matters.",
       "accounts": [
         {
           "bank": "ICICI BANK",
@@ -327,6 +381,7 @@
         },
         {
           "bank": "AXIS BANK",
+          "account_name": "Vision Inspiring Ilango Foundation",
           "account_no": "920010066165417",
           "ifsc": "UTIB0003492",
           "branch": "Ambattur Industrial Estate, Chennai",
@@ -334,6 +389,7 @@
         }
       ]
     },
+
     "contacts": {
       "heading": "REACH US TODAY",
       "phone1": "+91 44 4331 3170",
@@ -341,8 +397,10 @@
       "email": "info@viif.in",
       "address": "New No. 16, Old No. 12, 2nd Street, Ram Nagar, Velachery, Chennai – 600042"
     },
+
     "call_to_action": "LET US NOT WAIT FOR THE NEXT CRISIS. LET US ACT. LET US INSPIRE CHANGE — TODAY."
   },
+
   "about": {
     "title": "About Dr. Inspiring Ilango",
     "meta": {
