@@ -170,10 +170,10 @@ const Home = () => {
     <button onClick={() => window.open('https://buy.stripe.com/test_aFaaEZc7P3OY25T8SobAs01', '_blank')}>
       {t('Viif.donate.stripe')}
     </button>
-    <button onClick={() => window.open('https://paypal.me/inspiringilango', '_blank')}>
+    <button onClick={() => window.open('https://buy.stripe.com/test_aFaaEZc7P3OY25T8SobAs01', '_blank')}>
       {t('Viif.donate.paypal')}
     </button>
-    <button onClick={() => window.open('https://rzp.io/l/inspiringilango', '_blank')}>
+    <button onClick={() => window.open('https://buy.stripe.com/test_aFaaEZc7P3OY25T8SobAs01', '_blank')}>
       {t('Viif.donate.razorpay')}
     </button>
   </div>
