@@ -397,28 +397,64 @@
     "intro": "Explore services by Dr. Inspiring Ilango, designed to empower individuals and organizations.",
     "items": [
       {
-        "title": "Motivational Talks",
-        "description": "Inspire your team with powerful keynote sessions."
+        "title": "HopeLine - 24/7 Mental Health Centre",
+        "description": "A nationwide helpline staffed by 200+ trained counsellors offering real-time crisis support and long-term guidance."
       },
       {
-        "title": "Corporate Training",
-        "description": "Boost productivity with results-driven training."
+        "title": "Inspitainment - Where Inspiration Meets Entertainment",
+        "description": "Includes : Live Music, motivational talks, interactive wellness modules, and performances."
       },
       {
-        "title": "Voice Coaching",
-        "description": "Master clarity and tone with personalized coaching."
+        "title": "Empowering Vision - Digital Literacy for the Visually Challenged",
+        "description": "Includes : Smartphones, laptops, software, training, and life skills.Outcome : Sustainable digital employment and self-reliance."
       },
       {
-        "title": "Inspitainment Programs",
-        "description": "Interactive motivational events with entertainment."
+        "title": "Rising Stars - Youth Personality Development",
+        "description": "Includes : EI training, English fluency, leadership and employability coaching."
       },
       {
-        "title": "Online Courses",
-        "description": "Learn anytime with self-paced certified programs."
+        "title": "Live Life Campaigns - Mental Health Awareness",
+        "description": "Focus : School, college, and community outreach events promoting resilience and life-affirming values."
       },
       {
-        "title": "1-on-1 Consultations",
-        "description": "Personalized mentoring for growth and goals."
+        "title": "Empower Her - Women's Well-being and Leadership",
+        "description": "Focus : Entrepreneurship, emotional strength, and assertiveness training."
+      },
+      {
+        "title": "Speak Up - English for Empowerment",
+        "description": "Target : Rural and semi-urban youth and adults. Objective : Public speaking and employability through communication"
+      },
+      {
+        "title": "Emotional Wellness Clinics - Counselling & Group Therapy",
+        "description": "Services : One-to-one therapy, group sessions, stress and trauma support."
+      },
+       {
+        "title": "Inspired Living - Talks and Performances",
+        "description": "Speakers : Dr Inspiring Ilango and guest experts. Themes : Hope, healing, and purpose."
+      },
+      {
+        "title": "Hope, healing, and purpose",
+        "description": "Approach : Films, workshops, and rehabilitative pathways."
+      },
+      {
+        "title": "Healthy Choices - Food and Mood Awareness",
+        "description": "Objective : Link nutrition with emotional health."
+      },
+      {
+        "title": "Holistic Health - Lifestyle and Mindfulness",
+        "description": "Topics : Fitness, sleep, digital detox, and stress management."
+      },
+      {
+        "title": "Digital Wisdom - Smart Use of Technology",
+        "description": "Audience : Students and working professionals. Focus : AI, social media hygiene, and productivity"
+      },
+      {
+        "title": "Smart Parenting",
+        "description": "Workshops : Supporting emotional intelligence and safe digital habits in children."
+      },
+      {
+        "title": "Hope Fund - Support for Ailing Patients",
+        "description": "Aid : Emotional counselling, motivational therapy, and financial assistance"
       }
     ],
     "book": {
