@@ -1,36 +1,77 @@
+/* General Styles */
 .membership-container {
-  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.membership-header,
+.membership-footer-cta {
   text-align: center;
-  background-color: #f4f6f8;
+  margin-bottom: 2rem;
 }
 
-.membership-title {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 10px;
+.membership-header h1,
+.membership-footer-cta h2 {
+  font-size: 2.2rem;
+  color: #2b2b2b;
 }
 
-.membership-subtitle {
-  font-size: 18px;
-  color: #777;
-  margin-bottom: 40px;
+.membership-header p,
+.membership-footer-cta p {
+  font-size: 1.1rem;
+  color: #555;
 }
 
-.membership-cards {
+/* Why Join Section */
+.why-join-section {
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.why-join-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.why-join-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-join-section li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.why-join-section li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2e8b57;
+}
+
+/* Membership Plans */
+.membership-plans {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .membership-card {
-  background-color: #fff;
+  background: white;
   border-radius: 12px;
-  padding: 30px 20px;
-  width: 300px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: left;
-  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  flex: 1 1 300px;
+  max-width: 350px;
   transition: transform 0.3s ease;
 }
 
@@ -38,195 +79,169 @@
   transform: translateY(-5px);
 }
 
-.membership-card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #222;
+.membership-card.highlight {
+  border: 2px solid #2e8b57;
 }
 
-.price {
-  font-size: 20px;
-  color: #002244;
-  margin-bottom: 20px;
+.membership-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.membership-card .price {
+  font-size: 1.2rem;
   font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2e8b57;
 }
 
 .membership-card ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 .membership-card ul li {
-  padding: 8px 0;
-  color: #555;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 0.5rem;
+  list-style: disc;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #002244;;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-  text-align: center;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.popular {
-  border: 2px solid #002244;
-}
-
-@media (max-width: 900px) {
-  .membership-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .membership-card {
-    width: 90%;
-  }
-}
-
-.membership-benefits {
-  margin: 60px 0;
-  text-align: center;
-}
-
-.membership-benefits ul {
-  list-style: none;
-  padding: 0;
-  font-size: 18px;
-  color: #555;
-}
-
-.comparison-table {
-  margin: 60px auto; /* center align */
-  padding: 0 20px;   /* add horizontal padding on small screens */
-  overflow-x: auto;
-  max-width: 100%;
-  text-align: left;
-}
-
-.comparison-table table {
-  margin: 0 auto; /* center table horizontally */
-  border-collapse: collapse;
+.join-btn {
+  background-color: #2e8b57;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
   width: 100%;
-  min-width: 600px; /* ensures table doesn't break on mobile */
+  transition: background 0.3s ease;
 }
 
-.comparison-table th,
-.comparison-table td {
-  border: 1px solid #ccc;
-  padding: 12px;
-  font-size: 16px;
+.join-btn:hover {
+  background-color: #256c45;
 }
 
-.comparison-table th {
-  background-color: #002244;
-  color: #fff;
+/* Testimonials */
+.testimonials-section {
+  margin: 3rem 0;
   text-align: center;
 }
 
+.testimonials-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
 
-.membership-faq {
-  margin: 60px 0;
-  text-align: left;
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.testimonial-image-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image-only {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.faq-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 .faq-item {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
-.faq-item h4 {
-  margin-bottom: 5px;
-  color: #002244;
-}
-
-.membership-testimonials {
-  margin: 60px 0;
-  background: #e9f0f7;
-  padding: 40px 20px;
-  border-radius: 10px;
-}
-
-.membership-testimonials blockquote {
-  font-style: italic;
-  margin: 20px auto;
-  max-width: 600px;
+.faq-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
   color: #333;
 }
 
-.membership-testimonials footer {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #002244;
+.faq-item p {
+  font-size: 1rem;
+  color: #555;
 }
 
-.membership-cta-banner {
-  background-color: #002244;
-  color: #fff;
-  padding: 40px 20px;
+/* Footer CTA */
+.membership-footer-cta {
+  background: #2e8b57;
+  color: white;
+  padding: 2rem 1rem;
   border-radius: 12px;
-  text-align: center;
-  margin-top: 60px;
+  margin-top: 2rem;
 }
 
-.membership-cta-banner h2{
-  color: #fff;
-
+.membership-footer-cta button {
+  background: white;
+  color: #2e8b57;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
-/* Add visually hidden class */
-.visually-hidden {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.membership-footer-cta button:hover {
+  background: #f2f2f2;
 }
 
-/* Responsive Table */
-.comparison-table table {
-  width: 100%;
-  overflow-x: auto;
-  display: block;
-}
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+  .membership-container {
+    padding: 1rem;
+  }
 
-/* Improve focus visibility */
-a:focus, .btn:focus {
-  outline: 3px solid #0056b3;
-  outline-offset: 3px;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .membership-title {
-    font-size: 28px;
+  .membership-header h1 {
+    font-size: 1.8rem;
   }
 
   .membership-card {
-    width: 100%;
+    max-width: 100%;
   }
 
-  .membership-cards {
-    flex-direction: column;
+  .why-join-section,
+  .faq-section {
+    padding: 1rem;
   }
 
-  .comparison-table table th,
-  .comparison-table table td {
-    font-size: 14px;
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .membership-header h1,
+  .membership-footer-cta h2 {
+    font-size: 1.5rem;
   }
 
-  .btn {
-    width: 100%;
-    text-align: center;
-    color:#fff;
+  .membership-header p,
+  .membership-footer-cta p {
+    font-size: 1rem;
+  }
+
+  .join-btn,
+  .membership-footer-cta button {
+    font-size: 0.95rem;
   }
 }

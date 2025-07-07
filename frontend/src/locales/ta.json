@@ -543,85 +543,64 @@
   },
 
   "membership": {
-    "title": "எங்கள் உறுப்பினர் திட்டத்தில் சேருங்கள்",
-    "subtitle": "உங்களை பொருத்த திட்டத்தை தேர்ந்தெடுத்து சிறப்பான நன்மைகளை அனுபவிக்கவும்",
-    "plans": {
-      "basic": {
-        "title": "அடிப்படை",
-        "price": "₹499 / மாதம்",
-        "features": [
-          "வாராந்திர இணையவழி கருத்தரங்குகளுக்கான அணுகல்",
-          "மாதந்தோறும் ஊக்கமளிக்கும் அமர்வுகள்",
-          "மின்னஞ்சல் செய்திமடல்"
-        ]
-      },
-      "premium": {
-        "title": "பிரீமியம்",
-        "price": "₹999 / மாதம்",
-        "features": [
-          "அடிப்படை அம்சங்கள் அனைத்தும்",
-          "1-க்கு-1 பயிற்சி (மாதந்தோறும்)",
-          "தனிப்பட்ட eBooks மற்றும் வளங்கள்"
-        ]
-      },
-      "elite": {
-        "title": "எலீட்",
-        "price": "₹1999 / மாதம்",
-        "features": [
-          "பிரீமியம் அம்சங்கள் அனைத்தும்",
-          "வாரந்தோறும் தனிப்பட்ட பயிற்சி",
-          "முன்னுரிமை மின்னஞ்சல் ஆதரவு",
-          "தனிப்பயன் இலக்குத் திட்டங்கள்"
-        ]
-      },
-      "button": "Calendly மூலம் சேரவும்"
+    "title": "Join Our Membership",
+    "subtitle": "Empower your journey with exclusive benefits and access",
+    "joinButton": "Join Now",
+    "whyJoin": {
+      "title": "Why Become a Member?",
+      "points": [
+        "Unlimited access to wellness content",
+        "Exclusive discounts on sessions and workshops",
+        "Direct communication with Dr. Inspiring Ilango",
+        "Early access to events and digital resources"
+      ]
     },
-    "benefitsTitle": "ஏன் எங்கள் உறுப்பினராக சேர வேண்டும்?",
-    "benefits": [
-      "உங்கள் உணர்வுத் திறமையை மேம்படுத்துங்கள்",
-      "உலகளாவிய மனச்சேர்ந்த சமூகத்துடன் இணைக",
-      "தனிப்பட்ட மற்றும் தொழில்முறை வளர்ச்சி கருவிகள்"
-    ],
-    "comparisonTitle": "திட்டங்களை ஒப்பிடுங்கள்",
-    "comparison": {
-      "features": "அம்சங்கள்",
-      "weeklyWebinars": "வாராந்திர இணையவழி கருத்தரங்குகள்",
-      "coaching": "1-க்கு-1 பயிற்சி",
-      "ebooks": "தனிப்பட்ட eBooks",
-      "support": "முன்னுரிமை ஆதரவு",
-      "yes": "✔",
-      "no": "✖",
-      "monthly": "மாதந்தோறும்",
-      "weekly": "வாரந்தோறும்"
-    },
-    "faqTitle": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
-    "faq": [
-      {
-        "question": "நான் எப்போது வேண்டுமானாலும் ரத்துசெய்ய முடியுமா?",
-        "answer": "ஆம், நீங்கள் உங்கள் Calendly கணக்கிலிருந்து எப்போது வேண்டுமானாலும் உங்கள் உறுப்பினரை ரத்துசெய்யலாம்."
-      },
-      {
-        "question": "முயற்சி காலம் உள்ளதா?",
-        "answer": "தற்போது, ​​முயற்சி காலம் வழங்கப்படவில்லை, ஆனால் இலவச உள்ளடக்கத்தை ஆராயலாம்."
-      }
-    ],
-    "testimonialsTitle": "உறுப்பினர்கள் என்ன சொல்கிறார்கள்",
-    "testimonials": [
-      {
-        "quote": "இந்த திட்டம் எனது மனப்பாங்கும் தொழில் பாதையும் மாற்றியது. டாக்டர் இளங்கோ மிகுந்த ஊக்கமளிக்கிறார்!",
-        "author": "- பிரியா ஆர்., சென்னை"
-      },
-      {
-        "quote": "எலீட் பயிற்சி உண்மையில் மாற்றத்தை ஏற்படுத்துகிறது. இது எனக்கே சொந்தமாக இருப்பது போலவே உணர்கிறது.",
-        "author": "- ராகுல் எஸ்., பெங்களூர்"
-      }
-    ],
     "cta": {
-      "title": "உங்கள் வாழ்க்கையை மாற்ற தயாரா?",
-      "text": "உங்களைப் பொருத்த திட்டத்தை தேர்ந்தெடுத்து இன்று உங்கள் பயணத்தை தொடங்குங்கள்!",
-      "button": "திட்டத்தை தேர்ந்தெடுக்கவும்"
+      "title": "Ready to Transform Your Life?",
+      "subtitle": "Take the first step today. Join our vibrant community.",
+      "button": "Get Started"
+    },
+    "basic": {
+      "title": "Basic",
+      "price": "$9/month",
+      "features": [
+        "Access to webinars",
+        "Monthly newsletters",
+        "Community forum access"
+      ]
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "$29/month",
+      "features": [
+        "All Basic features",
+        "1-on-1 counseling sessions",
+        "Access to all eBooks & resources"
+      ]
+    },
+    "elite": {
+      "title": "Elite",
+      "price": "$99/month",
+      "features": [
+        "All Premium features",
+        "Personalized coaching",
+        "Priority event invitations"
+      ]
     }
+  },
+  "testimonials": {
+    "title": "Voices of Our Community"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Can I cancel my membership at any time?",
+    "a1": "Yes, you can cancel anytime from your profile dashboard.",
+    "q2": "Do memberships include personal sessions?",
+    "a2": "Premium and Elite members receive private 1-on-1 sessions.",
+    "q3": "Is there a free trial available?",
+    "a3": "We offer a 7-day trial for new members with limited features."
   }
+
 }
 
 

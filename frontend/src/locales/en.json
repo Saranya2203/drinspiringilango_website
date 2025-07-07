@@ -564,85 +564,65 @@
       "none": "No upcoming events found."
     }
   },
-"membership": {
-    "title": "Join Our Membership Program",
-    "subtitle": "Choose the right plan and unlock exclusive benefits",
-    "plans": {
-      "basic": {
-        "title": "Basic",
-        "price": "₹499 / month",
-        "features": [
-          "Access to weekly webinars",
-          "Monthly motivation sessions",
-          "Email newsletter"
-        ]
-      },
-      "premium": {
-        "title": "Premium",
-        "price": "₹999 / month",
-        "features": [
-          "All Basic features",
-          "1-on-1 Coaching (Monthly)",
-          "Exclusive eBooks & Resources"
-        ]
-      },
-      "elite": {
-        "title": "Elite",
-        "price": "₹1999 / month",
-        "features": [
-          "All Premium features",
-          "Weekly Personal Coaching",
-          "Priority Email Support",
-          "Custom Goal Roadmaps"
-        ]
-      },
-      "button": "Join via Calendly"
+  "membership": {
+    "title": "Join Our Membership",
+    "subtitle": "Empower your journey with exclusive benefits and access",
+    "joinButton": "Join Now",
+    "whyJoin": {
+      "title": "Why Become a Member?",
+      "points": [
+        "Unlimited access to wellness content",
+        "Exclusive discounts on sessions and workshops",
+        "Direct communication with Dr. Inspiring Ilango",
+        "Early access to events and digital resources"
+      ]
     },
-    "benefitsTitle": "Why Join Our Membership?",
-    "benefits": [
-      "Boost your emotional intelligence",
-      "Connect with a global like-minded community",
-      "Personal and professional growth tools"
-    ],
-    "comparisonTitle": "Compare Plans",
-    "comparison": {
-      "features": "Features",
-      "weeklyWebinars": "Weekly Webinars",
-      "coaching": "1-on-1 Coaching",
-      "ebooks": "Exclusive eBooks",
-      "support": "Priority Support",
-      "yes": "✔",
-      "no": "✖",
-      "monthly": "Monthly",
-      "weekly": "Weekly"
-    },
-    "faqTitle": "Frequently Asked Questions",
-    "faq": [
-      {
-        "question": "Can I cancel anytime?",
-        "answer": "Yes, you can cancel your membership anytime from your Calendly dashboard or by contacting us."
-      },
-      {
-        "question": "Do you offer a trial period?",
-        "answer": "Currently, we do not offer free trials, but you can explore our free content to get started."
-      }
-    ],
-    "testimonialsTitle": "What Members Say",
-    "testimonials": [
-      {
-        "quote": "This program changed my mindset and career path. Dr. Ilango is incredibly motivating!",
-        "author": "- Priya R., Chennai"
-      },
-      {
-        "quote": "Elite coaching is truly transformative. It feels tailored just for me.",
-        "author": "- Rahul S., Bangalore"
-      }
-    ],
     "cta": {
       "title": "Ready to Transform Your Life?",
-      "text": "Pick your plan and begin your journey with Inspiring Ilango today!",
-      "button": "Choose Your Plan"
+      "subtitle": "Take the first step today. Join our vibrant community.",
+      "button": "Get Started"
+    },
+    "basic": {
+      "title": "Basic",
+      "price": "$9/month",
+      "features": [
+        "Access to webinars",
+        "Monthly newsletters",
+        "Community forum access"
+      ]
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "$29/month",
+      "features": [
+        "All Basic features",
+        "1-on-1 counseling sessions",
+        "Access to all eBooks & resources"
+      ]
+    },
+    "elite": {
+      "title": "Elite",
+      "price": "$99/month",
+      "features": [
+        "All Premium features",
+        "Personalized coaching",
+        "Priority event invitations"
+      ]
     }
+  },
+  "testimonials": {
+    "title": "Voices of Our Community"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Can I cancel my membership at any time?",
+    "a1": "Yes, you can cancel anytime from your profile dashboard.",
+    "q2": "Do memberships include personal sessions?",
+    "a2": "Premium and Elite members receive private 1-on-1 sessions.",
+    "q3": "Is there a free trial available?",
+    "a3": "We offer a 7-day trial for new members with limited features."
   }
-  }
+}
+
+
   
