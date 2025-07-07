@@ -7,58 +7,94 @@ function Membership() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const plans = t('membership.plans', { returnObjects: true }) || [];
-  const faqs = t('membership.faqs', { returnObjects: true }) || [];
+  const membershipPlans = [
+    {
+      title: t('membership.basic.title'),
+      price: t('membership.basic.price'),
+      features: t('membership.basic.features', { returnObjects: true }),
+    },
+    {
+      title: t('membership.premium.title'),
+      price: t('membership.premium.price'),
+      features: t('membership.premium.features', { returnObjects: true }),
+      highlight: true,
+    },
+    {
+      title: t('membership.elite.title'),
+      price: t('membership.elite.price'),
+      features: t('membership.elite.features', { returnObjects: true }),
+    },
+  ];
+
+  const faqs = [
+    {
+      question: t('faq.q1'),
+      answer: t('faq.a1'),
+    },
+    {
+      question: t('faq.q2'),
+      answer: t('faq.a2'),
+    },
+    {
+      question: t('faq.q3'),
+      answer: t('faq.a3'),
+    },
+  ];
 
   return (
-    <div className="membership-container">
+    <main className="membership-container" role="main">
       {/* Header */}
       <header className="membership-header">
         <h1>{t('membership.title')}</h1>
-        <p>{t('membership.intro')}</p>
+        <p>{t('membership.subtitle')}</p>
       </header>
 
       {/* Why Join Section */}
       <section className="why-join-section">
         <h2>{t('membership.whyJoin.title')}</h2>
         <ul>
-          {t('membership.whyJoin.benefits', { returnObjects: true }).map((benefit, index) => (
-            <li key={index}>{benefit}</li>
+          {t('membership.whyJoin.points', { returnObjects: true }).map((point, index) => (
+            <li key={index}>{point}</li>
           ))}
         </ul>
       </section>
 
       {/* Membership Plans */}
       <section className="membership-plans">
-        {plans.map((plan, index) => (
+        {membershipPlans.map((plan, index) => (
           <div
             key={index}
             className={`membership-card ${plan.highlight ? 'highlight' : ''}`}
-            aria-label={plan.name}
+            tabIndex="0"
+            aria-label={`${plan.title} plan`}
           >
-            <h2>{plan.name}</h2>
+            <h2>{plan.title}</h2>
             <p className="price">{plan.price}</p>
             <ul>
-              {plan.features.map((feature, fIndex) => (
-                <li key={fIndex}>{feature}</li>
+              {plan.features.map((feature, i) => (
+                <li key={i}>{feature}</li>
               ))}
             </ul>
-            <button className="join-btn" onClick={() => navigate('/contact')}>
+            <button
+              className="join-btn"
+              aria-label={`Join ${plan.title}`}
+              onClick={() => navigate('/contact')}
+            >
               {t('membership.joinButton')}
             </button>
           </div>
         ))}
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials */}
       <section className="testimonials-section">
-        <h2>{t('membership.testimonials.title')}</h2>
+        <h2>{t('testimonials.title')}</h2>
         <div className="testimonials-grid">
           {[1, 2, 3, 4, 5, 6].map((num) => (
             <div key={num} className="testimonial-image-card">
               <img
                 src={`/assets/testimonial${num}.jpg`}
-                alt={`testimonial ${num}`}
+                alt={`Testimonial ${num}`}
                 className="testimonial-image-only"
               />
             </div>
@@ -66,26 +102,32 @@ function Membership() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ */}
       <section className="faq-section">
-        <h2>{t('membership.faqsTitle')}</h2>
-        {faqs.map((faq, index) => (
-          <div key={index} className="faq-item">
-            <h3>{faq.question}</h3>
-            <p>{faq.answer}</p>
-          </div>
-        ))}
+        <h2>{t('faq.title')}</h2>
+        <div className="faq-list">
+          {faqs.map((item, index) => (
+            <div key={index} className="faq-item">
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="membership-footer-cta">
-        <h2>{t('membership.footer.title')}</h2>
-        <p>{t('membership.footer.description')}</p>
-        <button onClick={() => navigate('/contact')}>
-          {t('membership.footer.cta')}
+      {/* Call to Action */}
+      <footer className="membership-footer-cta">
+        <h2>{t('membership.cta.title')}</h2>
+        <p>{t('membership.cta.subtitle')}</p>
+        <button
+          className="join-btn"
+          onClick={() => navigate('/contact')}
+          aria-label="Join Now"
+        >
+          {t('membership.cta.button')}
         </button>
-      </section>
-    </div>
+      </footer>
+    </main>
   );
 }
 
