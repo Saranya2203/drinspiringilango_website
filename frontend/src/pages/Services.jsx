@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Services.css';
 
 function Services() {
   const { t } = useTranslation();
+  const [calendlyLoaded, setCalendlyLoaded] = useState(false);
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -11,19 +12,21 @@ function Services() {
     script.async = true;
     script.onload = () => {
       console.log('Calendly loaded');
+      setCalendlyLoaded(true);
     };
     document.body.appendChild(script);
   }, []);
 
-  const openCalendlyPopup = () => {
-    if (window.Calendly) {
+  const openCalendlyPopup = (event) => {
+    event.preventDefault();
+    if (window.Calendly && calendlyLoaded) {
       window.Calendly.initPopupWidget({
         url: 'https://calendly.com/inspiringilango/30min',
       });
     } else {
+      // fallback to Calendly page if widget fails
       window.location.href = 'https://calendly.com/inspiringilango/30min';
     }
-    return false;
   };
 
   const handlePayment = (url) => {
@@ -47,8 +50,14 @@ function Services() {
               <h2>{service.title}</h2>
               <p>{service.description}</p>
               <div className="service-buttons">
-                <button onClick={openCalendlyPopup} aria-label={`Book ${service.title}`}>
-                  {t('services.buttons.bookNow')}
+                <button
+                  onClick={openCalendlyPopup}
+                  disabled={!calendlyLoaded}
+                  aria-label={`Book ${service.title}`}
+                >
+                  {calendlyLoaded
+                    ? t('services.buttons.bookNow')
+                    : t('services.buttons.loading')}
                 </button>
                 <button
                   onClick={() =>
@@ -75,7 +84,7 @@ function Services() {
           <div className="service-buttons">
             <button
               onClick={() =>
-                handlePayment('https://buy.stripe.com/your_real_book_link_here')
+                handlePayment('https://buy.stripe.com/test_aFa7sNfk199idOBecIbAs02')
               }
               className="pay-btn"
               aria-label={t('services.book.buyButton')}
@@ -86,30 +95,30 @@ function Services() {
         </div>
       </section>
 
-<section className="brochures-section">
-  <h2 className="brochures-title">{t('brochures.title')}</h2>
-  <div className="brochures-grid">
-    {[1, 2, 3].map((num) => (
-      <div key={num} className="brochure-card">
-        <img
-          src={`/assets/brochure${num}.jpg`}
-          alt={t(`brochures.brochure${num}.alt`)}
-          className="brochure-image"
-        />
-        <h3>{t(`brochures.brochure${num}.title`)}</h3>
-        <p>{t(`brochures.brochure${num}.description`)}</p>
-        <a
-          href={`/assets/brochure${num}.pdf`}
-          download
-          className="download-btn"
-          aria-label={t(`brochures.brochure${num}.download`)}
-        >
-          {t(`brochures.brochure${num}.download`)}
-        </a>
-      </div>
-    ))}
-  </div>
-</section>
+      <section className="brochures-section">
+        <h2 className="brochures-title">{t('brochures.title')}</h2>
+        <div className="brochures-grid">
+          {[1, 2, 3].map((num) => (
+            <div key={num} className="brochure-card">
+              <img
+                src={`/assets/brochure${num}.jpg`}
+                alt={t(`brochures.brochure${num}.alt`)}
+                className="brochure-image"
+              />
+              <h3>{t(`brochures.brochure${num}.title`)}</h3>
+              <p>{t(`brochures.brochure${num}.description`)}</p>
+              <a
+                href={`/assets/brochure${num}.pdf`}
+                download
+                className="download-btn"
+                aria-label={t(`brochures.brochure${num}.download`)}
+              >
+                {t(`brochures.brochure${num}.download`)}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="products-grid">
         <h2 className="products-title">{t('products.title')}</h2>
