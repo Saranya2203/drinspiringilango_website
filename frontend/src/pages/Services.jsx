@@ -7,10 +7,6 @@ function Services() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const handleContactRedirect = () => {
-    navigate('/contact');
-  };
-
   const handlePayment = (url) => {
     window.open(url, '_blank');
   };
