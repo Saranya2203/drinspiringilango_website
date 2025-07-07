@@ -1,32 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import './Services.css';
 
 function Services() {
   const { t } = useTranslation();
-  const [calendlyLoaded, setCalendlyLoaded] = useState(false);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    script.onload = () => {
-      console.log('Calendly loaded');
-      setCalendlyLoaded(true);
-    };
-    document.body.appendChild(script);
-  }, []);
-
-  const openCalendlyPopup = (event) => {
-    event.preventDefault();
-    if (window.Calendly && calendlyLoaded) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/inspiringilango/30min',
-      });
-    } else {
-      // fallback to Calendly page if widget fails
-      window.location.href = 'https://calendly.com/inspiringilango/30min';
-    }
+  const handleContactRedirect = () => {
+    navigate('/contact');
   };
 
   const handlePayment = (url) => {
@@ -51,13 +33,10 @@ function Services() {
               <p>{service.description}</p>
               <div className="service-buttons">
                 <button
-                  onClick={openCalendlyPopup}
-                  disabled={!calendlyLoaded}
+                  onClick={() => navigate('/contact')}
                   aria-label={`Book ${service.title}`}
                 >
-                  {calendlyLoaded
-                    ? t('services.buttons.bookNow')
-                    : t('services.buttons.loading')}
+                  {t('services.buttons.bookNow')}
                 </button>
                 <button
                   onClick={() =>
@@ -129,7 +108,7 @@ function Services() {
               <p>{product.description}</p>
               <p className="product-price">{product.price}</p>
               <button
-                onClick={() => handlePayment(product.url)}
+                onClick={() => navigate('/contact')}
                 className="pay-btn"
                 aria-label={`Buy ${product.title}`}
               >
