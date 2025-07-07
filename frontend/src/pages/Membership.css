@@ -53,7 +53,7 @@
   content: "✔";
   position: absolute;
   left: 0;
-  color: #2e8b57;
+  color: #002244;
 }
 
 /* Membership Plans */
@@ -80,7 +80,7 @@
 }
 
 .membership-card.highlight {
-  border: 2px solid #2e8b57;
+  border: 2px solid #002244;
 }
 
 .membership-card h2 {
@@ -92,7 +92,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #2e8b57;
+  color: #002244;
 }
 
 .membership-card ul {
@@ -106,7 +106,7 @@
 }
 
 .join-btn {
-  background-color: #2e8b57;
+  background-color: #002244;
   color: white;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
@@ -118,7 +118,7 @@
 }
 
 .join-btn:hover {
-  background-color: #256c45;
+  background-color: #002244;
 }
 
 /* Testimonials */
@@ -182,7 +182,7 @@
 
 /* Footer CTA */
 .membership-footer-cta {
-  background: #2e8b57;
+  background: #002244;
   color: white;
   padding: 2rem 1rem;
   border-radius: 12px;
@@ -191,7 +191,7 @@
 
 .membership-footer-cta button {
   background: white;
-  color: #2e8b57;
+  color: #002244;
   border: none;
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
@@ -239,7 +239,7 @@
   .membership-footer-cta p {
     font-size: 1rem;
   }
-
+  
   .join-btn,
   .membership-footer-cta button {
     font-size: 0.95rem;
