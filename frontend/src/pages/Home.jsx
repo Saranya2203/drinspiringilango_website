@@ -75,20 +75,21 @@ const Home = () => {
       </Helmet>
 
       <main className="home">
-        <section className="hero" aria-label="Global Hero Section">
-          <div className="hero-inner">
-            <div className="hero-image">
-              <img src="/assets/Ilango.jpg" alt="Dr. Inspiring Ilango" />
-            </div>
-            <div className="hero-content">
-              <h1 tabIndex="0">{t('hero.title')}</h1>
-              <p tabIndex="0">{t('hero.description')}</p>
-              <a href="https://calendly.com/inspiringilango/30min" className="cta-button" role="button" aria-label={t('hero.cta')}>
-                {t('hero.cta')}
-              </a>
-            </div>
-          </div>
-        </section>
+        <section className="hero banner-style" aria-label="Hero Banner">
+  <div className="banner-overlay" />
+  <div className="banner-content">
+    <h1 tabIndex="0">{t('hero.title')}</h1>
+    <p tabIndex="0">{t('hero.description')}</p>
+    <a
+      href="https://calendly.com/inspiringilango/30min"
+      className="cta-button"
+      role="button"
+      aria-label={t('hero.cta')}
+    >
+      {t('hero.cta')}
+    </a>
+  </div>
+</section>
 
         <section className="video-intro" aria-label={t('videoIntro.aria')}>
           <h2>{t('videoIntro.heading')}</h2>
