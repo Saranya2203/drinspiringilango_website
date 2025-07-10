@@ -15,10 +15,14 @@
 }
 
 .popup-content {
-  background: #1e1e1e;
+  background: #fff;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 0 20px #fff3;
+}
+
+.popup-content h2{
+    color: #000;
 }
 
 .language-buttons button {
