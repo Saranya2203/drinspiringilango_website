@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import './LanguagePopup.css';
 import { useTranslation } from 'react-i18next';
 
@@ -6,31 +6,28 @@ const LanguagePopup = ({ onSelect }) => {
   const { i18n } = useTranslation();
   const audioRef = useRef(null);
 
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (audio) {
-      audio.loop = true;
-      audio.volume = 1.0;
-
-      // Try to play the audio after a short delay to increase success
-      setTimeout(() => {
-        audio.play().catch((err) => {
-          console.warn('Autoplay blocked. Audio will play on user interaction.', err);
-        });
-      }, 200); // slight delay helps sometimes
-    }
-  }, []);
-
   const handleLanguageSelect = (lang) => {
     i18n.changeLanguage(lang);
 
-    // Optional: Stop music after language is selected
+    // Optional: Stop music when popup is closed
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
 
     onSelect(); // Hide popup
+  };
+
+  const playAndSelect = (lang) => {
+    if (audioRef.current) {
+      audioRef.current.loop = true;
+      audioRef.current.volume = 1.0;
+      audioRef.current.play().catch((err) => {
+        console.warn('User gesture required to play audio:', err);
+      });
+    }
+
+    handleLanguageSelect(lang);
   };
 
   return (
@@ -44,8 +41,8 @@ const LanguagePopup = ({ onSelect }) => {
         <h1 className="popup-title">Dr. Inspiring Ilango</h1>
         <h2>Select Your Language</h2>
         <div className="language-buttons">
-          <button onClick={() => handleLanguageSelect('en')}>English</button>
-          <button onClick={() => handleLanguageSelect('ta')}>தமிழ்</button>
+          <button onClick={() => playAndSelect('en')}>English</button>
+          <button onClick={() => playAndSelect('ta')}>தமிழ்</button>
         </div>
       </div>
     </div>
