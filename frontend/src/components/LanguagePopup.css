@@ -20,6 +20,13 @@
   border-radius: 20px;
   box-shadow: 0 0 20px #fff3;
 }
+.popup-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+
 
 .popup-content h2{
     color: #000;
