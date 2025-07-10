@@ -1,5 +1,4 @@
-// App.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,31 +18,22 @@ import Dashboard from './pages/Dashboard';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import LanguagePopup from './components/LanguagePopup'; // 👈 Import the new component
+import LanguagePopup from './components/LanguagePopup';
 import './index.css';
 
 function App() {
-  const [languageChosen, setLanguageChosen] = useState(false);
+  const [showPopup, setShowPopup] = useState(true);
 
-  useEffect(() => {
-    // Optional: persist selection in localStorage
-    const saved = localStorage.getItem('langSelected');
-    if (saved === 'true') {
-      setLanguageChosen(true);
-    }
-  }, []);
-
-  const handleLanguageSelect = () => {
-    localStorage.setItem('langSelected', 'true');
-    setLanguageChosen(true);
+  const handleLanguageSelected = () => {
+    setShowPopup(false);
   };
 
   return (
-    <>
-      {!languageChosen && <LanguagePopup onSelect={handleLanguageSelect} />}
-
-      {languageChosen && (
-        <Router>
+    <Router>
+      {showPopup ? (
+        <LanguagePopup onSelect={handleLanguageSelected} />
+      ) : (
+        <>
           <Header />
           <main>
             <Routes>
@@ -63,9 +53,9 @@ function App() {
             </Routes>
           </main>
           <Footer />
-        </Router>
+        </>
       )}
-    </>
+    </Router>
   );
 }
 

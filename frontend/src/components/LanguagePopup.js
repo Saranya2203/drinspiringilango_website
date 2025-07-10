@@ -1,27 +1,29 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './LanguagePopup.css';
 import { useTranslation } from 'react-i18next';
 
 const LanguagePopup = ({ onSelect }) => {
   const { i18n } = useTranslation();
   const audioRef = useRef(null);
+  const [audioStarted, setAudioStarted] = useState(false);
 
-  const handleLanguageSelect = async (lang) => {
-    try {
-      const audio = audioRef.current;
-      if (audio) {
-        // Attempt to play audio on user interaction
-        await audio.play();
-        audio.loop = true;
-        audio.volume = 1.0;
-      }
-    } catch (err) {
-      console.warn('Playback failed:', err);
+  const handlePlayAudio = () => {
+    const audio = audioRef.current;
+    if (audio && !audioStarted) {
+      audio.loop = true;
+      audio.volume = 1.0;
+      audio.play().then(() => {
+        setAudioStarted(true);
+      }).catch((err) => {
+        console.warn('Audio play failed:', err);
+      });
     }
+  };
 
+  const handleLanguageSelect = (lang) => {
     i18n.changeLanguage(lang);
 
-    // Optional: stop music after language selection
+    // Stop music after language selected
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
@@ -40,9 +42,24 @@ const LanguagePopup = ({ onSelect }) => {
       <div className="popup-content">
         <h1 className="popup-title">Dr. Inspiring Ilango</h1>
         <h2>Select Your Language</h2>
+        <p className="popup-instruction">Tap once to enable background music</p>
         <div className="language-buttons">
-          <button onClick={() => handleLanguageSelect('en')}>English</button>
-          <button onClick={() => handleLanguageSelect('ta')}>தமிழ்</button>
+          <button
+            onClick={() => {
+              handlePlayAudio();
+              handleLanguageSelect('en');
+            }}
+          >
+            English
+          </button>
+          <button
+            onClick={() => {
+              handlePlayAudio();
+              handleLanguageSelect('ta');
+            }}
+          >
+            தமிழ்
+          </button>
         </div>
       </div>
     </div>
