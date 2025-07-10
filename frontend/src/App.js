@@ -23,15 +23,7 @@ import LanguagePopup from './components/LanguagePopup'; // 👈 Import the new c
 import './index.css';
 
 function App() {
-  const [languageChosen, setLanguageChosen] = useState(false);
-
-  useEffect(() => {
-    // Optional: persist selection in localStorage
-    const saved = localStorage.getItem('langSelected');
-    if (saved === 'true') {
-      setLanguageChosen(true);
-    }
-  }, []);
+  
 
   const handleLanguageSelect = () => {
     localStorage.setItem('langSelected', 'true');
