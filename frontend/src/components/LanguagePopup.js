@@ -9,25 +9,34 @@ const LanguagePopup = ({ onSelect }) => {
   const handleLanguageSelect = (lang) => {
     i18n.changeLanguage(lang);
 
-    // Optional: Stop music when popup is closed
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
 
-    onSelect(); // Hide popup
+    onSelect(); // Hide the popup
   };
 
-  const playAndSelect = (lang) => {
-    if (audioRef.current) {
-      audioRef.current.loop = true;
-      audioRef.current.volume = 1.0;
-      audioRef.current.play().catch((err) => {
-        console.warn('User gesture required to play audio:', err);
-      });
+  const playMusicAndSelect = (lang) => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.loop = true;
+      audio.volume = 1.0;
+      audio
+        .play()
+        .then(() => {
+          // Start music, then wait a bit before changing language
+          setTimeout(() => {
+            handleLanguageSelect(lang);
+          }, 300); // Delay allows audio to start before stopping
+        })
+        .catch((err) => {
+          console.warn('Audio playback failed:', err);
+          handleLanguageSelect(lang); // Fallback
+        });
+    } else {
+      handleLanguageSelect(lang);
     }
-
-    handleLanguageSelect(lang);
   };
 
   return (
@@ -41,8 +50,8 @@ const LanguagePopup = ({ onSelect }) => {
         <h1 className="popup-title">Dr. Inspiring Ilango</h1>
         <h2>Select Your Language</h2>
         <div className="language-buttons">
-          <button onClick={() => playAndSelect('en')}>English</button>
-          <button onClick={() => playAndSelect('ta')}>தமிழ்</button>
+          <button onClick={() => playMusicAndSelect('en')}>English</button>
+          <button onClick={() => playMusicAndSelect('ta')}>தமிழ்</button>
         </div>
       </div>
     </div>
