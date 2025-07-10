@@ -4,33 +4,39 @@ import { useTranslation } from 'react-i18next';
 
 const LanguagePopup = ({ onSelect }) => {
   const { i18n } = useTranslation();
-  const audioRef = useRef();
+  const audioRef = useRef(null);
 
-  // Try to preload and play the music muted to bypass autoplay restrictions
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.volume = 1.0;
       audio.loop = true;
-      audio.play().catch((err) => {
-        console.log("Autoplay failed. Waiting for user interaction.", err);
-      });
+      audio.volume = 1.0;
+
+      // Try to play the audio after a short delay to increase success
+      setTimeout(() => {
+        audio.play().catch((err) => {
+          console.warn('Autoplay blocked. Audio will play on user interaction.', err);
+        });
+      }, 200); // slight delay helps sometimes
     }
   }, []);
 
   const handleLanguageSelect = (lang) => {
     i18n.changeLanguage(lang);
+
+    // Optional: Stop music after language is selected
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-    onSelect(); // hide popup
+
+    onSelect(); // Hide popup
   };
 
   return (
     <div className="language-popup">
       <audio ref={audioRef}>
-        <source src="/assets/background-music.mp3" type="audio/mp3" />
+        <source src="/assets/background-music1.mp3" type="audio/mp3" />
         Your browser does not support the audio tag.
       </audio>
 
@@ -38,22 +44,8 @@ const LanguagePopup = ({ onSelect }) => {
         <h1 className="popup-title">Dr. Inspiring Ilango</h1>
         <h2>Select Your Language</h2>
         <div className="language-buttons">
-          <button
-            onClick={() => {
-              audioRef.current?.play();
-              handleLanguageSelect('en');
-            }}
-          >
-            English
-          </button>
-          <button
-            onClick={() => {
-              audioRef.current?.play();
-              handleLanguageSelect('ta');
-            }}
-          >
-            தமிழ்
-          </button>
+          <button onClick={() => handleLanguageSelect('en')}>English</button>
+          <button onClick={() => handleLanguageSelect('ta')}>தமிழ்</button>
         </div>
       </div>
     </div>
