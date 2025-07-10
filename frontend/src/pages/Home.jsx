@@ -2,11 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import './Home.css';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
+import IlangoImage from '../assets/Ilango.jpg';
 
 const Home = () => {
   const { t, i18n } = useTranslation();
   const videoRef = useRef(null);
   const isTamil = i18n.language === 'ta'; // default is 'en'
+
+const style = {
+  backgroundImage: `url(${IlangoImage})`
+}
 
   const rolesData = [
     {
