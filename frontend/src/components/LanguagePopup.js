@@ -6,42 +6,33 @@ const LanguagePopup = ({ onSelect }) => {
   const { i18n } = useTranslation();
   const audioRef = useRef(null);
 
-  const handleLanguageSelect = (lang) => {
+  const handleLanguageSelect = async (lang) => {
+    try {
+      const audio = audioRef.current;
+      if (audio) {
+        // Attempt to play audio on user interaction
+        await audio.play();
+        audio.loop = true;
+        audio.volume = 1.0;
+      }
+    } catch (err) {
+      console.warn('Playback failed:', err);
+    }
+
     i18n.changeLanguage(lang);
 
+    // Optional: stop music after language selection
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
 
-    onSelect(); // Hide the popup
-  };
-
-  const playMusicAndSelect = (lang) => {
-    const audio = audioRef.current;
-    if (audio) {
-      audio.loop = true;
-      audio.volume = 1.0;
-      audio
-        .play()
-        .then(() => {
-          // Start music, then wait a bit before changing language
-          setTimeout(() => {
-            handleLanguageSelect(lang);
-          }, 300); // Delay allows audio to start before stopping
-        })
-        .catch((err) => {
-          console.warn('Audio playback failed:', err);
-          handleLanguageSelect(lang); // Fallback
-        });
-    } else {
-      handleLanguageSelect(lang);
-    }
+    onSelect(); // Hide popup
   };
 
   return (
     <div className="language-popup">
-      <audio ref={audioRef}>
+      <audio ref={audioRef} preload="auto">
         <source src="/assets/background-music1.mp3" type="audio/mp3" />
         Your browser does not support the audio tag.
       </audio>
@@ -50,8 +41,8 @@ const LanguagePopup = ({ onSelect }) => {
         <h1 className="popup-title">Dr. Inspiring Ilango</h1>
         <h2>Select Your Language</h2>
         <div className="language-buttons">
-          <button onClick={() => playMusicAndSelect('en')}>English</button>
-          <button onClick={() => playMusicAndSelect('ta')}>தமிழ்</button>
+          <button onClick={() => handleLanguageSelect('en')}>English</button>
+          <button onClick={() => handleLanguageSelect('ta')}>தமிழ்</button>
         </div>
       </div>
     </div>
