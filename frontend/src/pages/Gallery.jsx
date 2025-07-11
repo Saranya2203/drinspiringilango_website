@@ -17,7 +17,9 @@ const Gallery = () => {
   const fetchGallery = async () => {
     try {
       const res = await axios.get(JSONBIN_URL, {
-        headers: { 'X-Master-Key': JSONBIN_API_KEY }
+        headers: {
+          'X-Master-Key': JSONBIN_API_KEY
+        }
       });
 
       const allData = res.data.record;
@@ -25,6 +27,8 @@ const Gallery = () => {
       const sortedItems = items.sort(
         (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
       );
+
+      console.log('🎯 Loaded gallery:', sortedItems); // Debug
       setGalleryItems(sortedItems);
     } catch (err) {
       console.error('Error loading gallery:', err);
@@ -48,7 +52,11 @@ const Gallery = () => {
       <div className="gallery-grid">
         {galleryItems.map((item, index) => (
           <div className="gallery-card" key={index}>
-            <img src={item.url} alt={item.title || 'Gallery Image'} />
+            <img
+              src={item.url}
+              alt={item.title || 'Gallery Image'}
+              style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }}
+            />
             <h4>{item.title}</h4>
             {item.timestamp && (
               <small>
