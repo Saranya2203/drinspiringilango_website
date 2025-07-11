@@ -12,28 +12,32 @@ const Dashboard = () => {
   const [blogContent, setBlogContent] = useState('');
   const [imageFile, setImageFile] = useState(null);
   const [blogs, setBlogs] = useState([]);
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [galleryImageFile, setGalleryImageFile] = useState(null);
+  const [galleryStatus, setGalleryStatus] = useState('');
   const [status, setStatus] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
 
   useEffect(() => {
-    fetchBlogs();
+    fetchContent();
   }, []);
 
-  const fetchBlogs = async () => {
+  const fetchContent = async () => {
     try {
       const res = await axios.get(JSONBIN_URL, {
         headers: { 'X-Master-Key': JSONBIN_API_KEY }
       });
-      setBlogs(res.data.record.blogs || []);
+      const data = res.data.record;
+      setBlogs(data.blogs || []);
+      setGalleryImages(data.gallery || []);
     } catch (err) {
-      console.error('Failed to fetch blogs', err);
+      console.error('Failed to fetch data', err);
     }
   };
 
-  const handleImageUpload = async () => {
-    if (!imageFile) return null;
+  const handleImageUpload = async (file) => {
     const formData = new FormData();
-    formData.append('file', imageFile);
+    formData.append('file', file);
     formData.append('upload_preset', CLOUDINARY_PRESET);
     const response = await axios.post(CLOUDINARY_URL, formData);
     return response.data.secure_url;
@@ -47,7 +51,7 @@ const Dashboard = () => {
 
     try {
       setStatus(editingIndex !== null ? 'Updating blog...' : 'Posting blog...');
-      const imageUrl = imageFile ? await handleImageUpload() : blogs[editingIndex]?.image;
+      const imageUrl = imageFile ? await handleImageUpload(imageFile) : blogs[editingIndex]?.image;
       const newBlog = {
         title: blogTitle,
         content: blogContent,
@@ -64,7 +68,7 @@ const Dashboard = () => {
 
       await axios.put(
         JSONBIN_URL,
-        { blogs: updatedBlogs },
+        { blogs: updatedBlogs, gallery: galleryImages },
         {
           headers: {
             'Content-Type': 'application/json',
@@ -97,7 +101,7 @@ const Dashboard = () => {
     const updatedBlogs = blogs.filter((_, i) => i !== index);
     await axios.put(
       JSONBIN_URL,
-      { blogs: updatedBlogs },
+      { blogs: updatedBlogs, gallery: galleryImages },
       {
         headers: {
           'Content-Type': 'application/json',
@@ -110,9 +114,63 @@ const Dashboard = () => {
     setStatus('🗑️ Blog deleted.');
   };
 
+  const handleUploadGalleryImage = async () => {
+    if (!galleryImageFile) {
+      setGalleryStatus('Please select an image to upload.');
+      return;
+    }
+
+    try {
+      setGalleryStatus('Uploading image...');
+      const imageUrl = await handleImageUpload(galleryImageFile);
+      const newImage = {
+        title: `Gallery Image - ${new Date().toLocaleDateString()}`,
+        url: imageUrl,
+        timestamp: new Date().toISOString()
+      };
+      const updatedGallery = [newImage, ...galleryImages];
+
+      await axios.put(
+        JSONBIN_URL,
+        { blogs, gallery: updatedGallery },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Master-Key': JSONBIN_API_KEY,
+            'X-Bin-Versioning': false
+          }
+        }
+      );
+
+      setGalleryImages(updatedGallery);
+      setGalleryImageFile(null);
+      setGalleryStatus('✅ Image added to gallery!');
+    } catch (err) {
+      console.error(err);
+      setGalleryStatus('❌ Failed to upload image.');
+    }
+  };
+
+  const handleDeleteGalleryImage = async (index) => {
+    const updatedGallery = galleryImages.filter((_, i) => i !== index);
+    await axios.put(
+      JSONBIN_URL,
+      { blogs, gallery: updatedGallery },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Master-Key': JSONBIN_API_KEY,
+          'X-Bin-Versioning': false
+        }
+      }
+    );
+    setGalleryImages(updatedGallery);
+    setGalleryStatus('🗑️ Image deleted from gallery.');
+  };
+
   const handleLogout = () => {
-    localStorage.clear(); // or remove specific auth token
-    window.location.href = '/'; // redirect to login or homepage
+    localStorage.clear();
+    window.location.href = '/';
   };
 
   return (
@@ -122,6 +180,7 @@ const Dashboard = () => {
         <button className="logout-btn" onClick={handleLogout}>Logout</button>
       </div>
 
+      <h3>Post a Blog</h3>
       <div className="form-group">
         <label>Blog Title</label>
         <input
@@ -174,28 +233,35 @@ const Dashboard = () => {
               <div className="blog-actions">
                 <button onClick={() => handleEdit(index)}>Edit</button>
                 <button onClick={() => handleDelete(index)}>Delete</button>
-                <a
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(blog.image)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Share on Facebook
-                </a>
-                <a
-                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(blog.image)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Share on LinkedIn
-                </a>
-                <a
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(blog.title + ' - ' + blog.content)}&url=${encodeURIComponent(blog.image)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Share on X
-                </a>
               </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <hr />
+      <h3>Gallery</h3>
+      <div className="form-group">
+        <label>Upload Gallery Image</label>
+        <input
+          type="file"
+          accept="image/*"
+          className="form-control"
+          onChange={(e) => setGalleryImageFile(e.target.files[0])}
+        />
+      </div>
+      <button className="btn btn-secondary" onClick={handleUploadGalleryImage}>Upload to Gallery</button>
+      {galleryStatus && <p className="status-message">{galleryStatus}</p>}
+
+      <div className="gallery-grid">
+        {galleryImages.length === 0 && <p>No gallery images available.</p>}
+        {galleryImages.map((img, index) => (
+          <div key={index} className="gallery-card">
+            <img src={img.url} alt={img.title} />
+            <div className="gallery-actions">
+              <strong>{img.title}</strong>
+              <small>{new Date(img.timestamp).toLocaleString()}</small>
+              <button onClick={() => handleDeleteGalleryImage(index)}>Delete</button>
             </div>
           </div>
         ))}

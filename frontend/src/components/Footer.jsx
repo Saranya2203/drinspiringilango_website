@@ -25,6 +25,7 @@ const Footer = () => {
     <li><Link to="/viif">VIIF</Link></li>
     <li><Link to="/ace-panacea">Ace Panacea Life Skills Private Limited</Link></li>
     <li><Link to="/about">{t('footer.links.about')}</Link></li>
+    <li><Link to="/gallery">{t('footer.links.gallery')}</Link></li>
     <li><Link to="/services">{t('footer.links.services')}</Link></li>
     <li><Link to="/events">{t('footer.links.events')}</Link></li>
     <li><Link to="/blogs">{t('footer.links.blogs')}</Link></li>

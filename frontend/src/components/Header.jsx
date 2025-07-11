@@ -8,14 +8,15 @@ import logo from '../Log.png';
 const Header = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isSubMenuOpen, setSubMenuOpen] = useState(false);
+  const [isHomeSubMenuOpen, setHomeSubMenuOpen] = useState(false);
+  const [isAboutSubMenuOpen, setAboutSubMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
-    // Navigate to homepage and optionally close submenu
     navigate('/');
-    setSubMenuOpen(false);
-    setMenuOpen(false); // also close main menu on mobile
+    setHomeSubMenuOpen(false);
+    setAboutSubMenuOpen(false);
+    setMenuOpen(false);
   };
 
   return (
@@ -32,8 +33,11 @@ const Header = () => {
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           {/* Home with submenu */}
           <div
-            className={`nav-item ${isSubMenuOpen ? 'open' : ''}`}
-            onClick={() => setSubMenuOpen(!isSubMenuOpen)}
+            className={`nav-item ${isHomeSubMenuOpen ? 'open' : ''}`}
+            onClick={() => {
+              setHomeSubMenuOpen(!isHomeSubMenuOpen);
+              setAboutSubMenuOpen(false);
+            }}
           >
             <span className="nav-link">
               {t('header.navHome')} ▼
@@ -51,8 +55,28 @@ const Header = () => {
             </div>
           </div>
 
+          {/* About with submenu */}
+          <div
+            className={`nav-item ${isAboutSubMenuOpen ? 'open' : ''}`}
+            onClick={() => {
+              setAboutSubMenuOpen(!isAboutSubMenuOpen);
+              setHomeSubMenuOpen(false);
+            }}
+          >
+            <span className="nav-link">
+              {t('header.navAbout')} ▼
+            </span>
+            <div className="submenu">
+              <Link to="/about" onClick={() => setMenuOpen(false)}>
+                {t('header.navAboutMain', 'About')}
+              </Link>
+              <Link to="/about/gallery" onClick={() => setMenuOpen(false)}>
+                {t('header.navGallery', 'Gallery')}
+              </Link>
+            </div>
+          </div>
+
           {/* Other links */}
-          <Link to="/about" onClick={() => setMenuOpen(false)}>{t('header.navAbout')}</Link>
           <Link to="/services" onClick={() => setMenuOpen(false)}>{t('header.navServices')}</Link>
           <Link to="/blogs" onClick={() => setMenuOpen(false)}>{t('header.navBlogs')}</Link>
           <Link to="/events" onClick={() => setMenuOpen(false)}>{t('header.navEvents')}</Link>
