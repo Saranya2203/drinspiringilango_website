@@ -54,7 +54,7 @@ const Gallery = () => {
             {item.url ? (
               <img
                 src={item.url}
-                alt={item.title || 'Gallery Image'}
+                alt={item.title || 'Image'}
                 loading="lazy"
               />
             ) : (

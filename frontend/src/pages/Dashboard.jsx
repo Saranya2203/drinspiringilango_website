@@ -14,6 +14,7 @@ const Dashboard = () => {
   const [blogs, setBlogs] = useState([]);
   const [galleryImages, setGalleryImages] = useState([]);
   const [galleryImageFile, setGalleryImageFile] = useState(null);
+  const [galleryImageTitle, setGalleryImageTitle] = useState('');
   const [galleryStatus, setGalleryStatus] = useState('');
   const [status, setStatus] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
@@ -124,7 +125,7 @@ const Dashboard = () => {
       setGalleryStatus('Uploading image...');
       const imageUrl = await handleImageUpload(galleryImageFile);
       const newImage = {
-        title: `Gallery Image - ${new Date().toLocaleDateString()}`,
+        title: galleryImageTitle.trim() || `Gallery Image - ${new Date().toLocaleDateString()}`,
         url: imageUrl,
         timestamp: new Date().toISOString()
       };
@@ -144,6 +145,7 @@ const Dashboard = () => {
 
       setGalleryImages(updatedGallery);
       setGalleryImageFile(null);
+      setGalleryImageTitle('');
       setGalleryStatus('✅ Image added to gallery!');
     } catch (err) {
       console.error(err);
@@ -241,6 +243,18 @@ const Dashboard = () => {
 
       <hr />
       <h3>Gallery</h3>
+
+      <div className="form-group">
+        <label>Gallery Image Title</label>
+        <input
+          type="text"
+          className="form-control"
+          value={galleryImageTitle}
+          onChange={(e) => setGalleryImageTitle(e.target.value)}
+          placeholder="Enter image title"
+        />
+      </div>
+
       <div className="form-group">
         <label>Upload Gallery Image</label>
         <input
@@ -250,7 +264,10 @@ const Dashboard = () => {
           onChange={(e) => setGalleryImageFile(e.target.files[0])}
         />
       </div>
-      <button className="btn btn-secondary" onClick={handleUploadGalleryImage}>Upload to Gallery</button>
+
+      <button className="btn btn-secondary" onClick={handleUploadGalleryImage}>
+        Upload to Gallery
+      </button>
       {galleryStatus && <p className="status-message">{galleryStatus}</p>}
 
       <div className="gallery-grid">
