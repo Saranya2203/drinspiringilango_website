@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import VIIF from './pages/Viif';
 import AcePanacea from './pages/AcePanacea';
 import About from './pages/About';
-import Gallery from './components/Gallery';
+import Gallery from './pages/Gallery';
 import Services from './pages/Services';
 import Blogs from './pages/Blogs';
 import Events from './pages/Events';
@@ -42,7 +42,7 @@ function App() {
               <Route path="/viif" element={<VIIF />} />
               <Route path="/ace-panacea" element={<AcePanacea />} />
               <Route path="/about" element={<About />} />
-              <Route path="/about/gallery" element={<Gallery />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/services" element={<Services />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/events" element={<Events />} />
