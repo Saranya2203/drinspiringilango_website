@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Gallery.css';
 
-const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/685e88048561e97a502cbd91';
+const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/685e88048561e97a502cbd91/latest'; // ✅ FIXED;
 const JSONBIN_API_KEY = '$2a$10$LR0UoKdp73g6ex3pWvL2V.u0WWX0OVFbpHoIGNRVPiTnpLKA8SyTu';
 
 const Gallery = () => {
