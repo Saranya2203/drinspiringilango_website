@@ -42,7 +42,7 @@ function App() {
               <Route path="/viif" element={<VIIF />} />
               <Route path="/ace-panacea" element={<AcePanacea />} />
               <Route path="/about" element={<About />} />
-              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/about/gallery" element={<Gallery />} />
               <Route path="/services" element={<Services />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/events" element={<Events />} />
