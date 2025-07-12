@@ -1,6 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import Slider from "react-slick";
 import "./VIIF.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const VIIF = () => {
   const { t } = useTranslation();
@@ -8,8 +11,41 @@ const VIIF = () => {
   const initiatives = t("viif.initiatives.list", { returnObjects: true });
   const accounts = t("viif.donation.accounts", { returnObjects: true });
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+  };
+
+  const sliderContents = [
+    "Vision Inspiring Ilango Foundation empowers rural youth through leadership and life skills.",
+    "Our mission is to create self-reliant and socially responsible individuals.",
+    "Join us in building a better tomorrow through education, innovation, and compassion.",
+  ];
+
   return (
     <div className="viif-container">
+      {/* Logo */}
+      <div className="viif-logo">
+        <img src="/assets/viif_logo.png" alt="VIIF Logo" className="viif-logo-img" />
+      </div>
+
+      {/* Text Slider */}
+      <div className="viif-text-slider">
+        <Slider {...sliderSettings}>
+          {sliderContents.map((text, index) => (
+            <div key={index} className="text-slide">
+              <p>{text}</p>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
       <section className="viif-header">
         <h1>{t("viif.title")}</h1>
         <h2>{t("viif.subtitle1")}</h2>
