@@ -79,7 +79,7 @@ const Home = () => {
   className="hero-banner"
   aria-label="Global Hero Section"
   style={{
-    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/Ilango - Edited.jpg)`,
+    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/Ilango_Edited.jpg)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
