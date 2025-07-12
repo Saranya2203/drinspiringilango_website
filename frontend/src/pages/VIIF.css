@@ -160,9 +160,13 @@
 }
 
 /* Logo Styling */
+/* Logo Styling with Background */
 .viif-logo {
   text-align: center;
   margin-bottom: 2rem;
+  background-color: #ff9900;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .viif-logo-img {
@@ -179,7 +183,7 @@
 }
 
 .text-slide {
-  background-color: #002244;
+  background-color: #e6f2ff;
   padding: 2rem 1.5rem;
   border-radius: 8px;
   font-size: 1.2rem;
@@ -189,10 +193,10 @@
   text-align: center;
 }
 
-/* Slider Arrow Buttons */
-.slick-prev:before,
-.slick-next:before {
-  color: #004080;
+/* Slider Arrow Buttons (Dark Blue) */
+.viif-text-slider .slick-prev:before,
+.viif-text-slider .slick-next:before {
+  color: #002244 !important;
   font-size: 24px;
 }
 
