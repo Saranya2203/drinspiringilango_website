@@ -1,12 +1,40 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import Slider from "react-slick";
 import "./AcePanacea.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const AcePanacea = () => {
   const { t } = useTranslation();
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+  };
+
   return (
     <div className="ace-container">
+      {/* Logo */}
+      <div className="ace-logo">
+        <img src="/assets/Ace_Logo.png" alt="Ace Panacea Logo" className="logo-img" />
+      </div>
+
+      {/* Banner Slider */}
+      <div className="ace-banner-slider">
+  <Slider {...sliderSettings}>
+    <div><img src="/assets/Ace_banner1.jpg" alt="Banner 1" className="banner-img" /></div>
+    <div><img src="/assets/Ace_banner2.png" alt="Banner 2" className="banner-img" /></div>
+    <div><img src="/assets/Ace_banner3.jpg" alt="Banner 3" className="banner-img" /></div>
+  </Slider>
+</div>
       <h1 className="ace-title">{t("ace.title")}</h1>
       <p className="ace-subtitle">{t("ace.tagline")}</p>
 
