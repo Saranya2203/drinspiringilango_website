@@ -75,7 +75,16 @@ const Home = () => {
       </Helmet>
 
       <main className="home">
-        <section className="hero-banner" aria-label="Global Hero Section">
+        <section
+  className="hero-banner"
+  aria-label="Global Hero Section"
+  style={{
+    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/Ilango.jpg)`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
   <div className="hero-banner-content">
     <h1 tabIndex="0">{t('hero.title')}</h1>
     <p tabIndex="0">{t('hero.description')}</p>
@@ -89,6 +98,7 @@ const Home = () => {
     </a>
   </div>
 </section>
+
 
 
         <section className="video-intro" aria-label={t('videoIntro.aria')}>
