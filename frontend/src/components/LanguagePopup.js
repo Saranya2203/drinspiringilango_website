@@ -1,27 +1,33 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './LanguagePopup.css';
 import { useTranslation } from 'react-i18next';
 
 const LanguagePopup = ({ onSelect }) => {
   const { i18n } = useTranslation();
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
-  const startAudio = async () => {
+  useEffect(() => {
     const audio = audioRef.current;
-    if (audio && !isPlaying) {
-      try {
-        audio.loop = true;
-        audio.volume = 1.0;
-        audio.muted = false;
-        await audio.play();
-        setIsPlaying(true);
-      } catch (err) {
-        console.warn('Autoplay blocked or failed:', err);
-      }
+    if (audio) {
+      audio.loop = true;
+      audio.volume = 1.0;
+      audio.muted = false;
+
+      // Try to autoplay (works on desktop, blocked on mobile unless user interacts)
+      audio.play().catch((err) => {
+        console.warn('Autoplay failed, will require user interaction:', err);
+      });
     }
-  };
+
+    return () => {
+      // Cleanup: stop audio if component unmounts early
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    };
+  }, []);
 
   const handleMuteToggle = () => {
     const audio = audioRef.current;
@@ -31,8 +37,13 @@ const LanguagePopup = ({ onSelect }) => {
     }
   };
 
-  const handleLanguageSelect = async (lang) => {
-    await startAudio(); // start music on first interaction
+  const handleLanguageSelect = (lang) => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+
     i18n.changeLanguage(lang);
     onSelect(); // hide popup
   };
@@ -47,17 +58,14 @@ const LanguagePopup = ({ onSelect }) => {
       <div className="popup-content">
         <h1 className="popup-title">Dr. Inspiring Ilango</h1>
         <h2>Select Your Language</h2>
-        <p className="popup-instruction">Tap a language to start background music</p>
         <div className="language-buttons">
           <button onClick={() => handleLanguageSelect('en')}>English</button>
           <button onClick={() => handleLanguageSelect('ta')}>தமிழ்</button>
         </div>
 
-        {isPlaying && (
-          <button className="mute-button" onClick={handleMuteToggle}>
-            {isMuted ? 'Unmute 🔈' : 'Mute 🔇'}
-          </button>
-        )}
+        <button className="mute-button" onClick={handleMuteToggle}>
+          {isMuted ? 'Unmute 🔈' : 'Mute 🔇'}
+        </button>
       </div>
     </div>
   );
