@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 import './Dashboard.css';
 
 const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/derlc4lyq/image/upload';
@@ -8,14 +9,21 @@ const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/685e88048561e97a502cbd91';
 const JSONBIN_API_KEY = '$2a$10$LR0UoKdp73g6ex3pWvL2V.u0WWX0OVFbpHoIGNRVPiTnpLKA8SyTu';
 
 const Dashboard = () => {
+  const { t } = useTranslation();
+
   const [blogTitle, setBlogTitle] = useState('');
   const [blogContent, setBlogContent] = useState('');
   const [imageFile, setImageFile] = useState(null);
   const [blogs, setBlogs] = useState([]);
   const [galleryImages, setGalleryImages] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
+
   const [galleryImageFile, setGalleryImageFile] = useState(null);
   const [galleryImageTitle, setGalleryImageTitle] = useState('');
-  const [galleryStatus, setGalleryStatus] = useState('');
+
+  const [testimonialName, setTestimonialName] = useState('');
+  const [testimonialComment, setTestimonialComment] = useState('');
+
   const [status, setStatus] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
 
@@ -31,6 +39,7 @@ const Dashboard = () => {
       const data = res.data.record;
       setBlogs(data.blogs || []);
       setGalleryImages(data.gallery || []);
+      setTestimonials(data.testimonials || []);
     } catch (err) {
       console.error('Failed to fetch data', err);
     }
@@ -44,14 +53,28 @@ const Dashboard = () => {
     return response.data.secure_url;
   };
 
+  const updateJsonBin = async (newData) => {
+    await axios.put(
+      JSONBIN_URL,
+      newData,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Master-Key': JSONBIN_API_KEY,
+          'X-Bin-Versioning': false
+        }
+      }
+    );
+  };
+
   const handlePostBlog = async () => {
     if (!blogTitle || !blogContent) {
-      setStatus('Please enter both title and content.');
+      setStatus(t('dashboard.enterTitleContent'));
       return;
     }
 
     try {
-      setStatus(editingIndex !== null ? 'Updating blog...' : 'Posting blog...');
+      setStatus(editingIndex !== null ? t('dashboard.updating') : t('dashboard.posting'));
       const imageUrl = imageFile ? await handleImageUpload(imageFile) : blogs[editingIndex]?.image;
       const newBlog = {
         title: blogTitle,
@@ -67,27 +90,16 @@ const Dashboard = () => {
         updatedBlogs.unshift(newBlog);
       }
 
-      await axios.put(
-        JSONBIN_URL,
-        { blogs: updatedBlogs, gallery: galleryImages },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Master-Key': JSONBIN_API_KEY,
-            'X-Bin-Versioning': false
-          }
-        }
-      );
-
+      await updateJsonBin({ blogs: updatedBlogs, gallery: galleryImages, testimonials });
       setBlogs(updatedBlogs);
       setBlogTitle('');
       setBlogContent('');
       setImageFile(null);
       setEditingIndex(null);
-      setStatus('✅ Blog successfully saved!');
+      setStatus(t('dashboard.blogSaved'));
     } catch (err) {
       console.error(err);
-      setStatus('❌ Failed to save blog.');
+      setStatus(t('dashboard.blogFailed'));
     }
   };
 
@@ -100,74 +112,68 @@ const Dashboard = () => {
 
   const handleDelete = async (index) => {
     const updatedBlogs = blogs.filter((_, i) => i !== index);
-    await axios.put(
-      JSONBIN_URL,
-      { blogs: updatedBlogs, gallery: galleryImages },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Master-Key': JSONBIN_API_KEY,
-          'X-Bin-Versioning': false
-        }
-      }
-    );
+    await updateJsonBin({ blogs: updatedBlogs, gallery: galleryImages, testimonials });
     setBlogs(updatedBlogs);
-    setStatus('🗑️ Blog deleted.');
+    setStatus(t('dashboard.blogDeleted'));
   };
 
   const handleUploadGalleryImage = async () => {
     if (!galleryImageFile) {
-      setGalleryStatus('Please select an image to upload.');
+      setStatus(t('dashboard.selectImage'));
       return;
     }
 
     try {
-      setGalleryStatus('Uploading image...');
+      setStatus(t('dashboard.uploadingImage'));
       const imageUrl = await handleImageUpload(galleryImageFile);
       const newImage = {
-        title: galleryImageTitle.trim() || `Gallery Image - ${new Date().toLocaleDateString()}`,
+        title: galleryImageTitle.trim() || `${t('dashboard.galleryImage')} - ${new Date().toLocaleDateString()}`,
         url: imageUrl,
         timestamp: new Date().toISOString()
       };
       const updatedGallery = [newImage, ...galleryImages];
 
-      await axios.put(
-        JSONBIN_URL,
-        { blogs, gallery: updatedGallery },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Master-Key': JSONBIN_API_KEY,
-            'X-Bin-Versioning': false
-          }
-        }
-      );
-
+      await updateJsonBin({ blogs, gallery: updatedGallery, testimonials });
       setGalleryImages(updatedGallery);
       setGalleryImageFile(null);
       setGalleryImageTitle('');
-      setGalleryStatus('✅ Image added to gallery!');
+      setStatus(t('dashboard.imageUploaded'));
     } catch (err) {
       console.error(err);
-      setGalleryStatus('❌ Failed to upload image.');
+      setStatus(t('dashboard.imageUploadFailed'));
     }
   };
 
-  const handleDeleteGalleryImage = async (index) => {
-    const updatedGallery = galleryImages.filter((_, i) => i !== index);
-    await axios.put(
-      JSONBIN_URL,
-      { blogs, gallery: updatedGallery },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Master-Key': JSONBIN_API_KEY,
-          'X-Bin-Versioning': false
-        }
-      }
-    );
-    setGalleryImages(updatedGallery);
-    setGalleryStatus('🗑️ Image deleted from gallery.');
+  const handleUploadTestimonial = async () => {
+    if (!testimonialName || !testimonialComment) {
+      setStatus(t('dashboard.enterTestimonial'));
+      return;
+    }
+
+    try {
+      const newTestimonial = {
+        name: testimonialName.trim(),
+        comment: testimonialComment.trim(),
+        timestamp: new Date().toISOString()
+      };
+      const updatedTestimonials = [newTestimonial, ...testimonials];
+      await updateJsonBin({ blogs, gallery: galleryImages, testimonials: updatedTestimonials });
+
+      setTestimonials(updatedTestimonials);
+      setTestimonialName('');
+      setTestimonialComment('');
+      setStatus(t('dashboard.testimonialAdded'));
+    } catch (err) {
+      console.error(err);
+      setStatus(t('dashboard.testimonialFailed'));
+    }
+  };
+
+  const handleDeleteTestimonial = async (index) => {
+    const updatedTestimonials = testimonials.filter((_, i) => i !== index);
+    await updateJsonBin({ blogs, gallery: galleryImages, testimonials: updatedTestimonials });
+    setTestimonials(updatedTestimonials);
+    setStatus(t('dashboard.testimonialDeleted'));
   };
 
   const handleLogout = () => {
@@ -179,53 +185,35 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <div className="dashboard-header">
         <h2>Admin Dashboard</h2>
-        <button className="logout-btn" onClick={handleLogout}>Logout</button>
+        <button className="logout-btn" onClick={handleLogout}>{t('dashboard.logout')}</button>
       </div>
 
-      <h3>Post a Blog</h3>
+      <h3>{t('dashboard.postBlog')}</h3>
       <div className="form-group">
-        <label>Blog Title</label>
-        <input
-          type="text"
-          className="form-control"
-          value={blogTitle}
-          onChange={(e) => setBlogTitle(e.target.value)}
-          placeholder="Enter blog title"
-        />
+        <label>{t('dashboard.blogTitle')}</label>
+        <input type="text" className="form-control" value={blogTitle} onChange={(e) => setBlogTitle(e.target.value)} />
       </div>
 
       <div className="form-group">
-        <label>Blog Content</label>
-        <textarea
-          className="form-control"
-          rows="4"
-          value={blogContent}
-          onChange={(e) => setBlogContent(e.target.value)}
-          placeholder="Write your blog content..."
-        />
+        <label>{t('dashboard.blogContent')}</label>
+        <textarea className="form-control" rows="4" value={blogContent} onChange={(e) => setBlogContent(e.target.value)} />
       </div>
 
       <div className="form-group">
-        <label>Blog Image</label>
-        <input
-          type="file"
-          accept="image/*"
-          className="form-control"
-          onChange={(e) => setImageFile(e.target.files[0])}
-        />
+        <label>{t('dashboard.blogImage')}</label>
+        <input type="file" accept="image/*" className="form-control" onChange={(e) => setImageFile(e.target.files[0])} />
       </div>
 
       <button className="btn btn-primary" onClick={handlePostBlog}>
-        {editingIndex !== null ? 'Update Blog' : 'Post Blog'}
+        {editingIndex !== null ? t('dashboard.updateBlog') : t('dashboard.postBlog')}
       </button>
 
       {status && <p className="status-message">{status}</p>}
 
       <hr />
-      <h3>All Blogs</h3>
+      <h3>{t('dashboard.allBlogs')}</h3>
       <div className="blog-list">
-        {blogs.length === 0 && <p>No blogs available.</p>}
-        {blogs.map((blog, index) => (
+        {blogs.length === 0 ? <p>{t('dashboard.noBlogs')}</p> : blogs.map((blog, index) => (
           <div key={index} className="blog-card">
             {blog.image && <img src={blog.image} alt="Blog" />}
             <div className="blog-body">
@@ -233,8 +221,8 @@ const Dashboard = () => {
               <p>{blog.content}</p>
               <small>{new Date(blog.timestamp).toLocaleString()}</small>
               <div className="blog-actions">
-                <button onClick={() => handleEdit(index)}>Edit</button>
-                <button onClick={() => handleDelete(index)}>Delete</button>
+                <button onClick={() => handleEdit(index)}>{t('dashboard.edit')}</button>
+                <button onClick={() => handleDelete(index)}>{t('dashboard.delete')}</button>
               </div>
             </div>
           </div>
@@ -242,44 +230,52 @@ const Dashboard = () => {
       </div>
 
       <hr />
-      <h3>Gallery</h3>
-
+      <h3>{t('dashboard.gallery')}</h3>
       <div className="form-group">
-        <label>Gallery Image Title</label>
-        <input
-          type="text"
-          className="form-control"
-          value={galleryImageTitle}
-          onChange={(e) => setGalleryImageTitle(e.target.value)}
-          placeholder="Enter image title"
-        />
+        <label>{t('dashboard.galleryTitle')}</label>
+        <input type="text" className="form-control" value={galleryImageTitle} onChange={(e) => setGalleryImageTitle(e.target.value)} />
       </div>
 
       <div className="form-group">
-        <label>Upload Gallery Image</label>
-        <input
-          type="file"
-          accept="image/*"
-          className="form-control"
-          onChange={(e) => setGalleryImageFile(e.target.files[0])}
-        />
+        <label>{t('dashboard.galleryUpload')}</label>
+        <input type="file" accept="image/*" className="form-control" onChange={(e) => setGalleryImageFile(e.target.files[0])} />
       </div>
 
-      <button className="btn btn-secondary" onClick={handleUploadGalleryImage}>
-        Upload to Gallery
-      </button>
-      {galleryStatus && <p className="status-message">{galleryStatus}</p>}
+      <button className="btn btn-secondary" onClick={handleUploadGalleryImage}>{t('dashboard.uploadToGallery')}</button>
 
       <div className="gallery-grid">
-        {galleryImages.length === 0 && <p>No gallery images available.</p>}
-        {galleryImages.map((img, index) => (
+        {galleryImages.map((item, index) => (
           <div key={index} className="gallery-card">
-            <img src={img.url} alt={img.title} />
+            <img src={item.url} alt={item.title} />
             <div className="gallery-actions">
-              <strong>{img.title}</strong>
-              <small>{new Date(img.timestamp).toLocaleString()}</small>
-              <button onClick={() => handleDeleteGalleryImage(index)}>Delete</button>
+              <strong>{item.title}</strong>
+              <small>{new Date(item.timestamp).toLocaleString()}</small>
             </div>
+          </div>
+        ))}
+      </div>
+
+      <hr />
+      <h3>{t('dashboard.testimonials')}</h3>
+      <div className="form-group">
+        <label>{t('dashboard.testimonialName')}</label>
+        <input type="text" className="form-control" value={testimonialName} onChange={(e) => setTestimonialName(e.target.value)} />
+      </div>
+
+      <div className="form-group">
+        <label>{t('dashboard.testimonialComment')}</label>
+        <textarea className="form-control" rows="2" value={testimonialComment} onChange={(e) => setTestimonialComment(e.target.value)} />
+      </div>
+
+      <button className="btn btn-secondary" onClick={handleUploadTestimonial}>{t('dashboard.uploadTestimonial')}</button>
+
+      <div className="testimonials-list">
+        {testimonials.length === 0 ? <p>{t('dashboard.noTestimonials')}</p> : testimonials.map((item, index) => (
+          <div key={index} className="testimonial-card">
+            <strong>{item.name}</strong>
+            <p>{item.comment}</p>
+            <small>{new Date(item.timestamp).toLocaleString()}</small>
+            <button onClick={() => handleDeleteTestimonial(index)}>{t('dashboard.delete')}</button>
           </div>
         ))}
       </div>

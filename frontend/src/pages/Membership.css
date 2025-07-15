@@ -6,6 +6,7 @@
   color: #222;
 }
 
+/* Header & Footer */
 .membership-header,
 .membership-footer-cta {
   text-align: center;
@@ -105,6 +106,7 @@
   list-style: disc;
 }
 
+/* Join Button */
 .join-btn {
   background-color: #002244;
   color: white;
@@ -118,10 +120,10 @@
 }
 
 .join-btn:hover {
-  background-color: #002244;
+  background-color: #001a33;
 }
 
-/* Testimonials */
+/* Testimonials Section */
 .testimonials-section {
   margin: 3rem 0;
   text-align: center;
@@ -132,23 +134,41 @@
   margin-bottom: 1.5rem;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+.testimonial-comment-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
-.testimonial-image-card {
+.testimonial-comment-card {
+  background: #fff;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.2s ease;
 }
 
-.testimonial-image-only {
-  width: 100%;
-  height: auto;
+.testimonial-comment-card:hover {
+  transform: translateY(-3px);
+}
+
+.testimonial-comment-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #444;
+  font-style: italic;
+}
+
+.testimonial-comment-card strong {
   display: block;
-  object-fit: cover;
+  font-size: 1rem;
+  color: #002244;
+  margin-top: 0.5rem;
 }
 
 /* FAQ Section */
@@ -206,13 +226,26 @@
 }
 
 /* Responsive Breakpoints */
+@media screen and (max-width: 1024px) {
+  .membership-plans {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .membership-container {
     padding: 1rem;
   }
 
-  .membership-header h1 {
+  .membership-header h1,
+  .membership-footer-cta h2 {
     font-size: 1.8rem;
+  }
+
+  .membership-header p,
+  .membership-footer-cta p {
+    font-size: 1rem;
   }
 
   .membership-card {
@@ -224,8 +257,8 @@
     padding: 1rem;
   }
 
-  .testimonials-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  .testimonial-comment-card {
+    max-width: 100%;
   }
 }
 
@@ -237,11 +270,20 @@
 
   .membership-header p,
   .membership-footer-cta p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .join-btn,
   .membership-footer-cta button {
     font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .testimonials-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .faq-section h2 {
+    font-size: 1.4rem;
   }
 }

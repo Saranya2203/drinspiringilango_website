@@ -566,64 +566,92 @@
       "none": "No upcoming events found."
     }
   },
-  "membership": {
-    "title": "Join Our Membership",
-    "subtitle": "Empower your journey with exclusive benefits and access",
-    "joinButton": "Join Now",
-    "whyJoin": {
-      "title": "Why Become a Member?",
-      "points": [
-        "Unlimited access to wellness content",
-        "Exclusive discounts on sessions and workshops",
-        "Direct communication with Dr. Inspiring Ilango",
-        "Early access to events and digital resources"
-      ]
-    },
-    "cta": {
-      "title": "Ready to Transform Your Life?",
-      "subtitle": "Take the first step today. Join our vibrant community.",
-      "button": "Get Started"
-    },
+ "membership": {
+    "title": "Membership Plans",
+    "subtitle": "Choose the plan that's right for you.",
     "basic": {
       "title": "Basic",
-      "price": "$9/month",
+      "price": "$10/month",
       "features": [
-        "Access to webinars",
-        "Monthly newsletters",
-        "Community forum access"
+        "Access to online resources",
+        "Monthly newsletter",
+        "Community support"
       ]
     },
     "premium": {
       "title": "Premium",
-      "price": "$29/month",
+      "price": "$25/month",
       "features": [
-        "All Basic features",
-        "1-on-1 counseling sessions",
-        "Access to all eBooks & resources"
+        "Everything in Basic",
+        "Priority email support",
+        "Exclusive webinars"
       ]
     },
     "elite": {
       "title": "Elite",
-      "price": "$99/month",
+      "price": "$50/month",
       "features": [
-        "All Premium features",
-        "Personalized coaching",
-        "Priority event invitations"
+        "Everything in Premium",
+        "1-on-1 mentoring",
+        "Free event tickets"
       ]
+    },
+    "joinButton": "Join Now",
+    "whyJoin": {
+      "title": "Why Join Us?",
+      "points": [
+        "Connect with like-minded people",
+        "Grow your skills with expert sessions",
+        "Be part of a passionate community"
+      ]
+    },
+    "cta": {
+      "title": "Ready to Elevate Your Journey?",
+      "subtitle": "Sign up now and be part of our growing community.",
+      "button": "Get Started"
     }
-  },
-  "testimonials": {
-    "title": "Voices of Our Community"
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "q1": "Can I cancel my membership at any time?",
-    "a1": "Yes, you can cancel anytime from your profile dashboard.",
-    "q2": "Do memberships include personal sessions?",
-    "a2": "Premium and Elite members receive private 1-on-1 sessions.",
-    "q3": "Is there a free trial available?",
-    "a3": "We offer a 7-day trial for new members with limited features."
+    "q1": "What is included in each membership tier?",
+    "a1": "Each tier offers progressively more benefits as listed in the plans.",
+    "q2": "Can I switch plans later?",
+    "a2": "Yes, you can upgrade or downgrade anytime from your account settings.",
+    "q3": "Do you offer refunds?",
+    "a3": "Refunds are available within the first 7 days of joining."
+  },
+  "testimonials": {
+    "title": "Voice of Our Community"
+  },
+  "dashboard": {
+    "header": "Dashboard",
+    "logout": "Logout",
+    "blogsTitle": "Recent Blog Posts",
+    "galleryTitle": "Photo Gallery",
+    "testimonialsTitle": "What Our Members Say",
+    "blogs": [
+      {
+        "title": "Content",
+        "content": "ghfguiehofhe jipjeufvihebf ijiehjihjeifj"
+      }
+    ],
+    "gallery": [
+      {
+        "title": "Hiii"
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Sundar Rajan",
+        "comment": "This service exceeded my expectations. Great support team!"
+      },
+      {
+        "name": "Priya M.",
+        "comment": "A very professional and friendly experience. Highly recommend!"
+      }
+    ]
   }
+
 }
 
 

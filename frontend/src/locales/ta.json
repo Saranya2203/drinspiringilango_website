@@ -545,62 +545,89 @@
   },
 
   "membership": {
-    "title": "Join Our Membership",
-    "subtitle": "Empower your journey with exclusive benefits and access",
-    "joinButton": "Join Now",
-    "whyJoin": {
-      "title": "Why Become a Member?",
-      "points": [
-        "Unlimited access to wellness content",
-        "Exclusive discounts on sessions and workshops",
-        "Direct communication with Dr. Inspiring Ilango",
-        "Early access to events and digital resources"
-      ]
-    },
-    "cta": {
-      "title": "Ready to Transform Your Life?",
-      "subtitle": "Take the first step today. Join our vibrant community.",
-      "button": "Get Started"
-    },
+    "title": "உறுப்பினர் திட்டங்கள்",
+    "subtitle": "உங்களுக்கு பொருத்தமான திட்டத்தை தேர்ந்தெடுக்கவும்.",
     "basic": {
-      "title": "Basic",
-      "price": "$9/month",
+      "title": "அடிப்படை",
+      "price": "₹800/மாதம்",
       "features": [
-        "Access to webinars",
-        "Monthly newsletters",
-        "Community forum access"
+        "ஆன்லைன் வளங்களை அணுகுதல்",
+        "மாத சந்தா செய்தி",
+        "சமூக ஆதரவு"
       ]
     },
     "premium": {
-      "title": "Premium",
-      "price": "$29/month",
+      "title": "பிரீமியம்",
+      "price": "₹2000/மாதம்",
       "features": [
-        "All Basic features",
-        "1-on-1 counseling sessions",
-        "Access to all eBooks & resources"
+        "அடிப்படையில் உள்ள அனைத்தும்",
+        "முன்னுரிமை மின்னஞ்சல் ஆதரவு",
+        "தனிப்பட்ட வெபினார்கள்"
       ]
     },
     "elite": {
-      "title": "Elite",
-      "price": "$99/month",
+      "title": "எலீட்",
+      "price": "₹4000/மாதம்",
       "features": [
-        "All Premium features",
-        "Personalized coaching",
-        "Priority event invitations"
+        "பிரீமியத்தில் உள்ள அனைத்தும்",
+        "தனிப்பட்ட வழிகாட்டல்",
+        "இலவச நிகழ்வு டிக்கெட்டுகள்"
       ]
+    },
+    "joinButton": "இப்போது சேரவும்",
+    "whyJoin": {
+      "title": "ஏன் எங்களைச் சேர வேண்டும்?",
+      "points": [
+        "சம விருப்பங்களை கொண்டவர்களுடன் இணைக",
+        "நிபுணர் அமர்வுகள் மூலம் உங்கள் திறன்களை வளர்க்கவும்",
+        "ஒரு உற்சாகமான சமூகத்தில் இருங்கள்"
+      ]
+    },
+    "cta": {
+      "title": "உங்கள் பயணத்தை உயர்த்த தயாரா?",
+      "subtitle": "இப்போது பதிவு செய்யவும் மற்றும் எங்கள் சமூகத்தின் ஒரு பகுதியாக இருங்கள்.",
+      "button": "தொடங்கு"
     }
   },
-  "testimonials": {
-    "title": "Voices of Our Community"
-  },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "q1": "Can I cancel my membership at any time?",
-    "a1": "Yes, you can cancel anytime from your profile dashboard.",
-    "q2": "Do memberships include personal sessions?",
-    "a2": "Premium and Elite members receive private 1-on-1 sessions.",
-    "q3": "Is there a free trial available?",
-    "a3": "We offer a 7-day trial for new members with limited features."
+    "title": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+    "q1": "ஒவ்வொரு உறுப்பினர் நிலைக்கும் என்ன அடங்கும்?",
+    "a1": "ஒவ்வொரு நிலையும் அதன் பட்டியலின்படி கூடுதல் நன்மைகளை வழங்குகிறது.",
+    "q2": "நான் திட்டங்களை பின்னர் மாற்ற முடியுமா?",
+    "a2": "ஆம், நீங்கள் உங்கள் கணக்கு அமைப்புகளில் இருந்து எப்போது வேண்டுமானாலும் மேம்படுத்தவோ குறைப்பவோ முடியும்.",
+    "q3": "நீங்கள் பணத்தை திருப்பித் தருகிறீர்களா?",
+    "a3": "இணைந்த முதல் 7 நாட்களுக்குள் பணத்தை திருப்பி வழங்குகிறோம்."
+  },
+  "testimonials": {
+    "title": "எங்கள் சமூகத்தின் குரல்"
+  },
+  "dashboard": {
+    "header": "டாஷ்போர்ட்",
+    "logout": "வெளியேறு",
+    "blogsTitle": "சமீபத்திய பதிவுகள்",
+    "galleryTitle": "புகைப்பட கேலரி",
+    "testimonialsTitle": "எங்கள் உறுப்பினர்கள் என்ன சொல்கிறார்கள்",
+    "blogs": [
+      {
+        "title": "உள்ளடக்கம்",
+        "content": "ஜிஹ்ஜிஇஹ்ஜ்இஹ்ஜ்ஃ ஜிப்ஜெஉவ்ஃவிஹெப்ஃ இஜிஇஹ்ஜிஹ்ஜிஇஃஜ்"
+      }
+    ],
+    "gallery": [
+      {
+        "title": "வணக்கம்"
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "சுந்தர் ராஜன்",
+        "comment": "இந்த சேவை என் எதிர்பார்ப்புகளை மீறியது. சிறந்த ஆதரவு குழு!"
+      },
+      {
+        "name": "பிரியா எம்.",
+        "comment": "மிகவும் தொழில்முறை மற்றும் நண்பனான அனுபவம். மிகுந்த பரிந்துரை!"
+      }
+    ]
   }
 
 }

@@ -41,6 +41,8 @@ function Membership() {
     },
   ];
 
+  const testimonials = t('dashboard.testimonials', { returnObjects: true });
+
   return (
     <main className="membership-container" role="main">
       {/* Header */}
@@ -86,17 +88,14 @@ function Membership() {
         ))}
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials - Voice of Our Community */}
       <section className="testimonials-section">
         <h2>{t('testimonials.title')}</h2>
         <div className="testimonials-grid">
-          {[1, 2, 3, 4, 5, 6].map((num) => (
-            <div key={num} className="testimonial-image-card">
-              <img
-                src={`/assets/testimonial${num}.jpg`}
-                alt={`Testimonial ${num}`}
-                className="testimonial-image-only"
-              />
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial-card">
+              <p className="testimonial-comment">"{testimonial.comment}"</p>
+              <p className="testimonial-name">— {testimonial.name}</p>
             </div>
           ))}
         </div>
