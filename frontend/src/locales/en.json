@@ -624,35 +624,43 @@
     "title": "Voice of Our Community"
   },
   "dashboard": {
-    "header": "Dashboard",
     "logout": "Logout",
-    "blogsTitle": "Recent Blog Posts",
-    "galleryTitle": "Photo Gallery",
-    "testimonialsTitle": "What Our Members Say",
-    "blogs": [
-      {
-        "title": "Content",
-        "content": "ghfguiehofhe jipjeufvihebf ijiehjihjeifj"
-      }
-    ],
-    "gallery": [
-      {
-        "title": "Hiii"
-      }
-    ],
-    "testimonials": [
-      {
-        "name": "Sundar Rajan",
-        "comment": "This service exceeded my expectations. Great support team!"
-      },
-      {
-        "name": "Priya M.",
-        "comment": "A very professional and friendly experience. Highly recommend!"
-      }
-    ]
+    "postBlog": "Post Blog",
+    "blogTitle": "Blog Title",
+    "blogContent": "Blog Content",
+    "blogImage": "Blog Image",
+    "updateBlog": "Update Blog",
+    "posting": "Posting blog...",
+    "updating": "Updating blog...",
+    "blogSaved": "Blog saved successfully!",
+    "blogFailed": "Failed to save blog.",
+    "enterTitleContent": "Please enter blog title and content.",
+    "blogDeleted": "Blog deleted.",
+    "allBlogs": "All Blogs",
+    "noBlogs": "No blogs posted yet.",
+    "edit": "Edit",
+    "delete": "Delete",
+    "gallery": "Gallery",
+    "galleryTitle": "Gallery Image Title",
+    "galleryUpload": "Upload Gallery Image",
+    "uploadToGallery": "Upload to Gallery",
+    "selectImage": "Please select an image.",
+    "uploadingImage": "Uploading image...",
+    "imageUploaded": "Image uploaded successfully!",
+    "imageUploadFailed": "Failed to upload image.",
+    "testimonials": "Testimonials",
+    "testimonialName": "Your Name",
+    "testimonialComment": "Your Comment",
+    "uploadTestimonial": "Submit Testimonial",
+    "testimonialAdded": "Testimonial added.",
+    "testimonialFailed": "Failed to add testimonial.",
+    "enterTestimonial": "Please enter your name and comment.",
+    "testimonialDeleted": "Testimonial deleted.",
+    "noTestimonials": "No testimonials yet.",
+    "galleryImage": "Gallery Image"
   }
-
 }
+
 
 
   
