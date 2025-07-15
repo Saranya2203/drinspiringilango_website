@@ -566,63 +566,65 @@
       "none": "No upcoming events found."
     }
   },
- "membership": {
-    "title": "Membership Plans",
-    "subtitle": "Choose the plan that's right for you.",
+  "membership": {
+    "title": "Choose Your Membership Plan",
+    "subtitle": "Unlock exclusive benefits tailored for you.",
+    "whyJoin": {
+      "title": "Why Join?",
+      "points": [
+        "Access to exclusive content and events",
+        "Discounts on community programs",
+        "Support our mission and growth"
+      ]
+    },
     "basic": {
       "title": "Basic",
-      "price": "$10/month",
+      "price": "$0 / month",
       "features": [
-        "Access to online resources",
+        "Access to free content",
         "Monthly newsletter",
-        "Community support"
+        "Community forum access"
       ]
     },
     "premium": {
       "title": "Premium",
-      "price": "$25/month",
+      "price": "$9.99 / month",
       "features": [
         "Everything in Basic",
-        "Priority email support",
-        "Exclusive webinars"
+        "Early access to events",
+        "Premium-only content"
       ]
     },
     "elite": {
       "title": "Elite",
-      "price": "$50/month",
+      "price": "$19.99 / month",
       "features": [
         "Everything in Premium",
-        "1-on-1 mentoring",
-        "Free event tickets"
+        "1-on-1 mentorship",
+        "Recognition on our website"
       ]
     },
     "joinButton": "Join Now",
-    "whyJoin": {
-      "title": "Why Join Us?",
-      "points": [
-        "Connect with like-minded people",
-        "Grow your skills with expert sessions",
-        "Be part of a passionate community"
-      ]
-    },
     "cta": {
-      "title": "Ready to Elevate Your Journey?",
-      "subtitle": "Sign up now and be part of our growing community.",
+      "title": "Ready to elevate your journey?",
+      "subtitle": "Become a member and make a difference today.",
       "button": "Get Started"
     }
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "q1": "What is included in each membership tier?",
-    "a1": "Each tier offers progressively more benefits as listed in the plans.",
-    "q2": "Can I switch plans later?",
-    "a2": "Yes, you can upgrade or downgrade anytime from your account settings.",
-    "q3": "Do you offer refunds?",
-    "a3": "Refunds are available within the first 7 days of joining."
+    "q1": "What is included in each plan?",
+    "a1": "Each plan includes a different set of features tailored to your needs. See above for details.",
+    "q2": "Can I cancel my membership?",
+    "a2": "Yes, you can cancel anytime from your account settings.",
+    "q3": "How can I upgrade later?",
+    "a3": "Upgrading is easy! Just go to your profile and select a new plan."
   },
   "testimonials": {
-    "title": "Voice of Our Community"
+    "title": "Voice of Our Community",
+    "none": "No testimonials available at the moment."
   },
+
   "dashboard": {
     "logout": "Logout",
     "postBlog": "Post Blog",

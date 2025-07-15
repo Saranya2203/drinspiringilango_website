@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './Membership.css';
 
+// JSONBin API config
+const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/685e88048561e97a502cbd91';
+const JSONBIN_API_KEY = '$2a$10$LR0UoKdp73g6ex3pWvL2V.u0WWX0OVFbpHoIGNRVPiTnpLKA8SyTu';
+
 function Membership() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const [testimonials, setTestimonials] = useState([]);
+
+  // Fetch testimonials from JSONBin (used by dashboard)
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const res = await axios.get(JSONBIN_URL, {
+          headers: { 'X-Master-Key': JSONBIN_API_KEY }
+        });
+        const data = res.data.record;
+        setTestimonials(data.testimonials || []);
+      } catch (error) {
+        console.error('Error loading testimonials:', error);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
 
   const membershipPlans = [
     {
@@ -27,21 +50,10 @@ function Membership() {
   ];
 
   const faqs = [
-    {
-      question: t('faq.q1'),
-      answer: t('faq.a1'),
-    },
-    {
-      question: t('faq.q2'),
-      answer: t('faq.a2'),
-    },
-    {
-      question: t('faq.q3'),
-      answer: t('faq.a3'),
-    },
+    { question: t('faq.q1'), answer: t('faq.a1') },
+    { question: t('faq.q2'), answer: t('faq.a2') },
+    { question: t('faq.q3'), answer: t('faq.a3') },
   ];
-
-  const testimonials = t('dashboard.testimonials', { returnObjects: true });
 
   return (
     <main className="membership-container" role="main">
@@ -51,7 +63,7 @@ function Membership() {
         <p>{t('membership.subtitle')}</p>
       </header>
 
-      {/* Why Join Section */}
+      {/* Why Join */}
       <section className="why-join-section">
         <h2>{t('membership.whyJoin.title')}</h2>
         <ul>
@@ -79,8 +91,8 @@ function Membership() {
             </ul>
             <button
               className="join-btn"
-              aria-label={`Join ${plan.title}`}
               onClick={() => navigate('/contact')}
+              aria-label={`Join ${plan.title}`}
             >
               {t('membership.joinButton')}
             </button>
@@ -88,33 +100,37 @@ function Membership() {
         ))}
       </section>
 
-      {/* Testimonials - Voice of Our Community */}
+      {/* Testimonials Section */}
       <section className="testimonials-section">
         <h2>{t('testimonials.title')}</h2>
         <div className="testimonials-grid">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              <p className="testimonial-comment">"{testimonial.comment}"</p>
-              <p className="testimonial-name">— {testimonial.name}</p>
-            </div>
-          ))}
+          {testimonials.length === 0 ? (
+            <p>{t('testimonials.none')}</p>
+          ) : (
+            testimonials.map((testimonial, index) => (
+              <div key={index} className="testimonial-card">
+                <p className="testimonial-comment">"{testimonial.comment}"</p>
+                <p className="testimonial-name">— {testimonial.name}</p>
+              </div>
+            ))
+          )}
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* FAQ Section */}
       <section className="faq-section">
         <h2>{t('faq.title')}</h2>
         <div className="faq-list">
-          {faqs.map((item, index) => (
+          {faqs.map((faq, index) => (
             <div key={index} className="faq-item">
-              <h3>{item.question}</h3>
-              <p>{item.answer}</p>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* CTA */}
       <footer className="membership-footer-cta">
         <h2>{t('membership.cta.title')}</h2>
         <p>{t('membership.cta.subtitle')}</p>
