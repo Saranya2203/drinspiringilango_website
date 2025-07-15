@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Membership.css';
 
-// JSONBin API config
 const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/685e88048561e97a502cbd91';
 const JSONBIN_API_KEY = '$2a$10$LR0UoKdp73g6ex3pWvL2V.u0WWX0OVFbpHoIGNRVPiTnpLKA8SyTu';
 
@@ -13,7 +12,6 @@ function Membership() {
   const navigate = useNavigate();
   const [testimonials, setTestimonials] = useState([]);
 
-  // Fetch testimonials from JSONBin (used by dashboard)
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
@@ -57,13 +55,11 @@ function Membership() {
 
   return (
     <main className="membership-container" role="main">
-      {/* Header */}
       <header className="membership-header">
         <h1>{t('membership.title')}</h1>
         <p>{t('membership.subtitle')}</p>
       </header>
 
-      {/* Why Join */}
       <section className="why-join-section">
         <h2>{t('membership.whyJoin.title')}</h2>
         <ul>
@@ -73,7 +69,6 @@ function Membership() {
         </ul>
       </section>
 
-      {/* Membership Plans */}
       <section className="membership-plans">
         {membershipPlans.map((plan, index) => (
           <div
@@ -100,7 +95,6 @@ function Membership() {
         ))}
       </section>
 
-      {/* Testimonials Section */}
       <section className="testimonials-section">
         <h2>{t('testimonials.title')}</h2>
         <div className="testimonials-grid">
@@ -109,15 +103,14 @@ function Membership() {
           ) : (
             testimonials.map((testimonial, index) => (
               <div key={index} className="testimonial-card">
-                <p className="testimonial-comment">"{testimonial.comment}"</p>
-                <p className="testimonial-name">— {testimonial.name}</p>
+                <p className="testimonial-comment">"{testimonial.comment.en}"</p>
+                <p className="testimonial-name">— {testimonial.name.en}</p>
               </div>
             ))
           )}
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="faq-section">
         <h2>{t('faq.title')}</h2>
         <div className="faq-list">
@@ -130,7 +123,6 @@ function Membership() {
         </div>
       </section>
 
-      {/* CTA */}
       <footer className="membership-footer-cta">
         <h2>{t('membership.cta.title')}</h2>
         <p>{t('membership.cta.subtitle')}</p>
