@@ -667,6 +667,13 @@
     "loadError": "Failed to load gallery.",
     "empty": "No images found in the gallery.",
     "noImage": "No Image"
+  },
+  "blogs": {
+    "title": "Latest Blog Posts",
+    "loading": "Loading blogs...",
+    "empty": "No blogs available.",
+    "untitled": "Untitled",
+    "noContent": "No content available."
   }
 }
 
