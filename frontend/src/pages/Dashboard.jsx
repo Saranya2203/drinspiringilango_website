@@ -20,6 +20,7 @@ const Dashboard = () => {
 
   const [galleryImageFile, setGalleryImageFile] = useState(null);
   const [galleryImageTitle, setGalleryImageTitle] = useState({ en: '', ta: '' });
+  const [galleryEditingIndex, setGalleryEditingIndex] = useState(null);
 
   const [testimonialName, setTestimonialName] = useState({ en: '', ta: '' });
   const [testimonialComment, setTestimonialComment] = useState({ en: '', ta: '' });
