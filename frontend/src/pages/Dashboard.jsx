@@ -118,30 +118,50 @@ const Dashboard = () => {
   };
 
   const handleUploadGalleryImage = async () => {
-    if (!galleryImageFile) {
+    if (!galleryImageFile && galleryEditingIndex === null) {
       setStatus(t('dashboard.selectImage'));
       return;
     }
 
     try {
       setStatus(t('dashboard.uploadingImage'));
-      const imageUrl = await handleImageUpload(galleryImageFile);
+      const imageUrl = galleryImageFile ? await handleImageUpload(galleryImageFile) : galleryImages[galleryEditingIndex]?.url;
       const newImage = {
         title: galleryImageTitle,
         url: imageUrl,
         timestamp: new Date().toISOString()
       };
-      const updatedGallery = [newImage, ...galleryImages];
+
+      let updatedGallery = [...galleryImages];
+      if (galleryEditingIndex !== null) {
+        updatedGallery[galleryEditingIndex] = newImage;
+      } else {
+        updatedGallery.unshift(newImage);
+      }
 
       await updateJsonBin({ blogs, gallery: updatedGallery, testimonials });
       setGalleryImages(updatedGallery);
       setGalleryImageFile(null);
       setGalleryImageTitle({ en: '', ta: '' });
+      setGalleryEditingIndex(null);
       setStatus(t('dashboard.imageUploaded'));
     } catch (err) {
       console.error(err);
       setStatus(t('dashboard.imageUploadFailed'));
     }
+  };
+
+  const handleEditGalleryImage = (index) => {
+    const image = galleryImages[index];
+    setGalleryImageTitle(image.title);
+    setGalleryEditingIndex(index);
+  };
+
+  const handleDeleteGalleryImage = async (index) => {
+    const updatedGallery = galleryImages.filter((_, i) => i !== index);
+    await updateJsonBin({ blogs, gallery: updatedGallery, testimonials });
+    setGalleryImages(updatedGallery);
+    setStatus(t('dashboard.imageDeleted'));
   };
 
   const handleUploadTestimonial = async () => {
@@ -247,7 +267,9 @@ const Dashboard = () => {
         <input type="file" accept="image/*" className="form-control" onChange={(e) => setGalleryImageFile(e.target.files[0])} />
       </div>
 
-      <button className="btn btn-secondary" onClick={handleUploadGalleryImage}>{t('dashboard.uploadToGallery')}</button>
+      <button className="btn btn-secondary" onClick={handleUploadGalleryImage}>
+        {galleryEditingIndex !== null ? t('dashboard.updateImage') : t('dashboard.uploadToGallery')}
+      </button>
 
       <div className="gallery-grid">
         {galleryImages.map((item, index) => (
@@ -256,6 +278,10 @@ const Dashboard = () => {
             <div className="gallery-actions">
               <strong>{item.title[i18n.language]}</strong>
               <small>{new Date(item.timestamp).toLocaleString()}</small>
+              <div className="gallery-buttons">
+                <button onClick={() => handleEditGalleryImage(index)}>{t('dashboard.edit')}</button>
+                <button onClick={() => handleDeleteGalleryImage(index)}>{t('dashboard.delete')}</button>
+              </div>
             </div>
           </div>
         ))}
