@@ -660,8 +660,16 @@
     "testimonialDeleted": "Testimonial deleted.",
     "noTestimonials": "No testimonials yet.",
     "galleryImage": "Gallery Image"
+  },
+  "gallery1": {
+    "title": "Gallery",
+    "loading": "Loading gallery...",
+    "loadError": "Failed to load gallery.",
+    "empty": "No images found in the gallery.",
+    "noImage": "No Image"
   }
 }
+
 
 
 

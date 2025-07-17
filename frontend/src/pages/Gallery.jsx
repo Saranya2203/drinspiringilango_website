@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 import './Gallery.css';
 
 const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/685e88048561e97a502cbd91';
 const JSONBIN_API_KEY = '$2a$10$LR0UoKdp73g6ex3pWvL2V.u0WWX0OVFbpHoIGNRVPiTnpLKA8SyTu';
 
 const Gallery = () => {
+  const { i18n, t } = useTranslation();
   const [galleryItems, setGalleryItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -24,28 +26,27 @@ const Gallery = () => {
           (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
         );
 
-        console.log('🎯 Loaded gallery:', sortedItems); // Debug
         setGalleryItems(sortedItems);
       } catch (err) {
         console.error('Error loading gallery:', err);
-        setError('❌ Failed to load gallery.');
+        setError(t('gallery1.loadError'));
       } finally {
         setLoading(false);
       }
     };
 
     fetchGallery();
-  }, []);
+  }, [t]);
 
   return (
     <div className="gallery-container">
-      <h2 className="gallery-heading">Gallery</h2>
+      <h2 className="gallery-heading">{t('gallery1.title')}</h2>
 
-      {loading && <p className="gallery-status">Loading gallery...</p>}
+      {loading && <p className="gallery-status">{t('gallery1.loading')}</p>}
       {error && <p className="gallery-status error">{error}</p>}
 
       {!loading && galleryItems.length === 0 && (
-        <p className="gallery-status">No images found in the gallery.</p>
+        <p className="gallery-status">{t('gallery1.empty')}</p>
       )}
 
       <div className="gallery-grid">
@@ -54,13 +55,13 @@ const Gallery = () => {
             {item.url ? (
               <img
                 src={item.url}
-                alt={item.title || 'Image'}
+                alt={item.title?.[i18n.language] || 'Image'}
                 loading="lazy"
               />
             ) : (
-              <div className="fallback-image">No Image</div>
+              <div className="fallback-image">{t('gallery1.noImage')}</div>
             )}
-            <h4>{item.title || 'Untitled'}</h4>
+            <h4>{item.title?.[i18n.language] || 'Untitled'}</h4>
             {item.timestamp && (
               <small>
                 {new Date(item.timestamp).toLocaleDateString(undefined, {
