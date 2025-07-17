@@ -9,20 +9,20 @@ const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/685e88048561e97a502cbd91';
 const JSONBIN_API_KEY = '$2a$10$LR0UoKdp73g6ex3pWvL2V.u0WWX0OVFbpHoIGNRVPiTnpLKA8SyTu';
 
 const Dashboard = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const [blogTitle, setBlogTitle] = useState('');
-  const [blogContent, setBlogContent] = useState('');
+  const [blogTitle, setBlogTitle] = useState({ en: '', ta: '' });
+  const [blogContent, setBlogContent] = useState({ en: '', ta: '' });
   const [imageFile, setImageFile] = useState(null);
   const [blogs, setBlogs] = useState([]);
   const [galleryImages, setGalleryImages] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
 
   const [galleryImageFile, setGalleryImageFile] = useState(null);
-  const [galleryImageTitle, setGalleryImageTitle] = useState('');
+  const [galleryImageTitle, setGalleryImageTitle] = useState({ en: '', ta: '' });
 
-  const [testimonialName, setTestimonialName] = useState('');
-  const [testimonialComment, setTestimonialComment] = useState('');
+  const [testimonialName, setTestimonialName] = useState({ en: '', ta: '' });
+  const [testimonialComment, setTestimonialComment] = useState({ en: '', ta: '' });
 
   const [status, setStatus] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
@@ -68,7 +68,7 @@ const Dashboard = () => {
   };
 
   const handlePostBlog = async () => {
-    if (!blogTitle || !blogContent) {
+    if (!blogTitle.en || !blogContent.en || !blogTitle.ta || !blogContent.ta) {
       setStatus(t('dashboard.enterTitleContent'));
       return;
     }
@@ -92,8 +92,8 @@ const Dashboard = () => {
 
       await updateJsonBin({ blogs: updatedBlogs, gallery: galleryImages, testimonials });
       setBlogs(updatedBlogs);
-      setBlogTitle('');
-      setBlogContent('');
+      setBlogTitle({ en: '', ta: '' });
+      setBlogContent({ en: '', ta: '' });
       setImageFile(null);
       setEditingIndex(null);
       setStatus(t('dashboard.blogSaved'));
@@ -127,7 +127,7 @@ const Dashboard = () => {
       setStatus(t('dashboard.uploadingImage'));
       const imageUrl = await handleImageUpload(galleryImageFile);
       const newImage = {
-        title: galleryImageTitle.trim() || `${t('dashboard.galleryImage')} - ${new Date().toLocaleDateString()}`,
+        title: galleryImageTitle,
         url: imageUrl,
         timestamp: new Date().toISOString()
       };
@@ -136,7 +136,7 @@ const Dashboard = () => {
       await updateJsonBin({ blogs, gallery: updatedGallery, testimonials });
       setGalleryImages(updatedGallery);
       setGalleryImageFile(null);
-      setGalleryImageTitle('');
+      setGalleryImageTitle({ en: '', ta: '' });
       setStatus(t('dashboard.imageUploaded'));
     } catch (err) {
       console.error(err);
@@ -145,23 +145,23 @@ const Dashboard = () => {
   };
 
   const handleUploadTestimonial = async () => {
-    if (!testimonialName || !testimonialComment) {
+    if (!testimonialName.en || !testimonialComment.en || !testimonialName.ta || !testimonialComment.ta) {
       setStatus(t('dashboard.enterTestimonial'));
       return;
     }
 
     try {
       const newTestimonial = {
-        name: testimonialName.trim(),
-        comment: testimonialComment.trim(),
+        name: testimonialName,
+        comment: testimonialComment,
         timestamp: new Date().toISOString()
       };
       const updatedTestimonials = [newTestimonial, ...testimonials];
       await updateJsonBin({ blogs, gallery: galleryImages, testimonials: updatedTestimonials });
 
       setTestimonials(updatedTestimonials);
-      setTestimonialName('');
-      setTestimonialComment('');
+      setTestimonialName({ en: '', ta: '' });
+      setTestimonialComment({ en: '', ta: '' });
       setStatus(t('dashboard.testimonialAdded'));
     } catch (err) {
       console.error(err);
@@ -190,13 +190,17 @@ const Dashboard = () => {
 
       <h3>{t('dashboard.postBlog')}</h3>
       <div className="form-group">
-        <label>{t('dashboard.blogTitle')}</label>
-        <input type="text" className="form-control" value={blogTitle} onChange={(e) => setBlogTitle(e.target.value)} />
+        <label>{t('dashboard.blogTitle')} (EN)</label>
+        <input type="text" className="form-control" value={blogTitle.en} onChange={(e) => setBlogTitle({ ...blogTitle, en: e.target.value })} />
+        <label>{t('dashboard.blogTitle')} (TA)</label>
+        <input type="text" className="form-control" value={blogTitle.ta} onChange={(e) => setBlogTitle({ ...blogTitle, ta: e.target.value })} />
       </div>
 
       <div className="form-group">
-        <label>{t('dashboard.blogContent')}</label>
-        <textarea className="form-control" rows="4" value={blogContent} onChange={(e) => setBlogContent(e.target.value)} />
+        <label>{t('dashboard.blogContent')} (EN)</label>
+        <textarea className="form-control" rows="4" value={blogContent.en} onChange={(e) => setBlogContent({ ...blogContent, en: e.target.value })} />
+        <label>{t('dashboard.blogContent')} (TA)</label>
+        <textarea className="form-control" rows="4" value={blogContent.ta} onChange={(e) => setBlogContent({ ...blogContent, ta: e.target.value })} />
       </div>
 
       <div className="form-group">
@@ -217,8 +221,8 @@ const Dashboard = () => {
           <div key={index} className="blog-card">
             {blog.image && <img src={blog.image} alt="Blog" />}
             <div className="blog-body">
-              <h4>{blog.title}</h4>
-              <p>{blog.content}</p>
+              <h4>{blog.title[i18n.language]}</h4>
+              <p>{blog.content[i18n.language]}</p>
               <small>{new Date(blog.timestamp).toLocaleString()}</small>
               <div className="blog-actions">
                 <button onClick={() => handleEdit(index)}>{t('dashboard.edit')}</button>
@@ -232,8 +236,10 @@ const Dashboard = () => {
       <hr />
       <h3>{t('dashboard.gallery')}</h3>
       <div className="form-group">
-        <label>{t('dashboard.galleryTitle')}</label>
-        <input type="text" className="form-control" value={galleryImageTitle} onChange={(e) => setGalleryImageTitle(e.target.value)} />
+        <label>{t('dashboard.galleryTitle')} (EN)</label>
+        <input type="text" className="form-control" value={galleryImageTitle.en} onChange={(e) => setGalleryImageTitle({ ...galleryImageTitle, en: e.target.value })} />
+        <label>{t('dashboard.galleryTitle')} (TA)</label>
+        <input type="text" className="form-control" value={galleryImageTitle.ta} onChange={(e) => setGalleryImageTitle({ ...galleryImageTitle, ta: e.target.value })} />
       </div>
 
       <div className="form-group">
@@ -246,9 +252,9 @@ const Dashboard = () => {
       <div className="gallery-grid">
         {galleryImages.map((item, index) => (
           <div key={index} className="gallery-card">
-            <img src={item.url} alt={item.title} />
+            <img src={item.url} alt={item.title[i18n.language]} />
             <div className="gallery-actions">
-              <strong>{item.title}</strong>
+              <strong>{item.title[i18n.language]}</strong>
               <small>{new Date(item.timestamp).toLocaleString()}</small>
             </div>
           </div>
@@ -258,13 +264,17 @@ const Dashboard = () => {
       <hr />
       <h3>{t('dashboard.testimonials')}</h3>
       <div className="form-group">
-        <label>{t('dashboard.testimonialName')}</label>
-        <input type="text" className="form-control" value={testimonialName} onChange={(e) => setTestimonialName(e.target.value)} />
+        <label>{t('dashboard.testimonialName')} (EN)</label>
+        <input type="text" className="form-control" value={testimonialName.en} onChange={(e) => setTestimonialName({ ...testimonialName, en: e.target.value })} />
+        <label>{t('dashboard.testimonialName')} (TA)</label>
+        <input type="text" className="form-control" value={testimonialName.ta} onChange={(e) => setTestimonialName({ ...testimonialName, ta: e.target.value })} />
       </div>
 
       <div className="form-group">
-        <label>{t('dashboard.testimonialComment')}</label>
-        <textarea className="form-control" rows="2" value={testimonialComment} onChange={(e) => setTestimonialComment(e.target.value)} />
+        <label>{t('dashboard.testimonialComment')} (EN)</label>
+        <textarea className="form-control" rows="2" value={testimonialComment.en} onChange={(e) => setTestimonialComment({ ...testimonialComment, en: e.target.value })} />
+        <label>{t('dashboard.testimonialComment')} (TA)</label>
+        <textarea className="form-control" rows="2" value={testimonialComment.ta} onChange={(e) => setTestimonialComment({ ...testimonialComment, ta: e.target.value })} />
       </div>
 
       <button className="btn btn-secondary" onClick={handleUploadTestimonial}>{t('dashboard.uploadTestimonial')}</button>
@@ -272,8 +282,8 @@ const Dashboard = () => {
       <div className="testimonials-list">
         {testimonials.length === 0 ? <p>{t('dashboard.noTestimonials')}</p> : testimonials.map((item, index) => (
           <div key={index} className="testimonial-card">
-            <strong>{item.name}</strong>
-            <p>{item.comment}</p>
+            <strong>{item.name[i18n.language]}</strong>
+            <p>{item.comment[i18n.language]}</p>
             <small>{new Date(item.timestamp).toLocaleString()}</small>
             <button onClick={() => handleDeleteTestimonial(index)}>{t('dashboard.delete')}</button>
           </div>
