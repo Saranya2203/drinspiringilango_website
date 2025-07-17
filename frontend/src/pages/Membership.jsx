@@ -8,10 +8,9 @@ const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/685e88048561e97a502cbd91';
 const JSONBIN_API_KEY = '$2a$10$LR0UoKdp73g6ex3pWvL2V.u0WWX0OVFbpHoIGNRVPiTnpLKA8SyTu';
 
 function Membership() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const navigate = useNavigate();
   const [testimonials, setTestimonials] = useState([]);
-
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
@@ -103,8 +102,12 @@ function Membership() {
           ) : (
             testimonials.map((testimonial, index) => (
               <div key={index} className="testimonial-card">
-                <p className="testimonial-comment">"{testimonial.comment.en}"</p>
-                <p className="testimonial-name">— {testimonial.name.en}</p>
+                <p className="testimonial-comment">
+                  "{testimonial.comment?.[i18n.language] || testimonial.comment?.en || ''}"
+                </p>
+                <p className="testimonial-name">
+                  — {testimonial.name?.[i18n.language] || testimonial.name?.en || ''}
+                </p>
               </div>
             ))
           )}
