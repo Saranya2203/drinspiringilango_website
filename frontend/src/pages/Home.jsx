@@ -75,20 +75,17 @@ const Home = () => {
       </Helmet>
 
       <main className="home">
-      <section class="hero-banner" aria-label="Global Hero Section">
-  <div class="hero-overlay">
-    <div class="hero-content">
-      <h1>{t('hero.title')}</h1>
-      <a href="https://calendly.com/inspiringilango/30min" class="cta-button" role="button" aria-label="{t('hero.cta')}">
-        {t('hero.cta')}
-      </a>
-    </div>
+      <section class="hero-split" aria-label="Global Hero Section">
+  <div class="hero-text">
+    <h1>{t('hero.title')}</h1>
+    <p>{t('hero.description')}</p>
+    <a href="https://calendly.com/inspiringilango/30min" class="cta-button" role="button" aria-label="{t('hero.cta')}">
+      {t('hero.cta')}
+    </a>
   </div>
-  <img src="/assets/Ilango_Edited.jpg" alt="Dr. Inspiring Ilango" class="hero-image" />
-</section>
-
-<section class="hero-description">
-  <p>{t('hero.description')}</p>
+  <div class="hero-image-wrapper">
+    <img src="/assets/Ilango.jpg" alt="Dr. Inspiring Ilango" />
+  </div>
 </section>
 
   
