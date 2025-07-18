@@ -1,91 +1,80 @@
-.home {
+/* General Reset & Base Styles */
+* {
+  box-sizing: border-box;
+}
+body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
   color: #272727;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Home Wrapper */
+.home {
   margin-top: 0%;
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero {
   background: linear-gradient(to right, #ffffff, #fffefe);
-  padding: 1rem 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* Reset box-sizing */
-* {
-  box-sizing: border-box;
-}
-
-/* Hero Section */
 .hero-banner {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .hero-image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   object-fit: cover;
   z-index: 1;
 }
-
 .hero-overlay {
   position: relative;
   z-index: 2;
-  width: 100%;
-  height: 100%;
   background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(10, 10, 10, 0.7));
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
   text-align: center;
+  height: 100%;
 }
-
 .hero-content {
   color: #fff;
   max-width: 800px;
   margin: 0 auto;
   animation: fadeInUp 1.2s ease-out;
 }
-
 .hero-content h1 {
   font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  font-weight: 700;
-  text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
 }
-
 .cta-button {
   display: inline-block;
   padding: 0.9rem 2rem;
   font-size: 1rem;
-  background-color: #38bdf8; /* Sky Blue */
+  background-color: #38bdf8;
   color: white;
   font-weight: bold;
   border-radius: 50px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
-
 .cta-button:hover {
-  background-color: #0ea5e9; /* Darker Blue */
+  background-color: #0ea5e9;
   transform: scale(1.05);
 }
-
-/* Description Below Banner */
 .hero-description {
   max-width: 800px;
   margin: 2rem auto;
@@ -93,10 +82,9 @@
   font-size: 1.1rem;
   text-align: center;
   color: #444;
-  line-height: 1.6;
 }
 
-/* Animations */
+/* Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -108,32 +96,7 @@
   }
 }
 
-/* Responsive Typography */
-@media (min-width: 600px) {
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-
-  .cta-button {
-    font-size: 1.1rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .hero-content h1 {
-    font-size: 4rem;
-  }
-
-  .cta-button {
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
-  }
-}
-
-
-
-
-/* Video Section */
+/* Video Intro */
 .video-intro {
   padding: 3rem 2rem;
   text-align: center;
@@ -149,7 +112,7 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Carousel Section */
+/* Carousel */
 .carousel {
   padding: 3rem 2rem;
   background-color: #f7f7f7;
@@ -169,37 +132,33 @@
   padding: 1rem;
   max-width: 250px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .role-icon {
   font-size: 3rem;
   color: #080808;
   margin-bottom: 1rem;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: 0.3s;
+}
+.carousel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 .carousel-card:hover .role-icon {
   color: #005bb5;
   transform: scale(1.2);
 }
 
-.carousel-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-
-/* Gallery Section */
+/* Gallery */
 .gallery {
   padding: 3rem 2rem;
   background-color: #fafafa;
   text-align: center;
 }
-
 .gallery h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
-
 .gallery-scroll {
   display: flex;
   overflow-x: auto;
@@ -208,7 +167,6 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
-
 .gallery-scroll img {
   flex: 0 0 auto;
   width: 250px;
@@ -218,21 +176,11 @@
   scroll-snap-align: start;
   transition: transform 0.3s ease;
 }
-
 .gallery-scroll img:hover {
   transform: scale(1.05);
 }
 
-/* Responsive Gallery */
-@media (max-width: 768px) {
-  .gallery-scroll img {
-    max-height: 150px;
-  }
-}
-
-
-
-/* Contact Prompt */
+/* Contact */
 .contact-prompt {
   background-color: #ffffff;
   color: rgb(9, 9, 9);
@@ -248,28 +196,12 @@
 }
 .contact-prompt .cta-button {
   background-color: #00c2ff;
-  color: white;
 }
 .contact-prompt .cta-button:hover {
   background-color: #00a0dd;
 }
 
-
-
-@media (max-width: 768px) {
-
-
-  .gallery-scroll {
-    padding: 0.5rem;
-  }
-
-  .carousel-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* --- VIIF Fundraising Section --- */
+/* VIIF Section */
 .Viif-section {
   background-color: #f2fbff;
   padding: 3rem 2rem;
@@ -308,14 +240,14 @@
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: 0.3s;
 }
 .donate-buttons button:hover {
   background-color: #005fa3;
   transform: scale(1.05);
 }
 
-/* --- Endorsements Section --- */
+/* Endorsements */
 .endorsements {
   background-color: #ffffff;
   padding: 3rem 2rem;
@@ -332,95 +264,7 @@
   color: #444;
 }
 
-
-
-/* --- Responsive Styles for Small Screens --- */
-@media (max-width: 768px) {
-  .Viif-section h2,
-  .endorsements h2,
-  .gratitude-wall h2 {
-    font-size: 1.6rem;
-  }
-
-  .Viif-section p,
-  .endorsements p {
-    font-size: 1rem;
-  }
-
-  .donate-buttons {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .donate-buttons button {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-.Viif-section video {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  
-
-  .donate-buttons button {
-    font-size: 0.95rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  .Viif-section h2,
-  .endorsements h2{
-    font-size: 1.4rem;
-  }
-}
-
-/* Gallery Section */
-.gallery {
-  padding: 3rem 2rem;
-  background-color: #fafafa;
-  text-align: center;
-}
-
-.gallery h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.gallery-scroll {
-  display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding: 1rem 0;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.gallery-scroll img {
-  flex: 0 0 auto;
-  width: 250px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  scroll-snap-align: start;
-  transition: transform 0.3s ease;
-}
-
-.gallery-scroll img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive Gallery */
-@media (max-width: 768px) {
-  .gallery-scroll img {
-    max-height: 150px;
-  }
-}
-
-
-/* Become a Patron Section */
+/* Become Patron */
 .become-patron {
   background-color: #ffffff;
   padding: 3rem 2rem;
@@ -434,14 +278,12 @@
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto 2rem;
-  color: #333;
 }
 .patron-downloads {
   display: flex;
   justify-content: center;
-  gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
 }
 .patron-btn {
   background-color: #f0f0f0;
@@ -451,28 +293,14 @@
   text-decoration: none;
   color: #0055a5;
   border: 2px solid #cbdbee;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: 0.3s;
 }
 .patron-btn:hover {
   background-color: #0077cc;
   transform: scale(1.05);
 }
 
-/* Responsive Patron Section */
-@media (max-width: 768px) {
-  .patron-downloads {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .patron-btn {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-}
-
-/* Newsletter Section */
+/* Newsletter */
 .newsletter-section {
   padding: 3rem 2rem;
   background-color: #e8f4fa;
@@ -488,7 +316,6 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  color: #333;
 }
 .newsletter-form {
   display: flex;
@@ -514,173 +341,45 @@
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s;
+  transition: 0.3s ease;
 }
 .newsletter-form button:hover {
   background-color: #003d66;
   transform: scale(1.05);
 }
 
-/* Responsive Mailchimp */
-@media (max-width: 768px) {
-  .newsletter-form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .newsletter-form input,
-  .newsletter-form button {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-
-
-
-/* Accessibility Focus Styles */
-a:focus, button:focus, input:focus {
-  outline: 3px solid #00aaff;
-  outline-offset: 3px;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px; height: 1px;
-  margin: -1px; padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-@media (min-width: 1200px) {
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-
-  .gallery-scroll img {
-    width: 250px;
-  }
-
-  .carousel-container {
-    gap: 3rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content,
-  .hero-image {
-    max-width: 100%;
-  }
-
-
-  .gallery-scroll img {
-    width: 220px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  body {
-    font-size: 14px; /* சிறிய எழுத்துரு */
-  }
-
-  .hero h1,
-  .video-intro h2,
-  .gallery h2,
-  .viif-section h2,
-  .endorsements h2,
-  .contact-prompt h2,
-  .become-patron h2,
-  .newsletter-section h2 {
-    font-size: 1.3rem;
-  }
-.hero p,
-  .viif-section p,
-  .endorsements p,
-  .contact-prompt p,
-  .become-patron p,
-  .newsletter-section p {
-    font-size: 1rem;
-  }
-
-  .cta-button,
-  .donate-buttons button,
-  .newsletter-form button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.95rem;
-  }
-
-  .newsletter-form input {
-    font-size: 1rem;
-  }
-
-  .carousel-card {
-    max-width: 90%;
-  }
-
-  .gallery-scroll img {
-    width: 180px;
-  }
-}
-
-.viif-video {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Base Social Section */
+/* Social Section */
 .social {
   text-align: center;
   margin-top: 2rem;
 }
-
 .social h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
-
 .social-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.25rem;
 }
-
 .social-icons a,
 .dropdown-toggle {
   font-size: 1.75rem;
   color: #333;
-  transition: color 0.3s ease;
+  transition: 0.3s;
   background: none;
   border: none;
   cursor: pointer;
 }
-
 .social-icons a:hover,
 .dropdown-toggle:hover {
   color: #007bff;
 }
-
-/* Dropdown styling */
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -694,40 +393,66 @@ a:focus, button:focus, input:focus {
   min-width: 200px;
   z-index: 10;
 }
-
 .dropdown-menu a {
   display: block;
   padding: 0.75rem 1rem;
   text-decoration: none;
   color: #333;
-  font-size: 1rem;
 }
-
 .dropdown-menu a:hover {
   background-color: #f5f5f5;
   color: #007bff;
 }
-
-/* Hover/Focus activation */
 .dropdown:hover .dropdown-menu,
 .dropdown:focus-within .dropdown-menu {
   display: block;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .social-icons {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .dropdown-menu {
-    top: 2.75rem;
-    left: 0;
-    right: 0;
-    transform: none;
-    margin: 0 auto;
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .hero-content h1 {
+    font-size: 3rem;
   }
 }
-
+@media (max-width: 768px) {
+  .gallery-scroll img {
+    max-height: 150px;
+  }
+  .carousel-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter-form,
+  .donate-buttons,
+  .patron-downloads {
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter-form input,
+  .newsletter-form button,
+  .donate-buttons button,
+  .patron-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+@media (max-width: 575.98px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .cta-button,
+  .donate-buttons button,
+  .newsletter-form button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  .carousel-card {
+    max-width: 90%;
+  }
+  .gallery-scroll img {
+    width: 180px;
+  }
+}
