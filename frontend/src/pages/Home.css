@@ -293,13 +293,12 @@ body {
   text-decoration: none;
   color: #0055a5;
   border: 2px solid #cbdbee;
-  transition: 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 .patron-btn:hover {
   background-color: #0077cc;
   transform: scale(1.05);
 }
-
 /* Newsletter */
 .newsletter-section {
   padding: 3rem 2rem;
