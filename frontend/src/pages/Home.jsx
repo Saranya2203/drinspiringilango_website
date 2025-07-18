@@ -84,7 +84,7 @@ const Home = () => {
       </a>
     </div>
   </div>
-  <img src="/assets/Ilango.jpg" alt="Dr. Inspiring Ilango" class="hero-image" />
+  <img src="/assets/Ilango_Edited.jpg" alt="Dr. Inspiring Ilango" class="hero-image" />
 </section>
 
 <section class="hero-description">
