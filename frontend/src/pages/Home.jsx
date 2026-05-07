@@ -86,8 +86,7 @@ const Home = () => {
         <section className="hero" aria-label="Global Hero Section">
           <div className="hero-inner">
             <div className="hero-image">
-              <img src="/assets/ilango.jpg" alt="Dr. Inspiring Ilango" />
-            </div>
+            <img src={process.env.PUBLIC_URL + "/assets/Ilango.jpg"} alt="Dr. Inspiring Ilango" />            </div>
             <div className="hero-content">
               <h1 tabIndex="0">{t('hero.title')}</h1>
               <p tabIndex="0">{t('hero.description')}</p>
