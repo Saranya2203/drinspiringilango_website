@@ -1,0 +1,177 @@
+/* UserAccess.css */
+
+/* General Container */
+.user-access {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  color: #222;
+}
+
+/* Page Title */
+.user-access h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1a73e8;
+}
+
+/* Material Categories */
+.material-category {
+  margin-bottom: 40px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Category Title */
+.material-category h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Materials List */
+.material-category ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.material-category li {
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Material Title & Timestamp */
+.material-category li strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #1a73e8;
+}
+
+.material-category li small {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Viewer Container */
+.material-category li div {
+  margin-top: 10px;
+}
+
+/* Iframe, Video, Audio, Image */
+.material-category iframe,
+.material-category video,
+.material-category audio,
+.material-category img {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Show More / Show Less Button */
+.show-toggle {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.show-toggle:hover {
+  background-color: #155ab6;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .user-access {
+    padding: 15px;
+  }
+
+  .material-category h2 {
+    font-size: 1.3rem;
+  }
+
+  .material-category li strong {
+    font-size: 1rem;
+  }
+
+  .material-category iframe,
+  .material-category video,
+  .material-category audio,
+  .material-category img {
+    max-height: 400px;
+  }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+  .user-access {
+    padding: 10px;
+  }
+
+  .user-access h1 {
+    font-size: 1.6rem;
+  }
+
+  .material-category h2 {
+    font-size: 1.2rem;
+  }
+
+  .material-category li {
+    padding: 8px;
+  }
+
+  .material-category li strong {
+    font-size: 0.95rem;
+  }
+
+  .material-category iframe,
+  .material-category video,
+  .material-category audio,
+  .material-category img {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .show-toggle {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Prevent text selection & dragging on images */
+.material-category img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Scrollbar styling (optional) */
+.materials-section {
+  scrollbar-width: thin;
+  scrollbar-color: #1a73e8 #f1f1f1;
+}
+
+.materials-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.materials-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.materials-section::-webkit-scrollbar-thumb {
+  background-color: #1a73e8;
+  border-radius: 4px;
+}

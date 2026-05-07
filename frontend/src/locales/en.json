@@ -1,0 +1,712 @@
+{
+  "header": {
+    "navHome": "Home",
+    "navHomepage": "Inspiring Ilango",
+    "navAbout": "About",
+    "navGallery": "Gallery",
+    "navServices": "Services",
+    "navBlogs": "Blogs",
+    "navEvents": "Events",
+    "navContact": "Contact",
+    "navMembership": "Membership",
+    "navAdmin": "Admin",
+    "navVIIF": "VIIF",
+    "navAcePanacea": "Ace Panacea Life Skills Pvt. Ltd."
+  },
+  "hero": {
+    "title": "Dr. Inspiring Ilango",
+    "description": "Motivational programmes are most impactful when they are not treated as one-time events but as part of a consistent growth strategy. Just as machines require regular maintenance, individuals too benefit from periodic inspiration to stay focused, energised, and productive.\n\nHaving been deeply moved by the transformative sessions of Mr Inspiring Ilango, many corporate organisations and educational institutions have already begun scheduling monthly or bi-monthly programmes with him. These ongoing engagements have proven to significantly elevate individual morale, team synergy, and organisational output.\n\nWe invite you to consider adopting a similar proactive approach through regularly scheduled sessions that aim to review, revive, and revamp both mindset and performance. These high-impact modules—delivered in English or Tamil—are meticulously designed to unlock potential, sustain momentum, and drive measurable results.\n\nLet’s collaborate to foster a culture of continuous motivation and excellence in your organisation or institution.",
+    "cta": "Invite to Speak"
+  },
+  "videoIntro": {
+    "heading": "Meet Dr. Inspiring Ilango",
+    "description": "Watch the inspiring story of the world’s only visually challenged emotional intelligence consultant.",
+    "aria": "Introductory video section about Dr. Ilango",
+    "videoLabel": "Intro video of Dr. Ilango",
+    "captionLabel": "English",
+    "noSupport": "Your browser does not support the video tag."
+  },
+  "endorsements": {
+    "heading": "Global Endorsements",
+    "description": "Endorsed by leaders in academia, corporate innovation, and global well-being."
+  },
+  "roles": {
+    "heading": "Who Is Dr. Inspiring Ilango?",
+    "motivationalSpeaker": {
+      "title": "Motivational Speaker",
+      "description": "Captivates global audiences with transformative stories, emotional intelligence, and powerful motivational insights that ignite change."
+    },
+    "voiceoverArtist": {
+      "title": "World Record Voice-over Artist",
+      "description": "Renowned for bilingual excellence, lending his unique voice in English and Tamil for ads, documentaries, and corporate films, setting global benchmarks."
+    },
+    "entrepreneur": {
+      "title": "Enterprising Entrepreneur",
+      "description": "Founder of <a href=\"https://acea2z.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Ace Panacea Life Skills Pvt. Ltd.</a>, dedicated to advancing human excellence through life-transforming learning programmes."
+    },
+    "lifeCoach": {
+      "title": "Life Coach",
+      "description": "Empowers individuals to unlock potential, overcome barriers, and achieve personal and professional breakthroughs through guided mentorship."
+    }
+  },
+  "ace": {
+    "title": "Ace Panacea Life Skills Pvt. Ltd.",
+    "tagline": "Strategic Communication | Emotional Intelligence | Transformational Inspiration",
+
+    "intro": {
+      "heading": "Welcome",
+      "description1": "If you are seeking a single, trusted partner to elevate your organisation’s communication proficiency, emotional culture, people development, and brand presence — your search ends here.",
+      "description2": "Ace Panacea Life Skills Pvt. Ltd. offers measurable, impactful, and sustainable transformation through expert-led training, consultancy, infotainment, and media production services.",
+      "description3": "We empower, we inspire, we connect your message to minds and hearts — online or in person."
+    },
+
+    "vision": {
+      "title": "Our Vision",
+      "text": "A world enriched by heart and ideas, uplifted by truth and world media. With wisdom as our constant panacea, we nurture humanity — we are Ace Panacea."
+    },
+
+    "mission": {
+      "title": "Our Mission",
+      "text": "To stir each soul, unlock each mind, through every word, performance, and frame we find. To train, to teach, to touch with grace — and transform the world through Ace Panacea’s embrace."
+    },
+
+    "about": {
+      "title": "About Us",
+      "description1": "Founded in 2009, Ace Panacea Life Skills Pvt. Ltd. has become a national beacon in human-resource development, emotional intelligence, and transformative communication.",
+      "description2": "We design bespoke modules with cultural sensitivity, emotional resonance, and international relevance.",
+      "description3": "Our certified trainers, creative artistes, and award-winning media professionals serve your institution’s growth with integrity and impact."
+    },
+
+    "leadership": {
+      "title": "Leadership You Can Trust",
+      "founder": {
+        "name": "Dr. Inspiring Ilango - Founder & Managing Director",
+        "bio": "An international speaker, emotional intelligence consultant, bestselling author, and vocalist, Dr. Ilango is a visionary who turned his visual disability into a global mission of empowerment. He holds world records in deep-sea diving and solo paragliding, and inspires through action."
+      },
+      "executive": {
+        "name": "Srilatha Ilango - Executive Director",
+        "bio": "An advocate for women’s empowerment and strategic implementation, she ensures excellence across training and media. She also serves as Trustee of the Vision Inspiring Ilango Foundation, championing mental health awareness and social equity."
+      }
+    },
+
+    "services": {
+      "title": "Our Core Services",
+      "list": {
+        "1": {
+          "title": "1. English Communication Training — ECE with Ace",
+          "description": "A 200-hour, globally benchmarked programme helping learners speak fluently, write professionally, and present persuasively — for professionals, departments, and institutions."
+        },
+        "2": {
+          "title": "2. Personality Development Training",
+          "description": "A practical journey to build confidence, communication finesse, emotional balance, and self-leadership for individuals of all ages and roles."
+        },
+        "3": {
+          "title": "3. Inspitainment — A Signature Upliftment Experience",
+          "description": "An immersive 2.5–3-hour live event featuring real-life insights, performances, and magic — crafted to move and motivate audiences in schools, corporations, or retreats."
+        },
+        "4": {
+          "title": "4. Motivational Speaking by Dr. Inspiring Ilango",
+          "description": "Tailoured speeches in English or Tamil that spark courage, deepen awareness, and inspire leadership — for students, teams, and changemakers."
+        },
+        "5": {
+          "title": "5. Emotional Intelligence Workshops & Retainer Services",
+          "description": "One-time workshops and monthly retainer services for lasting emotional literacy and compassionate leadership across institutions."
+        },
+        "6": {
+          "title": "6. Professional Audio-Video Production",
+          "description": "From campaign videos to training films, we produce content that enhances branding, awareness, and education — both online and offline."
+        },
+        "7": {
+          "title": "7. Voice Artistry by Dr. Inspiring Ilango",
+          "description": "A trusted voice for campaigns, audiobooks, documentaries, and public messaging — chosen for authenticity over AI narration."
+        }
+      }
+    },
+
+    "additional": {
+      "title": "Additional Solutions for Holistic Growth",
+      "items": [
+        "Public Speaking and Presentation Coaching",
+        "Leadership Voice and Presence Training",
+        "IELTS, TOEFL, GRE, GMAT Preparation",
+        "Institutional Mentorship Programmes",
+        "Faculty Development for Academic Institutions",
+        "SEL Programmes for Schools",
+        "School-to-College Transition Modules",
+        "Exam Readiness & Stress Management",
+        "Interview and CV Coaching"
+      ]
+    },
+
+    "custom": {
+      "title": "Our Assurance of Customisation",
+      "description": "We never offer one-size-fits-all training. Every engagement begins with a deep understanding of your people, goals, and context — and results in a tailoured transformation."
+    },
+
+    "recommendation": {
+      "title": "What We Recommend for You",
+      "steps": [
+        "Sign an MoU with Ace Panacea Life Skills Pvt. Ltd.",
+        "Appoint Dr. Inspiring Ilango as your Emotional Intelligence Consultant on a monthly basis.",
+        "Deploy our English Communication & Personality Development trainings across your teams.",
+        "Host an Inspitainment™ event for your community.",
+        "Commission our media team for your branding and training films.",
+        "Use Inspiring Ilango’s voice for high-impact messaging."
+      ]
+    },
+
+    "invite": {
+      "title": "Let’s Begin the Journey",
+      "items": [
+        "English Communication & Life Skills Training",
+        "Inspitainment™ Events",
+        "Motivational Speaking (English/Tamil)",
+        "Emotional Intelligence Workshops & Retainer Services",
+        "Voice Artistry for Campaigns",
+        "Audio-Video Production",
+        "Social Impact & Mental Health Projects"
+      ]
+    },
+
+    "contact": {
+      "title": "Contact Us",
+      "landline": "Landline: +91 44 4331 3170",
+      "mobile": "Mobile: +91 99419 54545",
+      "email1": { "label": "Email:" },
+      "email2": { "label": "Email:" },
+      "address": "New No. 16, Old No. 12, Second Street, Ram Nagar, Velachery, Chennai - 600042, Tamil Nadu, India"
+    }
+  },
+
+  "gallery": {
+    "heading": "Moments Captured",
+    "images": [
+      "Inspiring Ilango with police officer",
+      "On stage, Inspiring Ilango lighting the lamp",
+      "Receiving award from CM Stalin",
+      "Inspiring Ilango with Suriya and Sivakumar",
+      "Club meeting on stage",
+      "Inspiring Ilango with students"
+    ]
+  },
+
+  "Viif": {
+    "heading": "Support the Mission",
+    "description": "The Vision Inspiring Ilango Foundation (VIIF) is launching the Hope-Giving Cylinder Technician project to prevent suicides across India.",
+    "donate": {
+      "stripe": "Donate with Stripe",
+      "paypal": "Donate with PayPal",
+      "razorpay": "Donate with Razorpay",
+      "patronCta": "Become a Patron – Empower Change"
+    }
+  },
+
+  "patron": {
+    "heading": "Become a Patron",
+    "description": "Join our global family of supporters and empower lives through education, empathy, and emotional intelligence.",
+    "mediaKit": "📥 Download Media Kit",
+    "benefits": "🎁 View Patron Benefits",
+    "partner": "Partner with Us"
+  },
+
+  "newsletter": {
+    "heading": "Subscribe to Our Newsletter",
+    "description": "Stay updated with events, courses, and global missions from Dr. Inspiring Ilango.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe"
+  },
+
+  "contact": {
+    "heading": "Get in Touch",
+    "description": "We’d love to hear from you. Reach out with any questions or feedback.",
+    "cta": "Contact Us"
+  },
+  "contact_us": "Contact Us",
+  "name": "Name",
+  "email": "Email ID",
+  "contact_number": "Contact Number",
+  "your_message": "Your Message",
+  "send": "Send",
+  "message_sent": "Message sent successfully!",
+  "get_in_touch": "Get in Touch",
+  "address": "Address",
+  "mobile": "Mobile",
+  "email_label": "Email",
+
+  "footer": {
+    "copyright": "© {{year}} Ace Panacea Life Skills Pvt. Ltd. All rights reserved.",
+    "links": {
+      "heading": "Quick Links",
+      "home": "Home",
+      "viif": "VIIF",
+      "acePanacea": "Ace Panacea Life Skills Pvt. Ltd.",
+      "about": "About",
+      "gallery": "Gallery",
+      "services": "Services",
+      "events": "Events",
+      "blogs": "Blogs",
+      "contact": "Contact",
+      "membership": "Membership",
+      "admin": "Admin"
+    },
+    "contact": {
+      "heading": "Contact",
+      "email": "Email: inspiringilango@gmail.com",
+      "phone": "Phone: +91 9941704167",
+      "location": "Location: New #16, Old #12, Ramnagar 2nd street, Velachery, Chennai Tamil Nadu 600042"
+    }
+  },
+
+  "viif": {
+    "title": "Inspiring Ilango",
+    "subtitle1": "Transforming Lives",
+    "subtitle2": "Inspiring Hopes",
+
+    "about": {
+      "heading": "About the Foundation",
+      "description": "Vision Inspiring Ilango Foundation (VIIF) is a registered, not-for-profit, non-governmental organisation devoted to emotional empowerment, inclusive development, and life-changing training programmes. Co-founded by Dr. Inspiring Ilango and Mrs Srilatha Ilango, VIIF serves as a sanctuary for individuals and communities navigating emotional crises, systemic neglect, or social disadvantage."
+    },
+
+    "vision": {
+      "heading": "Our Vision",
+      "text": "To radically transform lives affected by emotional trauma, addiction, digital dependence, and internalised oppression. We envision a world grounded in dignity, emotional independence, equality, compassion, and universal human worth."
+    },
+
+    "mission": {
+      "heading": "Our Mission",
+      "text": "To champion emotional empowerment through inspiring programmes, accessible training, and compassionate intervention — especially for the visually challenged and emotionally vulnerable. Our mission is to make emotional freedom, mental clarity, and psychological resilience accessible to all."
+    },
+
+    "why_now": {
+      "heading": "Why This Cannot Wait",
+      "global": "More than 700,000 people die by suicide every year — one every 40 seconds (WHO). Suicide is the third leading cause of death among people aged 15–29.",
+      "india": "India accounts for 20% of global suicide deaths. In 2021, 164,033 Indians died by suicide — a 7.2% rise from the previous year. Tamil Nadu alone reported 18,925 cases; Maharashtra led with 22,207.",
+      "economic": "Suicide and mental illness significantly reduce productivity and economic output. Tamil Nadu’s GDP is directly affected by mental health-related losses."
+    },
+
+    "shortage": {
+      "heading": "A Dire Shortage of Mental Health Professionals",
+      "text": "India has only 0.75 psychiatrists per 100,000 people — far below the global average of 3–6. Millions suffer without access to trained support."
+    },
+
+    "initiatives": {
+      "heading": "Our Flagship Initiatives",
+      "list": [
+        "HopeLine – 24/7 Mental Health Centre",
+        "Inspitainment™ – Where Inspiration Meets Entertainment",
+        "Empowering Vision – Digital Literacy for the Visually Challenged",
+        "Rising Stars – Youth Personality Development",
+        "Live Life Campaigns – Mental Health Awareness",
+        "Speak Up – English for Empowerment",
+        "Empower Her – Women’s Well-being and Leadership",
+        "Emotional Wellness Clinics – Counselling & Group Therapy",
+        "Inspired Living – Talks and Performances",
+        "Breaking Free – Addiction Awareness and Recovery",
+        "Healthy Choices – Food and Mood Awareness",
+        "Holistic Health – Lifestyle and Mindfulness",
+        "Digital Wisdom – Smart Use of Technology",
+        "Smart Parenting",
+        "Hope Fund – Support for Ailing and Cancer Patients"
+      ]
+    },
+
+    "founders": {
+      "heading": "Our Founders and Trustees",
+      "ilango": {
+        "name": "Dr. Inspiring Ilango",
+        "role": "Founder & Managing Trustee",
+        "bio": "An international speaker, emotional intelligence consultant, bestselling author, and self-trained vocalist, Dr. Inspiring Ilango is a visionary who has transformed his visual disability into the cornerstone of his global impact. He holds world records in deep-sea diving and solo paragliding, demonstrating that no obstacle is insurmountable. He is also the Founder & Managing Director of Ace Panacea Life Skills Pvt. Ltd."
+      },
+      "srilatha": {
+        "name": "Srilatha Ilango",
+        "role": "Founder and Trustee",
+        "bio": "An advocate for women’s empowerment and strategic impact, Srilatha Ilango leads with both empathy and precision. As Executive Director of Ace Panacea Life Skills and Trustee of VIIF, she ensures flawless execution of training and media initiatives to advance mental health awareness and social equity."
+      }
+    },
+
+    "donation": {
+      "heading": "What We Need From You",
+      "text": "VIIF is authorised by the Government of India to receive CSR contributions. We are not seeking charity — we are seeking champions. Fund our flagship HopeLine Mental Health Centre, which will save lives daily. Support any of our scalable programmes designed to create long-lasting societal change. Initiate a CSR partnership or join our circle of monthly patrons. Every contribution is a lifeline.",
+      "account_name": "Account Name: Vision Inspiring Ilango Foundation",
+      "account_no_label": "Account No",
+      "branch_label": "Branch",
+      "accounts": [
+        {
+          "bank": "ICICI Bank",
+          "account_name": "Vision Inspiring Ilango Foundation",
+          "account_no": "168001000906",
+          "ifsc": "ICIC0001680",
+          "branch": "Indira Nagar, Chennai",
+          "swift": "ICICINBBXXX"
+        },
+        {
+          "bank": "Axis Bank",
+          "account_name": "Vision Inspiring Ilango Foundation",
+          "account_no": "920010066165417",
+          "ifsc": "UTIB0003492",
+          "branch": "Ambattur Industrial Estate, Chennai",
+          "swift": "AXISINBB211"
+        }
+      ]
+    },
+
+    "contacts": {
+      "heading": "Reach Us Today",
+      "phone1": "+91 44 4331 3170",
+      "phone2": "+91 99419 54545",
+      "email": "info@viif.in",
+      "address": "New No. 16, Old No. 12, 2nd Street, Ram Nagar, Velachery, Chennai – 600042"
+    },
+
+    "call_to_action": "Let us not wait for the next crisis. Let us act. Let us inspire change — today."
+  },
+
+  "about": {
+    "title": "About Dr. Inspiring Ilango",
+    "meta": {
+      "title": "About Dr. Inspiring Ilango | Emotional Intelligence Leader",
+      "description": "Learn about Dr. Inspiring Ilango, a visually challenged global thought leader in emotional intelligence, inspiring people around the world.",
+      "keywords": "Dr. Inspiring Ilango, emotional intelligence, global speaker, leadership coach, visually challenged leader, motivational speaker"
+    },
+    "biography": {
+      "heading": "Biography",
+      "paragraph1": "Inspiring Ilango was born totally blind on 06/04/1972 at Andhra Hospital, Adyar in Chennai, Tamil Nadu, India. His blindness is due to the consanguineous marriage between his parents, Mrs N. Amsam and Mr K. Natarajan. He studied at Little Flower Convent for the Blind, St Louis Institute for the Deaf and Blind, and Sri Venkateswara Matriculation School.",
+      "paragraph2": "He holds bachelor's and master's degrees in English with distinction from Loyola College, Chennai, and an MPhil in English Language Teaching from the University of Madras. He began his career teaching at various institutions and became an Assistant Professor of English at the University of Madras (2002–2006). Later, he became a popular motivational speaker, voice-over artist, and singer."
+    },
+    "mission": {
+      "heading": "Mission",
+      "text": "To inspire people globally by demonstrating that disability is not a limitation, but a unique strength. Through transformative programmes, accessible communication, and emotional intelligence mastery, Dr. Ilango seeks to empower the world to lead with empathy, vision, and resilience."
+    },
+    "vision": {
+      "heading": "Vision",
+      "text": "To build a world where inclusive leadership and emotional intelligence are foundational to success. Dr. Ilango envisions a global movement that redefines possibilities, celebrates differences, and inspires excellence in every walk of life."
+    },
+    "awards": {
+      "heading": "Awards & Achievements",
+      "list": [
+        "Siva Foundation Award for Best Contribution to Music with playback singer S. P. Balasubrahmanyam (2011)",
+        "Tamil Nadu State Government Award from Mr M. K. Stalin for being a successful visually challenged voice-over artist (2010)",
+        "Rose of Ridvan Award from Baha'i Assembly of Chennai (2010)",
+        "Outstanding Young Indian (OYI) Award by JCI (National Level, 2009)",
+        "Outstanding Young Person (OYP) Award by JCI (Regional Zone, 2009)",
+        "OYP Award by JCI Chennai (2009)",
+        "Selected as Youth Icon by India Today (2009)",
+        "Best Achiever Award from Loyola College (1994)",
+        "Outstanding Youth Award by Rajiv Gandhi Foundation (2000)"
+      ]
+    },
+    "facts": {
+      "heading": "9 Inspiring Facts About Dr. Inspiring Ilango",
+      "items": [
+        "🌍 Has inspired over 500,000+ students worldwide.",
+        "🎤 Self-trained motivational speaker and singer.",
+        "📺 Featured in several TV interviews & public forums.",
+        "🧠 Expert in emotional intelligence and life coaching.",
+        "🏆 Brand ambassador of NTC Logistics since 2014.",
+        "🦯 Born totally blind and redefined his destiny.",
+        "📚 Holds an MPhil in English Language Teaching.",
+        "🎶 Performed over 300+ live concerts as a singer.",
+        "👨‍🏫 Former Assistant Professor at University of Madras."
+      ]
+    }
+  },
+
+  "services": {
+    "title": "Our Services",
+    "intro": "Explore services by Dr. Inspiring Ilango, designed to empower individuals and organisations.",
+    "items": [
+      {
+        "title": "HopeLine - 24/7 Mental Health Centre",
+        "description": "A nationwide helpline staffed by 200+ trained counsellors offering real-time crisis support and long-term guidance."
+      },
+      {
+        "title": "Inspitainment - Where Inspiration Meets Entertainment",
+        "description": "Includes: Live Music, motivational talks, interactive wellness modules, and performances."
+      },
+      {
+        "title": "Empowering Vision - Digital Literacy for the Visually Challenged",
+        "description": "Includes: Smartphones, laptops, software, training, and life skills. Outcome: Sustainable digital employment and self-reliance."
+      },
+      {
+        "title": "Rising Stars - Youth Personality Development",
+        "description": "Includes: EI training, English fluency, leadership, and employability coaching."
+      },
+      {
+        "title": "Live Life Campaigns - Mental Health Awareness",
+        "description": "Focus: School, college, and community outreach events promoting resilience and life-affirming values."
+      },
+      {
+        "title": "Empower Her - Women's Well-being and Leadership",
+        "description": "Focus: Entrepreneurship, emotional strength, and assertiveness training."
+      },
+      {
+        "title": "Speak Up - English for Empowerment",
+        "description": "Target: Rural and semi-urban youth and adults. Objective: Public speaking and employability through communication."
+      },
+      {
+        "title": "Emotional Wellness Clinics - Counselling & Group Therapy",
+        "description": "Services: One-to-one therapy, group sessions, stress and trauma support."
+      },
+      {
+        "title": "Inspired Living - Talks and Performances",
+        "description": "Speakers: Dr. Inspiring Ilango and guest experts. Themes: Hope, healing, and purpose."
+      },
+      {
+        "title": "Breaking Free - Addiction Awareness and Recovery",
+        "description": "Approach: Films, workshops, and rehabilitative pathways."
+      },
+      {
+        "title": "Healthy Choices - Food and Mood Awareness",
+        "description": "Objective: Link nutrition with emotional health."
+      },
+      {
+        "title": "Holistic Health - Lifestyle and Mindfulness",
+        "description": "Topics: Fitness, sleep, digital detox, and stress management."
+      },
+      {
+        "title": "Digital Wisdom - Smart Use of Technology",
+        "description": "Audience: Students and working professionals. Focus: AI, social media hygiene, and productivity."
+      },
+      {
+        "title": "Smart Parenting",
+        "description": "Workshops: Supporting emotional intelligence and safe digital habits in children."
+      },
+      {
+        "title": "Hope Fund - Support for Ailing Patients",
+        "description": "Aid: Emotional counselling, motivational therapy, and financial assistance."
+      }
+    ],
+    "book": {
+      "title": "Book: Inspire the World",
+      "alt": "Cover of Inspire the World book",
+      "price": "₹130",
+      "description": "Grab your copy of Dr. Ilango's inspiring new book packed with life-changing insights.",
+      "buyButton": "Buy Now"
+    },
+    "buttons": {
+      "bookNow": "Book Now",
+      "pay": "Pay"
+    }
+  },
+
+  "brochures": {
+    "title": "Download Our Brochures",
+    "brochure1": {
+      "title": "Brochure One",
+      "description": "Inspiring Ilango Inspitainment",
+      "download": "Download PDF",
+      "alt": "Cover of Inspiring Ilango Inspitainment"
+    },
+    "brochure2": {
+      "title": "Brochure Two",
+      "description": "Transforming Lives, Inspiring Hopes.",
+      "download": "Download PDF",
+      "alt": "Cover of transforming lives"
+    },
+    "brochure3": {
+      "title": "Brochure Three",
+      "description": "Ace Panacea Life Skills Pvt. Ltd.",
+      "download": "Download PDF",
+      "alt": "Cover of Ace Panacea"
+    }
+  },
+
+  "products": {
+    "title": "E-commerce Products",
+    "items": [
+      {
+        "title": "Meditation Audio",
+        "description": "Relax and centre yourself with our guided meditation audio.",
+        "price": "₹200",
+        "url": "https://buy.stripe.com/test_xyzMeditation"
+      },
+      {
+        "title": "Voice-over Sample",
+        "description": "Professional voice-over for your projects.",
+        "price": "₹200",
+        "url": "https://buy.stripe.com/test_xyzVoiceover"
+      },
+      {
+        "title": "Original Song",
+        "description": "A downloadable original song by Ilango.",
+        "price": "₹200",
+        "url": "https://buy.stripe.com/test_xyzSong"
+      }
+    ]
+  },
+
+  "events": {
+    "header": {
+      "title": "Join Our Events",
+      "tagline": "Empowering lives through inspiration and learning"
+    },
+    "form": {
+      "ariaLabel": "Event Registration Form",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "selectEvent": "Select an Event",
+      "choose": "-- Please choose an event --",
+      "events": {
+        "masterclass": "Inspiration Masterclass",
+        "oneToOne": "One-to-One with Ilango"
+      },
+      "required": "required"
+    },
+    "buttons": {
+      "stripe": "Pay with Stripe",
+      "calendar": "Add to Google Calendar",
+      "book": "Book Now"
+    },
+    "confirmation": {
+      "thankYou": "Thank you for registering!",
+      "details": "We’ll contact you with more information soon."
+    },
+    "upcoming": {
+      "title": "Upcoming Events",
+      "none": "No upcoming events found."
+    }
+  },
+
+  "membership": {
+    "title": "Choose Your Membership Plan",
+    "subtitle": "Unlock exclusive benefits tailoured for you.",
+    "whyJoin": {
+      "title": "Why Join?",
+      "points": [
+        "Access to exclusive content and events",
+        "Discounts on community programmes",
+        "Support our mission and growth"
+      ]
+    },
+    "basic": {
+      "title": "Basic",
+      "price": "199 / month",
+      "features": [
+        "Access to free content",
+        "Monthly newsletter",
+        "Community forum access"
+      ]
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "499 / month",
+      "features": [
+        "Everything in Basic",
+        "Early access to events",
+        "Premium-only content"
+      ]
+    },
+    "elite": {
+      "title": "Elite",
+      "price": "999 / month",
+      "features": [
+        "Everything in Premium",
+        "1-on-1 mentorship",
+        "Recognition on our website"
+      ]
+    },
+    "joinButton": "Join Now",
+    "cta": {
+      "title": "Ready to elevate your journey?",
+      "subtitle": "Become a member and make a difference today.",
+      "button": "Get Started"
+    }
+  },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What is included in each plan?",
+    "a1": "Each plan includes a different set of features tailoured to your needs. See above for details.",
+    "q2": "Can I cancel my membership?",
+    "a2": "Yes, you can cancel anytime from your account settings.",
+    "q3": "How can I upgrade later?",
+    "a3": "Upgrading is easy! Just go to your profile and select a new plan."
+  },
+
+  "testimonials": {
+    "title": "Voice of Our Community",
+    "none": "No testimonials available at the moment."
+  },
+
+  "dashboard": {
+    "adminDashboard": "Admin Dashboard",
+    "logout": "Log Out",
+    "showDonateButtons": "Show Donate Buttons",
+    "hideDonateButtons": "Hide Donate Buttons",
+
+    "courseMaterialPassword": "Course Material Access Password",
+    "currentPassword": "Current Password",
+    "noPasswordSet": "No password set yet",
+    "generateNewPassword": "Generate New Password",
+
+    "postBlog": "Post Blog",
+    "titleEn": "Title (EN)",
+    "titleTa": "Title (TA)",
+    "contentEn": "Content (EN)",
+    "contentTa": "Content (TA)",
+    "uploadImage": "Upload Image",
+    "postBlogBtn": "Post Blog",
+    "updateBlogBtn": "Update Blog",
+    "edit": "Edit",
+    "delete": "Delete",
+
+    "gallery": "Gallery",
+    "chooseCategory": "Choose Category",
+    "uploadImageBtn": "Upload Image",
+    "updateImageBtn": "Update Image",
+
+    "testimonials": "Testimonials",
+    "nameEn": "Name (EN)",
+    "nameTa": "Name (TA)",
+    "commentEn": "Comment (EN)",
+    "commentTa": "Comment (TA)",
+    "uploadTestimonialBtn": "Upload Testimonial",
+    "updateTestimonialBtn": "Update Testimonial",
+
+    "courseMaterials": "Course Materials",
+    "materialTitleEn": "Material Title (EN)",
+    "materialTitleTa": "Material Title (TA)",
+    "uploadMaterialBtn": "Upload Material",
+    "updateMaterialBtn": "Update Material",
+    "viewFile": "View File"
+  },
+
+  "gallery1": {
+    "title": "Photo Gallery",
+    "loading": "Loading images...",
+    "empty": "No images found in the gallery.",
+    "loadError": "Failed to load gallery images.",
+    "noImage": "Image not available",
+    "showMore": "Show More",
+    "showLess": "Show Less"
+  },
+
+  "blogs": {
+    "title": "Latest Blog Posts",
+    "loading": "Loading blogs...",
+    "empty": "No blogs available.",
+    "untitled": "Untitled",
+    "noContent": "No content available.",
+    "linkCopied": "Link copied!",
+    "copyLink": "Copy Link",
+    "share": "Share",
+    "shareText": "Check out this blog!",
+    "shareNotSupported": "Share not supported — link copied instead.",
+    "socialUpdates": "Today's Social Media Updates",
+    "socialLoading": "Loading social media posts...",
+    "socialEmpty": "No social posts today.",
+    "view": "View"
+  },
+  "social": {
+    "title": "Instagram & Facebook Updates",
+    "loading": "Loading social media posts...",
+    "empty": "No recent social posts.",
+    "copyLink": "Copy Link",
+    "share": "Share",
+    "shareText": "Check out this post!",
+     "heading": "Connect with Dr. Inspiring Ilango",
+    "view": "View"
+  }
+}
+
