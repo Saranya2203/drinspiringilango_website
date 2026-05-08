@@ -191,7 +191,7 @@ const Events = () => {
 
       <section className="brochure-section">
         <h2>
-          {t('events.brochures') ||
+          {t('Events.brochures') ||
             'Event Brochures'}
         </h2>
 

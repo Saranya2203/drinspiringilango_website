@@ -2,13 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 import logo from '../Inspiring_Ilango.png';
-
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isHomeSubMenuOpen, setHomeSubMenuOpen] = useState(false);
   const [isAboutSubMenuOpen, setAboutSubMenuOpen] = useState(false);
   const [showMusicPopup, setShowMusicPopup] = useState(true);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const audioRef = useRef(null);
   const navigate = useNavigate();
 
@@ -27,22 +26,59 @@ const Header = () => {
   };
 
   // Handle autoplay
+  // useEffect(() => {
+  //   if (audioRef.current && !isMuted) {
+  //     const playAudio = async () => {
+  //       try {
+  //         await audioRef.current.play();
+  //       } catch (error) {
+  //         console.warn('Autoplay blocked:', error);
+  //       }
+  //     };
+  //     playAudio();
+  //   }
+  // }, [isMuted]);
   useEffect(() => {
-    if (audioRef.current && !isMuted) {
-      const playAudio = async () => {
-        try {
-          await audioRef.current.play();
-        } catch (error) {
-          console.warn('Autoplay blocked:', error);
-        }
-      };
-      playAudio();
-    }
-  }, [isMuted]);
+  const audio = audioRef.current;
 
-  const toggleMute = () => {
-    setIsMuted((prev) => !prev);
+  const startAudio = async () => {
+    if (audio) {
+      try {
+        audio.muted = false;
+        await audio.play();
+        setIsMuted(false);
+      } catch (error) {
+        console.warn('Autoplay blocked:', error);
+      }
+    }
   };
+
+  document.addEventListener('click', startAudio, { once: true });
+
+  return () => {
+    document.removeEventListener('click', startAudio);
+  };
+}, []);
+
+ const toggleMute = async () => {
+  const audio = audioRef.current;
+
+  if (!audio) return;
+
+  if (isMuted) {
+    audio.muted = false;
+
+    try {
+      await audio.play();
+    } catch (error) {
+      console.warn(error);
+    }
+  } else {
+    audio.muted = true;
+  }
+
+  setIsMuted(!isMuted);
+};
 
   const dismissPopup = () => {
     setShowMusicPopup(false);
@@ -116,7 +152,7 @@ const Header = () => {
             <button onClick={toggleMute}>
               {isMuted ? '🔇' : '🔊'}
             </button>
-            <audio ref={audioRef} src="./assets/Web_music.mp3" loop autoPlay muted={isMuted} />
+            <audio ref={audioRef} src="/assets/Web_music.mp3" loop  preload="auto" muted={isMuted} />
           </div>
 
           {/* Mobile Menu Toggle */}

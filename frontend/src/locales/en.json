@@ -489,28 +489,27 @@
     }
   },
 
-  "brochures": {
-    "title": "Download Our Brochures",
-    "brochure1": {
-      "title": "Brochure One",
-      "description": "Inspiring Ilango Inspitainment",
-      "download": "Download PDF",
-      "alt": "Cover of Inspiring Ilango Inspitainment"
-    },
-    "brochure2": {
-      "title": "Brochure Two",
-      "description": "Transforming Lives, Inspiring Hopes.",
-      "download": "Download PDF",
-      "alt": "Cover of transforming lives"
-    },
-    "brochure3": {
-      "title": "Brochure Three",
-      "description": "Ace Panacea Life Skills Pvt. Ltd.",
-      "download": "Download PDF",
-      "alt": "Cover of Ace Panacea"
-    }
+"brochures": {
+  "title": "Download Our Brochures",
+  "brochure1": {
+    "title": "Inspiring Ilango Inspitainment",
+    "description": "Empowering lives through inspiration and transformative learning experiences.",
+    "download": "Download PDF",
+    "alt": "Cover of Inspiring Ilango Inspitainment brochure"
   },
-
+  "brochure2": {
+    "title": "Transforming Lives, Inspiring Hopes",
+    "description": "Programs and initiatives focused on personal growth and positive change.",
+    "download": "Download PDF",
+    "alt": "Cover of Transforming Lives Inspiring Hopes brochure"
+  },
+  "brochure3": {
+    "title": "Ace Panacea Life Skills Pvt. Ltd.",
+    "description": "Professional life skills and training solutions for students and organizations.",
+    "download": "Download PDF",
+    "alt": "Cover of Ace Panacea Life Skills brochure"
+  }
+},
   "products": {
     "title": "E-commerce Products",
     "items": [

@@ -165,6 +165,10 @@
   .banner-img {
     max-height: 300px;
   }
+   .logo-img {
+    max-width: 300px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -173,7 +177,7 @@
   }
 
   .logo-img {
-    max-width: 200px;
+    max-width: 300px;
   }
 }
 
@@ -183,7 +187,7 @@
   }
 
   .logo-img {
-    max-width: 200px;
+    max-width: 250px;
   }
 
   .ace-section {
@@ -255,6 +259,10 @@
     font-size: 0.95rem;
     padding: 0.6rem 1.5rem;
   }
+  .logo-img {
+    max-width: 250px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -271,6 +279,10 @@
     width: 100%;
     padding: 0.75rem;
   }
+  .logo-img {
+    max-width: 250px;
+  }
+
 }
 
 @media (max-width: 480px) {

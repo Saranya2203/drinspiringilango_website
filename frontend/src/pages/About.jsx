@@ -38,11 +38,13 @@ const About = () => {
             alt={t('about.altText', 'Dr. Inspiring Ilango')}
             className="profile-image"
           />
-          <video
+          {/* <video
             controls
             aria-label={t('about.videoLabel', 'Introduction video of Dr. Ilango')}
             className="intro-video"
-          >
+          > */}
+          <video controls preload="metadata" playsInline aria-label={t('about.videoLabel', 'Introduction video of Dr. Ilango')}
+                  className="intro-video"  poster="/assets/video-thumbnail.jpg">
             <source src="/assets/About_InspiringIlango.mp4" type="video/mp4" />
             <track
               src="/videos/intro-captions.vtt"
