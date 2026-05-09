@@ -60,24 +60,22 @@ const Header = () => {
   };
 }, []);
 
- const toggleMute = async () => {
+const toggleMute = async () => {
   const audio = audioRef.current;
 
   if (!audio) return;
 
-  if (isMuted) {
-    audio.muted = false;
-
+  if (audio.paused) {
     try {
       await audio.play();
-    } catch (error) {
-      console.warn(error);
+      setIsMuted(false);
+    } catch (err) {
+      console.log(err);
     }
   } else {
-    audio.muted = true;
+    audio.pause();
+    setIsMuted(true);
   }
-
-  setIsMuted(!isMuted);
 };
 
   const dismissPopup = () => {
@@ -152,7 +150,7 @@ const Header = () => {
             <button onClick={toggleMute}>
               {isMuted ? '🔇' : '🔊'}
             </button>
-            <audio ref={audioRef} src="/assets/Web_music.mp3" loop  preload="auto" muted={isMuted} />
+            <audio ref={audioRef} src="/assets/Web_music.mp3" loop  preload="auto"  />
           </div>
 
           {/* Mobile Menu Toggle */}
