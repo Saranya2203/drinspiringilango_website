@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Footer.css';
-import logo from '../Logo1.jpg';
+import logo from '../Inspiring_Ilango.png';
 
 const Footer = () => {
   const { t } = useTranslation();

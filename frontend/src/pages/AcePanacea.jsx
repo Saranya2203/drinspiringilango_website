@@ -248,7 +248,7 @@ const AcePanacea = () => {
               inspiringilango@inspiringilango.com
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="https://www.inspiringilango.com"
               target="_blank"
@@ -256,7 +256,7 @@ const AcePanacea = () => {
             >
               www.inspiringilango.com
             </a>
-          </li>
+          </li> */}
           {/* <li>
             <a
               href="https://www.acea2z.com"
