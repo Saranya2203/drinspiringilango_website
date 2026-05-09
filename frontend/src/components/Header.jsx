@@ -60,22 +60,24 @@ const Header = () => {
   };
 }, []);
 
-const toggleMute = async () => {
+ const toggleMute = async () => {
   const audio = audioRef.current;
 
   if (!audio) return;
 
-  if (audio.paused) {
+  if (isMuted) {
+    audio.muted = false;
+
     try {
       await audio.play();
-      setIsMuted(false);
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.warn(error);
     }
   } else {
-    audio.pause();
-    setIsMuted(true);
+    audio.muted = true;
   }
+
+  setIsMuted(!isMuted);
 };
 
   const dismissPopup = () => {
@@ -150,7 +152,7 @@ const toggleMute = async () => {
             <button onClick={toggleMute}>
               {isMuted ? '🔇' : '🔊'}
             </button>
-            <audio ref={audioRef} src="/assets/Web_music.mp3" loop  preload="auto"  />
+            <audio ref={audioRef} src="/assets/Web_music.mp3" loop  preload="auto" muted={isMuted} />
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -165,15 +167,44 @@ const toggleMute = async () => {
         {showMusicPopup && (
           <div className="music-popup">
             <p>Background music is playing.</p>
-            <button onClick={dismissPopup}>Okay</button>
-            <button
+            {/* <button onClick={dismissPopup}>Okay</button> */}
+            <button onClick={async () => { const audio = audioRef.current;
+               if (audio) {
+                 try { audio.muted = false;
+                   await audio.play();
+                    setIsMuted(false);
+                   } catch (err) {
+                     console.log(err);
+                     }
+                     }
+                       dismissPopup();
+                        }}
+                        >
+                           Okay
+                           </button>
+                           <button
+  onClick={() => {
+    const audio = audioRef.current;
+
+    if (audio) {
+      audio.pause();
+      audio.muted = true;
+    }
+
+    setIsMuted(true);
+    dismissPopup();
+  }}
+>
+  Mute
+</button>
+            {/* <button
               onClick={() => {
                 setIsMuted(true);
                 dismissPopup();
               }}
             >
               Mute
-            </button>
+            </button> */}
           </div>
         )}
       </div>
