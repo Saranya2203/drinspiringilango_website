@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "./VIIF.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import gpayQR from "./assets/gpay-qr.jpg";
 const VIIF = () => {
   const { t } = useTranslation();
   const [donationAmount, setDonationAmount] = useState(1000); // default minimum
@@ -30,30 +30,37 @@ const VIIF = () => {
   ];
 
   // Razorpay donation handler
-  const handleDonate = () => {
-    const amount = Math.max(donationAmount, 1000) * 100; // amount in paise
-    const options = {
-      key: "YOUR_RAZORPAY_KEY", // Replace with your Razorpay key
-      amount: amount,
-      currency: "INR",
-      name: "Vision Inspiring Ilango Foundation",
-      description: "Donation",
-      handler: function (response) {
-        alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
-      },
-      prefill: {
-        name: "",
-        email: "",
-        contact: "",
-      },
-      theme: {
-        color: "#f05a28",
-      },
-    };
-    const rzp = new window.Razorpay(options);
-    rzp.open();
-  };
+  // const handleDonate = () => {
+  //   const amount = Math.max(donationAmount, 1000) * 100; // amount in paise
+  //   const options = {
+  //     key: "YOUR_RAZORPAY_KEY", // Replace with your Razorpay key
+  //     amount: amount,
+  //     currency: "INR",
+  //     name: "Vision Inspiring Ilango Foundation",
+  //     description: "Donation",
+  //     handler: function (response) {
+  //       alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+  //     },
+  //     prefill: {
+  //       name: "",
+  //       email: "",
+  //       contact: "",
+  //     },
+  //     theme: {
+  //       color: "#f05a28",
+  //     },
+  //   };
+  //   const rzp = new window.Razorpay(options);
+  //   rzp.open();
+  // };
+const handleGooglePay = () => {
+  const amount = Math.max(donationAmount, 1000);
 
+  const upiLink =
+    `upi://pay?pa=inspiringilango-1@okicici&pn=VIIF&am=${amount}&cu=INR`;
+
+  window.location.href = upiLink;
+};
   return (
     <div className="viif-container">
       {/* Logo */}
@@ -84,7 +91,7 @@ const VIIF = () => {
       </div>
 
       {/* Razorpay Donate Button */}
-      <div className="viif-donate-button-container">
+      {/* <div className="viif-donate-button-container">
         <input
           type="number"
           min="1000"
@@ -93,11 +100,52 @@ const VIIF = () => {
           placeholder="Enter amount (min ₹1000)"
           className="viif-donate-input"
         />
-        <button className="viif-donate-button" onClick={handleDonate}>
-          Donate Now
-        </button>
-      </div>
+    <button className="viif-donate-button" onClick={handleGooglePay}>
+         Donate with Google Pay
+    </button>
+      </div> */}
 
+
+ <div className="qr-section">
+  <img
+      src={gpayQR}
+    alt="Google Pay QR"
+    className="gpay-qr"
+  />
+
+  <p className="qr-text">
+    Scan QR Code to Donate
+  </p>
+</div>
+      <div className="viif-donate-button-container">
+  <input
+    type="number"
+    min="100"
+    value={donationAmount}
+    onChange={(e) => setDonationAmount(Number(e.target.value))}
+    placeholder="Enter amount (min ₹100)"
+    className="viif-donate-input"
+  />
+
+  <button
+    className="viif-donate-button"
+    onClick={handleGooglePay}
+  >
+    Donate with Google Pay
+  </button>
+</div>
+
+<p className="payment-note">
+  <a
+    href="https://wa.me/919941704167"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="whatsapp-link"
+  >
+    Share Payment Screenshot on WhatsApp
+  </a>
+</p>
+            
       {/* Header Section */}
       <section className="viif-header">
         <h1>{t("viif.title")}</h1>

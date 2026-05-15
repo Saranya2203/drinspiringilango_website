@@ -140,7 +140,7 @@
 }
 
 .logo-img {
-  max-width: 250px;
+  max-width: 400px;
   width: 250%;
   height: auto;
 }
@@ -166,7 +166,7 @@
     max-height: 300px;
   }
    .logo-img {
-    max-width: 300px;
+    max-width: 400px;
   }
 
 }
@@ -177,7 +177,7 @@
   }
 
   .logo-img {
-    max-width: 300px;
+    max-width: 350px;
   }
 }
 
@@ -187,7 +187,7 @@
   }
 
   .logo-img {
-    max-width: 250px;
+    max-width: 400px;
   }
 
   .ace-section {
@@ -260,7 +260,7 @@
     padding: 0.6rem 1.5rem;
   }
   .logo-img {
-    max-width: 250px;
+    max-width: 400px;
   }
 
 }
@@ -280,7 +280,7 @@
     padding: 0.75rem;
   }
   .logo-img {
-    max-width: 250px;
+    max-width: 400px;
   }
 
 }

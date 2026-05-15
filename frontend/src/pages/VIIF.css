@@ -40,8 +40,8 @@
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #004080;
-  border-left: 4px solid #ffffff;
-  padding-left: 10px;
+  /* border-left: 1px solid #f9f9f9; */
+  /* padding-left: 10px; */
 }
 
 .viif-container p,
@@ -88,7 +88,7 @@
   background-color: #fff;
   padding: 1rem;
   border: 1px solid #ddd;
-  /* border-left: 4px solid #007acc; */
+  border-left: 4px solid #007acc;
   border-radius: 6px;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -223,7 +223,48 @@
   color: #002244 !important;
   font-size: 24px;
 }
+.payment-note {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
+.whatsapp-link {
+  color: #25D366;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+}
+.qr-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.gpay-qr {
+  width: 320px;
+  max-width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.qr-text {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .text-slide {
