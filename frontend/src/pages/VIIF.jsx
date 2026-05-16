@@ -61,6 +61,31 @@ const handleGooglePay = () => {
 
   window.location.href = upiLink;
 };
+const handleRazorpayDonate = () => {
+  const amount = Math.max(donationAmount, 100) * 100;
+
+  const options = {
+    key: "rzp_test_SpyxKVp3wvjGtE",
+    amount: amount,
+    currency: "INR",
+    name: "Vision Inspiring Ilango Foundation",
+    description: "Donation",
+
+    handler: function (response) {
+      alert(
+        "Payment Successful! Payment ID: " +
+        response.razorpay_payment_id
+      );
+    },
+
+    theme: {
+      color: "#3395ff",
+    },
+  };
+
+  const rzp = new window.Razorpay(options);
+  rzp.open();
+};
   return (
     <div className="viif-container">
       {/* Logo */}
@@ -108,16 +133,16 @@ const handleGooglePay = () => {
 
  <div className="qr-section">
   <img
-      src={gpayQR}
+    src={gpayQR}
     alt="Google Pay QR"
     className="gpay-qr"
   />
 
-  <p className="qr-text">
+  {/* <p className="qr-text">
     Scan QR Code to Donate
-  </p>
+  </p> */}
 </div>
-      <div className="viif-donate-button-container">
+     <div className="viif-donate-button-container">
   <input
     type="number"
     min="100"
@@ -126,15 +151,22 @@ const handleGooglePay = () => {
     placeholder="Enter amount (min ₹100)"
     className="viif-donate-input"
   />
-
+<div className="payment-buttons">
   <button
     className="viif-donate-button"
     onClick={handleGooglePay}
   >
     Donate with Google Pay
   </button>
-</div>
 
+  <button
+    className="viif-razorpay-button"
+    onClick={handleRazorpayDonate}
+  >
+    Donate with Razorpay
+  </button>
+</div>
+</div>
 <p className="payment-note">
   <a
     href="https://wa.me/919941704167"

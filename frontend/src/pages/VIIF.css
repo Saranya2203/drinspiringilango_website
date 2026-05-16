@@ -319,7 +319,44 @@
   background-color: #d14e20;
   transform: scale(1.05);
 }
+.payment-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
+.viif-donate-button,
+.viif-razorpay-button {
+  width: 260px;
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viif-donate-button {
+  background: #0077b6;
+}
+
+.viif-razorpay-button {
+  background: #3395ff;
+}
+
+.viif-donate-button:hover,
+.viif-razorpay-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
 @media (max-width: 768px) {
   .viif-donate-button,
   .viif-donate-input {
