@@ -223,47 +223,98 @@
   color: #002244 !important;
   font-size: 24px;
 }
-.payment-note {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.whatsapp-link {
-  color: #25D366;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-}
-
-.whatsapp-link:hover {
-  text-decoration: underline;
-}
+/* QR SECTION */
 .qr-section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-top: 30px;
 }
 
 .gpay-qr {
-  width: 320px;
-  max-width: 90%;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 300px;
+  border-radius: 24px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+/* DONATION SECTION */
+.viif-donate-button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
 }
 
-.qr-text {
-  margin-top: 15px;
+/* INPUT */
+.viif-donate-input {
+  width: 320px;
+  max-width: 90%;
+  height: 58px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+/* BUTTON CONTAINER */
+.payment-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+/* BUTTONS */
+.viif-donate-button,
+.viif-razorpay-button {
+  width: 300px;
+  max-width: 60%;
+  height: 60%;
+  border: none;
+  border-radius: 14px;
+  font-size: 14px;
   font-weight: 600;
-  color: #222;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+.viif-donate-button {
+  background: #0077b6;
+}
+
+.viif-razorpay-button {
+  background: #3395ff;
+}
+.viif-donate-button:hover,
+.viif-razorpay-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.whatsapp-link {
+  text-align: center;
+  font-size: 20px;
+  color: #1db954;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+/* WHATSAPP NOTE */
+.payment-note {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -275,7 +326,30 @@
   .viif-logo-img {
     width: 250px;
   height: auto;
+  }
+   .gpay-qr {
+    max-width: 320px;
+  }
 
+  .viif-donate-input {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .payment-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .viif-donate-button,
+  .viif-razorpay-button {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .whatsapp-link {
+    font-size: 18px;
+    padding: 0 10px;
   }
 }
 
@@ -335,7 +409,7 @@
   border: none;
   border-radius: 12px;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;

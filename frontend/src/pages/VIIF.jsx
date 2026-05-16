@@ -142,31 +142,29 @@ const handleRazorpayDonate = () => {
     Scan QR Code to Donate
   </p> */}
 </div>
-     <div className="viif-donate-button-container">
+<div className="viif-donate-button-container">
   <input
     type="number"
     min="100"
     value={donationAmount}
     onChange={(e) => setDonationAmount(Number(e.target.value))}
     placeholder="Enter amount (min ₹100)"
-    className="viif-donate-input"
-  />
+    className="viif-donate-input"/>
+  </div>
 <div className="payment-buttons">
   <button
     className="viif-donate-button"
-    onClick={handleGooglePay}
-  >
+    onClick={handleGooglePay}>
     Donate with Google Pay
   </button>
 
   <button
     className="viif-razorpay-button"
-    onClick={handleRazorpayDonate}
-  >
+    onClick={handleRazorpayDonate}>
     Donate with Razorpay
   </button>
 </div>
-</div>
+
 <p className="payment-note">
   <a
     href="https://wa.me/919941704167"
